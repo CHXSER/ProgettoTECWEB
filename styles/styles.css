@@ -29,7 +29,7 @@
   font-weight: bold;
 }
 
-:root {
+body {
   --background-color: #ffffe6;
   --text-color: #10100e;
   --inactive-border: #e8e8d1;
@@ -39,7 +39,7 @@
 }
 
 /* Dark mode styles */
-.dark-theme {
+body.dark-theme {
   --background-color: #10100e;
   --text-color: #ffffe6;
   --inactive-border: #30302b;
@@ -60,18 +60,13 @@ body {
 }
 
 .top-nav {
-  font-family: var(--sans);
+  font-family: var(--serif);
   padding: 1%;
   border-radius: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: .2rem solid var(--inactive-border);
-  transition: 1s;
-}
-
-.top-nav:hover {
-  border: .2rem solid var(--text-color);
+  border: .1rem solid var(--inactive-border);
 }
 
 .top-nav ul {
@@ -80,6 +75,30 @@ body {
   padding: 0rem;
   margin: 0rem;
   justify-content: space-between;
+}
+
+.hover-underline {
+  position: relative;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--text-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  transform: scaleX(0);
+}
+
+.hover-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 p {
@@ -102,15 +121,18 @@ article {
 
 .top-nav span {
   font-family: var(--serif);
+  color: var(--inactive-text);
 }
 
 .top-nav a {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--active-text);
 }
 
-.top-nav a:hover {
-  background-color: var(--hover-color);
+.top-nav #logo-small {
+  font-size: 1rem;
+  font-family: var(--sans);
+  color: var(--text-color);
 }
 
 .dropdown {
@@ -127,8 +149,121 @@ footer {
   color: var(--text-color);
   text-align: center;
   font-family:  var(--sans);
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  overflow:hidden;
+    position:relative;
+    margin-top:1em;
+  
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 500px 1fr;
+  grid-template-rows: 100px 200px;
+}
+
+.main-grid {  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 7fr 2.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Main Main Main Main"
+    "Sub1 Sub1 Sub2 Sub2";
+}
+.Main {
+  grid-area: Main;
+  justify-self: center;
+  align-self: center;
+}
+
+.Sub1 { 
+  grid-area: Sub1; 
+  text-align: right;
+  padding: 1rem;
+}
+
+.Sub2 { 
+  grid-area: Sub2;
+  text-align: left;
+  padding: 1rem;
+}
+
+.Sub1 a, .Sub2 a {
+  text-decoration: none;
+  color: var(--inactive-text);
+  transition: .5s;
+}
+
+.Sub1 a:hover, .Sub2 a:hover {
+  color: var(--text-color);
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+section {
+  border: .1rem solid var(--inactive-border);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: .5rem;
+}
+
+#logo {
+  font-size: 10rem;
+  font-family: var(--sans);
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+button {
+  font-family: var(--serif);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: .1rem solid var(--inactive-border);
+  border-radius: 1rem;
+  padding: .5rem;
+  transition: .5s;
+  cursor: pointer;
+}
+
+button:hover {
+  border: .1rem solid var(--text-color);
+}
+
+button:active {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--background-color); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--inactive-border); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-color); 
 }

@@ -1,9 +1,16 @@
-var themeButtom = document.getElementById("theme-button");
-themeButtom.onclick = function () {
-    document.body.classList.toggle("dark-theme");
-    if (document.body.classList.contains("dark-theme")) {
-        themeButtom.innerHTML = "Light Mode";
-    } else {
-        themeButtom.innerHTML = "Dark Mode";
-    }
+const btn = document.querySelector(".theme-button");
+
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme == "dark") {
+  document.body.classList.add("dark-theme");
 }
+
+btn.addEventListener("click", function () {
+  document.body.classList.toggle("dark-theme");
+
+  let theme = "light";
+  if (document.body.classList.contains("dark-theme")) {
+    theme = "dark";
+  }
+  localStorage.setItem("theme", theme);
+});
