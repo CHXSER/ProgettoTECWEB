@@ -1,5 +1,5 @@
 <?php
-    $DOM = file_get_contents("../../html/header.html");
+    $DOM = file_get_contents("html/template/header.html");
     $DOM = str_replace("<title></title>", "<title>" . $title . "</title>", $DOM);
     $DOM = str_replace('<meta name="description" content="" />', '<meta name="description" content="' . $description . '" />', $DOM);
     $DOM = str_replace('<meta name="keywords" content="" />', '<meta name="keywords" content="' . $keywords . '" />', $DOM);
@@ -18,9 +18,9 @@
         $DOM = str_replace('<meta property="og:image" content="logo_preview" />', '<meta property="og:image" content="logo_preview' . $image . '" />', $DOM);
     }
 
-    session_start();
-    $username = get_session_user();
-    session_abort();
+    //ssession_start();
+    //$username = get_session_user();
+    //session_abort();
     
     echo($DOM);
 ?>

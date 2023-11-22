@@ -1,4 +1,4 @@
 <?php
-    $DOM = file_get_contents("../../html/footer.html");
+    $DOM = file_get_contents("html/template/footer.html");
     echo ($DOM);
 ?>
