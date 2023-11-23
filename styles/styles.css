@@ -35,15 +35,34 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* html { font-size: 62.5%;} */
+html { font-size: calc(1em + 1vw); }
+
+@media screen and (min-width: 50em) {
+  html {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  html {
+    font-size: 1.5em;
+  }
 }
 
 body {
   --background-color: #ffffe6;
   --text-color: #10100e;
   --inactive-border: #e8e8d1;
-  --inactive-text: #c0c0ad;
+  --inactive-text: #575757;
   --sans: "Comico", sans-serif;
   --serif: "Zodiak", serif;
+  margin: .5rem;
 }
 
 /* Dark mode styles */
@@ -51,7 +70,7 @@ body.dark-theme {
   --background-color: #10100e;
   --text-color: #ffffe6;
   --inactive-border: #30302b;
-  --inactive-text: #606056;
+  --inactive-text: #9F9F93;
 }
 
 body.dark-theme img {
@@ -64,7 +83,6 @@ body {
   color: var(--text-color);
   font-size: 1rem;
   line-height: 1.5;
-  margin: 1rem;
 }
 
 nav {
@@ -77,7 +95,7 @@ nav {
 label.logo {
   font-family: var(--sans);
   color: var(--text-color);
-  font-size: 1vw;
+  font-size: clamp(24px, 1vw, 56px);
   line-height: 2rem;
   padding: 1rem 1rem;
 }
@@ -124,7 +142,7 @@ nav ul li a:hover {
 
 @media (max-width: 952px) {
   label.logo {
-    font-size: 3vw;
+    font-size: clamp(24px, 1vw, 56px);
     padding-left: 1rem;
   }
   nav ul li a {
@@ -160,6 +178,7 @@ nav ul li a:hover {
   }
   #check:checked ~ ul {
     left: 0;
+    z-index: 1000;
   }
   
 }
@@ -196,6 +215,12 @@ ul {
   transform-origin: bottom left;
 }
 
+#main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 p {
     width: clamp(45ch, 50%, 75ch);
 }
@@ -204,8 +229,6 @@ article {
     scroll-padding: 1rem 0 0 0;
     width: clamp(45ch, 50%, 75ch);
 }
-
-
 
 .dropdown {
     opacity: 0;
@@ -220,11 +243,12 @@ button:focus-within .dropdown {
 footer {
   color: var(--text-color);
   text-align: center;
-  font-size: .7vw;
+  font-size: 0.5rem;
   font-family:  var(--sans);
   overflow:hidden;
     position:relative;
-    margin-top:1em;
+    margin-top:1rem;
+    height: 2rem;
   
 }
 
@@ -252,13 +276,17 @@ footer {
 
 .Sub1 { 
   grid-area: Sub1; 
-  text-align: right;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   padding: 1rem;
 }
 
 .Sub2 { 
   grid-area: Sub2;
-  text-align: left;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   padding: 1rem;
 }
 
@@ -282,9 +310,11 @@ footer {
 }
 
 section {
-  border: .1rem solid var(--inactive-border);
+  /* border: .1rem solid var(--inactive-border); <- Da mettere solo nelle card*/
   border-radius: 1rem;
-  padding: 1rem;
+  flex-grow: 1;
+  flex-shrink: 0;
+  overflow: auto;
   margin-top: .5rem;
 }
 
