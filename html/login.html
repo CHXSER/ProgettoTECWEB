@@ -1,0 +1,16 @@
+<main id="main">
+    <div class="login-container">
+        <h1>Login</h1>
+        <form name="login-form" onsubmit="return validateLogin()" action="auth_manager.php" method="post" autocomplete="on" >
+            <!--Username-->
+           <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Username" onblur="validateUsername()" required>
+            <!--Password-->
+            <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password" onblur="validatePassword()" required>
+             <!--Login button-->
+            <input class="button" type="submit" value="Login">
+        </form>
+        <p>Don't have an account? <a href="register.php">Register</a></p>
+    </div>
+</main>

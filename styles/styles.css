@@ -40,19 +40,40 @@
   -webkit-text-size-adjust: 100%;
 }
 
-/* html { font-size: 62.5%;} */
-html { font-size: calc(1em + 1vw); }
-
-@media screen and (min-width: 50em) {
-  html {
-    font-size: 2vw;
-  }
+:root {
+  --step--2: clamp(0.7813rem, 0.6906rem + 0.4533vw, 1.0419rem);
+  --step--1: clamp(0.9375rem, 0.8288rem + 0.5435vw, 1.25rem);
+  --step-0: clamp(1.125rem, 0.9946rem + 0.6522vw, 1.5rem);
+  --step-1: clamp(1.35rem, 1.1935rem + 0.7826vw, 1.8rem);
+  --step-2: clamp(1.62rem, 1.4322rem + 0.9391vw, 2.16rem);
+  --step-3: clamp(1.9438rem, 1.7183rem + 1.1272vw, 2.5919rem);
+  --step-4: clamp(2.3325rem, 2.0618rem + 1.3533vw, 3.1106rem);
+  --step-5: clamp(2.7994rem, 2.4748rem + 1.6228vw, 3.7325rem);
 }
 
-@media screen and (min-width: 75em) {
-  html {
-    font-size: 1.5em;
-  }
+h1 {
+  font-size: var(--step-4);
+}
+h2 {
+  font-size: var(--step-3);
+}
+h3 {
+  font-size: var(--step-2);
+}
+h4 {
+  font-size: var(--step-1);
+}
+h5 {
+  font-size: var(--step-0);
+}
+h6 {
+  font-size: var(--step--1);
+}
+p, div, a {
+  font-size: var(--step--1);
+}
+small, footer {
+  font-size: var(--step--2);
 }
 
 body {
@@ -62,7 +83,6 @@ body {
   --inactive-text: #575757;
   --sans: "Comico", sans-serif;
   --serif: "Zodiak", serif;
-  margin: .5rem;
 }
 
 /* Dark mode styles */
@@ -81,8 +101,7 @@ body {
   font-family: var(--serif);
   background-color: var(--background-color);
   color: var(--text-color);
-  font-size: 1rem;
-  line-height: 1.5;
+  margin: 1rem;
 }
 
 nav {
@@ -114,7 +133,6 @@ nav ul li {
 nav ul li a {
   color: var(--text-color);
   font-family: var(--sans);
-  font-size: .8rem;
   padding: .5rem 1rem;
   border-radius: .7rem;
 }
@@ -127,26 +145,26 @@ nav ul li a:hover {
 }
 
 .checkbtn {
-  font-size: 1rem;
   color: var(--text-color);
   float: right;
   line-height: 2rem;
   margin-right: 1rem;
   cursor: pointer;
-  display: none;
+  display: none
 }
 
 #check {
   display: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--sans);
+}
+
 @media (max-width: 952px) {
   label.logo {
     font-size: clamp(24px, 1vw, 56px);
     padding-left: 1rem;
-  }
-  nav ul li a {
-    font-size: .5rem;
   }
 }
 
@@ -168,9 +186,6 @@ nav ul li a:hover {
     display: block;
     margin: 1rem 0;
     line-height: 2rem;
-  }
-  nav ul li a {
-    font-size: .8333rem;
   }
   a:hover, a.active {
     background: none;
@@ -210,45 +225,21 @@ ul {
   transform: scaleX(0);
 }
 
-.hover-underline:hover::after {
+.hover-underline:hover::after { 
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
-#main {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-p {
-    width: clamp(45ch, 50%, 75ch);
-}
-
-article {
-    scroll-padding: 1rem 0 0 0;
-    width: clamp(45ch, 50%, 75ch);
-}
-
-.dropdown {
-    opacity: 0;
-    visibility: hidden;
-}
-
-button:focus-within .dropdown {
-    opacity: 1;
-    visibility: visible;
-}
 
 footer {
   color: var(--text-color);
   text-align: center;
-  font-size: 0.5rem;
+  /* font-size: 0.5rem; */
   font-family:  var(--sans);
   overflow:hidden;
     position:relative;
     margin-top:1rem;
-    height: 2rem;
+    /* height: 2rem;*/
   
 }
 
@@ -300,6 +291,16 @@ footer {
   color: var(--text-color);
 }
 
+section a, article a, aside a {
+  text-decoration: none;
+  color: var(--inactive-text);
+  transition: .5s;
+}
+
+section a:hover, aside a:hover, article a:hover {
+  color: var(--text-color);
+}
+
 .flex {
   display: flex;
   flex-direction: column;
@@ -310,8 +311,6 @@ footer {
 }
 
 section {
-  /* border: .1rem solid var(--inactive-border); <- Da mettere solo nelle card*/
-  border-radius: 1rem;
   flex-grow: 1;
   flex-shrink: 0;
   overflow: auto;
@@ -330,6 +329,26 @@ section {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+#wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+#location-section {
+  flex: 1 0 0;
+}
+
+.mapouter {
+  border-radius: 1rem;
+  border: .1rem solid var(--text-color);
+}
+
+@media (max-width: 858px) {
+  #wrapper {
+    flex-direction: column;
+  }
 }
 
 button {

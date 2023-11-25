@@ -1,0 +1,24 @@
+<main id="main">
+    <div class="register-container">
+
+        <h1>Register</h1>
+
+        <form name="register-form" onsubmit="return validateRegister()" action="auth_manager.php" method="post" autocomplete="on" >
+            <!--Username-->
+            <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Username" onblur="validateUsername()" required>
+            <!--Password-->
+            <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password" onblur="validatePassword()" required>
+            <!--Confirm Password-->
+            <label for="confirm-password">Confirm Password</label>
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" onblur="validateConfirmPassword()" required>
+            <!--Email-->
+            <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Email" onblur="validateEmail()" required>
+            <!--Register button-->
+            <input class="button" type="submit" value="Register">
+        </form>
+        <p>Already have an account? <a href="login.php">Login</a></p>
+    </div>
+</main>
