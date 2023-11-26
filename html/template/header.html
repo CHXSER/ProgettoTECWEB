@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -13,25 +13,34 @@
     <!-- TODO: <link rel="stylesheet" href="styles/min.css"> -->
     <link rel="stylesheet" href="../../styles/styles.css" />
     <link rel="stylesheet" href="styles/print.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
-    <header id="header" class="top-nav">
-      <!-- menu -->
-      <nav class="nav">
-        <input type="checkbox" id="check" />
-        <label for="check" class="checkbtn">
-          <i class="fa fa-bars" aria-hidden="true"></i>
-        </label>
-        <label class="logo">BH</label>
-        <ul class="menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Login <span>/</span> Signup</a></li>
-          <li><a href="#">Cart</a></li>
-          <li><button class="theme-button">Change Theme</button></li>
-        </ul>
+    <header>
+      <nav class="nav container">
+        <a href="#" class="logo">BH</a>
+
+        <div class="navbar">
+          <a href="#" class="nav-link">Home</a>
+          <a href="#" class="nav-link">Collection</a>
+          <a href="#" class="nav-link">About</a>
+          <a href="#" class="nav-link">Contact</a>
+        </div>
+
+        <div class="nav-icons">
+          <!-- <a href="#" class="nav-icon"><i class="fa fa-search"></i></a> -->
+          <a href="#" class="nav-icon"><i class="fa fa-user"></i></a>
+          <a href="#" class="nav-icon"><i class="fa fa-shopping-cart"></i></a>
+          <div class="menu-icon">
+            <i class="fa fa-bars"></i>
+          </div>
+        </div>
       </nav>
     </header>
     <script src="../../scripts/theme.js"></script>
+    <script src="../../scripts/menu.js"></script>
+  </body>
+</html>
