@@ -124,6 +124,15 @@ section {
   width: 100%;
 }
 
+.container a {
+  text-decoration: none;
+  color: var(--inactive-text);
+}
+
+.container a:hover {
+  color: var(--text-color);
+}
+
 header {
   position: static;
   top: 20px;

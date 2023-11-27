@@ -5,10 +5,10 @@
     $description = "descrizione";
     $keywords = "";
 
-    include "php/template/header.php";
+    include "./php/template/header.php";
     $content = "";
     // Serve creare la homepage
-    $DOM = file_get_contents('html/home.html');
+    $DOM = file_get_contents('./html/home.html');
     echo ($DOM);
-    include "php/template/footer.php"
+    include "./php/template/footer.php"
 ?>
