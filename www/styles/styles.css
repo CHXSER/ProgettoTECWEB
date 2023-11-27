@@ -95,7 +95,7 @@ body.dark-theme {
   --inactive-text: #9F9F93;
 }
 
-body.dark-theme img {
+body.dark-theme img .fa{
     filter: brightness(.8) contrast(1.2);
 }
 
@@ -193,7 +193,7 @@ header {
 
 .footer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(100px, auto));
   justify-content: space-between;
   gap: 1rem;
   margin-top: 3rem !important;
@@ -233,6 +233,12 @@ header {
 .footer-box a {
   color: var(--inactive-text);
   margin-bottom: 10px;
+  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.footer-box a:hover {
+  color: var(--text-color);
+  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .copyright {
@@ -253,6 +259,82 @@ header {
   font-size: 3rem;
   font-family: var(--sans);
   margin-bottom: 1rem;
+}
+
+.home-text a {
+  color: var(--inactive-text);
+  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.home-text a:hover {
+  color: var(--text-color);
+  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.reviews {
+  max-width: 600px;
+  margin: auto;
+  width: 100%;
+}
+
+.heading {
+  font-family: var(--sans);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.review-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3.5rem !important;
+}
+
+.review-text h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+.review-text span {
+  font-family: var(--sans);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.review-text p {
+  font-size: .9rem;
+  margin: 1rem;
+}
+
+.swiper-pagination-bullet {
+  background: var(--inactive-text) !important;
+}
+
+.swiper-pagination-bullet-active {
+  size: 1.5rem !important;
+  background: var(--text-color) !important;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  gap: 1.5rem;
+}
+
+.team-card span {
+  font-size: .77rem;
+}
+
+.team-card h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.team-card p {
+  font-size: .9rem;
+  margin: 1rem 0;
 }
 
 /* width */
@@ -281,10 +363,6 @@ header {
     width: 90%;
     margin: 0 auto;
   }
-  
- .footer {
-   grid-template-columns: repeat(3, 1fr);
- }
 }
 
 @media (max-width: 700px) {
@@ -313,10 +391,9 @@ header {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    /* https://bennettfeely.com/clippy/ */
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     transition: .5s all cubic-bezier(0.075, 0.82, 0.165, 1);
-    /* https://bennettfeely.com/clippy/ */
-    
   }
    
   .open-menu {
@@ -339,9 +416,6 @@ header {
 }
 
 @media (max-width: 380px) {
-  .footer {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 400px) {
