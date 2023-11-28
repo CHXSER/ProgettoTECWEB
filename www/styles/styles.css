@@ -127,7 +127,7 @@ header {
 }
 
 .nav-link {
-  font-size: 0.88rem;
+  font-size: 1rem;
   color: var(--inactive-text);
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -219,7 +219,7 @@ a:hover {
   padding: 30px;
   color: var(--text-color);
   text-align: center;
-  font-size: .77rem;
+  font-size: .88rem;
 }
 
 .home {
@@ -284,7 +284,7 @@ a:hover {
 }
 
 .review-text p {
-  font-size: .9rem;
+  font-size: 1rem;
   margin: 1rem;
 }
 
@@ -304,7 +304,7 @@ a:hover {
 }
 
 .team-card span {
-  font-size: .77rem;
+  font-size: .88rem;
 }
 
 .team-card h2 {
@@ -313,7 +313,7 @@ a:hover {
 }
 
 .team-card p {
-  font-size: .9rem;
+  font-size: 1rem;
   margin: 1rem 0;
 }
 
@@ -390,7 +390,7 @@ a:hover {
   background-color: var(--text-color);
   color: var(--background-color);
   font-family: var(--sans);
-  font-size: .9rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: .4 all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -477,6 +477,10 @@ a:hover {
     transition: .5s all cubic-bezier(0.075, 0.82, 0.165, 1);
   }
    
+  .nav-icons {
+    font-size: 24px;
+  }
+
   .open-menu {
     /* https://bennettfeely.com/clippy/ */
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -502,6 +506,6 @@ a:hover {
 @media (max-width: 400px) {
   /* */
   p {
-    font-size: .9rem;
+    font-size: 1rem;
   }
 }
