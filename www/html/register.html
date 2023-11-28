@@ -1,21 +1,21 @@
 <main id="main">
-    <div class="register-container">
+    <div class="register container">
 
-        <h1>Register</h1>
+        <h2 class="heading">Register</h2>
 
         <form name="register-form" onsubmit="return validateRegister()" action="auth_manager.php" method="post" autocomplete="on" >
             <!--Username-->
             <label for="username">Username</label>
-                <input type="text" name="username" id="username" placeholder="Username" onblur="validateUsername()" required>
+                <input type="text" class="form-input" name="username" id="username" placeholder="Username" onblur="validateUsername()" required>
             <!--Password-->
             <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Password" onblur="validatePassword()" required>
+                <input type="password" class="form-input" name="password" id="password" placeholder="Password" onblur="validatePassword()" required>
             <!--Confirm Password-->
             <label for="confirm-password">Confirm Password</label>
-                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" onblur="validateConfirmPassword()" required>
+                <input type="password" class="form-input" name="confirm-password" id="confirm-password" placeholder="Confirm Password" onblur="validateConfirmPassword()" required>
             <!--Email-->
             <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Email" onblur="validateEmail()" required>
+                <input type="email" class="form-input" name="email" id="email" placeholder="Email" onblur="validateEmail()" required>
             <!--Register button-->
             <input class="button" type="submit" value="Register">
         </form>

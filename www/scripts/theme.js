@@ -10,9 +10,9 @@ btn.addEventListener("click", function () {
   let theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
   localStorage.setItem("theme", theme);
 
-  if (btn.classList.contains('fa-sun-o')) {
-    btn.classList.replace('fa-sun-o', 'fa-moon-o');
+  if (btn.classList.contains('ph-sun-dim')) {
+    btn.classList.replace('ph-sun-dim', 'ph-moon');
   } else {
-    btn.classList.replace('fa-moon-o', 'fa-sun-o');
+    btn.classList.replace('ph-moon', 'ph-sun-dim');
   }
 });
