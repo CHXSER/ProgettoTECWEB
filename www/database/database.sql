@@ -16,7 +16,8 @@
 --
 -- Struttura della tabella `disegni`
 --
-ALTER TABLE `disegni` DROP PRIMARY KEY;
+ALTER TABLE `disegni` 
+  DROP PRIMARY KEY;
 DROP TABLE IF EXISTS `disegni`;
 CREATE TABLE `disegni` (
   `nome` varchar(40) NOT NULL,
