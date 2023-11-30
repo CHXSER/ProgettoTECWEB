@@ -16,6 +16,8 @@
 --
 -- Struttura della tabella `disegni`
 --
+ALTER TABLE IF EXISTS `disegni`
+  DROP PRIMARY KEY;
 DROP TABLE IF EXISTS `disegni`;
 CREATE TABLE `disegni` (
   `nome` varchar(40) NOT NULL,
@@ -46,6 +48,10 @@ INSERT INTO `disegni` (`nome`, `disegno`, `descrizione`, `autore`) VALUES
 --
 -- Struttura della tabella `metodopagamento`
 --
+ALTER TABLE IF EXISTS `metodopagamento`
+  DROP PRIMARY KEY;
+ALTER TABLE IF EXISTS `metodopagamento`
+  DROP FOREIGN KEY FK_DisegniMetodoPagamento;
 DROP TABLE IF EXISTS `metodopagamento`;
 CREATE TABLE `metodopagamento` (
   `id` int AUTO_INCREMENT NOT NULL,
@@ -59,7 +65,7 @@ CREATE TABLE `metodopagamento` (
   `datascadenza` date,
   `cvc` varchar(3),
   PRIMARY KEY(id),
-  FOREIGN KEY (nomedisegno) REFERENCES disegni(nome) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT FK_DisegniMetodoPagamento FOREIGN KEY (nomedisegno) REFERENCES disegni(nome) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -83,6 +89,10 @@ INSERT INTO `metodopagamento` (`id`, `metodopagamento`, `nomedisegno`, `nomeordi
 --
 -- Struttura della tabella `utente`
 --
+ALTER TABLE IF EXISTS `utente`
+  DROP PRIMARY KEY;
+ALTER TABLE IF EXISTS `utente`
+  DROP FOREIGN KEY FK_MetodoPagamentoUtente;
 DROP TABLE IF EXISTS `utente`;
 CREATE TABLE `utente` (
   `id` int AUTO_INCREMENT,
@@ -92,7 +102,7 @@ CREATE TABLE `utente` (
   `PASSWORD` varchar(20),
   `email` varchar(30),
   PRIMARY KEY(username),
-  FOREIGN KEY (id) REFERENCES metodopagamento(id) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT FK_MetodoPagamentoUtente FOREIGN KEY (id) REFERENCES metodopagamento(id) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
