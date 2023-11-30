@@ -16,7 +16,7 @@
 --
 -- Struttura della tabella `disegni`
 --
-
+DROP TABLE IF EXISTS `disegni`;
 CREATE TABLE `disegni` (
   `nome` varchar(40) NOT NULL,
   `disegno` varchar(40),
@@ -46,7 +46,7 @@ INSERT INTO `disegni` (`nome`, `disegno`, `descrizione`, `autore`) VALUES
 --
 -- Struttura della tabella `metodopagamento`
 --
-
+DROP TABLE IF EXISTS `metodopagamento`;
 CREATE TABLE `metodopagamento` (
   `id` int AUTO_INCREMENT NOT NULL,
   `metodopagamento` varchar(30),
@@ -83,7 +83,7 @@ INSERT INTO `metodopagamento` (`id`, `metodopagamento`, `nomedisegno`, `nomeordi
 --
 -- Struttura della tabella `utente`
 --
-
+DROP TABLE IF EXISTS `utente`;
 CREATE TABLE `utente` (
   `id` int AUTO_INCREMENT,
   `username` varchar(30) NOT NULL,
