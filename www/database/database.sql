@@ -16,7 +16,7 @@
 --
 -- Struttura della tabella `disegni`
 --
-ALTER TABLE IF EXISTS `disegni`
+ALTER TABLE `disegni`
   DROP PRIMARY KEY;
 DROP TABLE IF EXISTS `disegni`;
 CREATE TABLE `disegni` (
@@ -48,9 +48,9 @@ INSERT INTO `disegni` (`nome`, `disegno`, `descrizione`, `autore`) VALUES
 --
 -- Struttura della tabella `metodopagamento`
 --
-ALTER TABLE IF EXISTS `metodopagamento`
+ALTER TABLE `metodopagamento`
   DROP PRIMARY KEY;
-ALTER TABLE IF EXISTS `metodopagamento`
+ALTER TABLE `metodopagamento`
   DROP FOREIGN KEY FK_DisegniMetodoPagamento;
 DROP TABLE IF EXISTS `metodopagamento`;
 CREATE TABLE `metodopagamento` (
@@ -89,9 +89,9 @@ INSERT INTO `metodopagamento` (`id`, `metodopagamento`, `nomedisegno`, `nomeordi
 --
 -- Struttura della tabella `utente`
 --
-ALTER TABLE IF EXISTS `utente`
+ALTER TABLE `utente`
   DROP PRIMARY KEY;
-ALTER TABLE IF EXISTS `utente`
+ALTER TABLE `utente`
   DROP FOREIGN KEY FK_MetodoPagamentoUtente;
 DROP TABLE IF EXISTS `utente`;
 CREATE TABLE `utente` (
