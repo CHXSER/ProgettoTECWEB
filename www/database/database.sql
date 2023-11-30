@@ -19,7 +19,7 @@
 
 CREATE TABLE `disegni` (
   `nome` varchar(40) NOT NULL,
-  `disegno` longblob,
+  `disegno` varchar(40),
   `descrizione` text,
   `autore` varchar(40),
   PRIMARY KEY(nome)
