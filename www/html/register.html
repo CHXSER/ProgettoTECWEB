@@ -1,8 +1,6 @@
 <main id="main">
     <div class="register container">
-
         <h2 class="heading">Register</h2>
-
         <form name="register-form" onsubmit="return validateRegister()" action="auth_manager.php" method="post" autocomplete="on" >
             <!--Username-->
             <label for="username">Username</label>
@@ -11,7 +9,7 @@
             <label for="password">Password</label>
                 <input type="password" class="form-input" name="password" id="password" placeholder="Password" onblur="validatePassword()" required>
             <!--Confirm Password-->
-            <label for="confirm-password">Confirm Password</label>
+            <label for="confirm-password">Conferma Password</label>
                 <input type="password" class="form-input" name="confirm-password" id="confirm-password" placeholder="Confirm Password" onblur="validateConfirmPassword()" required>
             <!--Email-->
             <label for="email">Email</label>
@@ -19,6 +17,6 @@
             <!--Register button-->
             <input class="button" type="submit" value="Register">
         </form>
-        <p>Already have an account? <a href="login.php">Login</a></p>
+        <p>Possiedì già un account? <a href="login.php">Effettua il login</a></p>
     </div>
 </main>
