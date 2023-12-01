@@ -1,6 +1,5 @@
 <?php
-    require_once('./php/service_manager.php');
-    $title = "Titolo";
+    $title = "BOHEMY";
     $page = "index";
     $description = "descrizione";
     $keywords = "";
@@ -9,5 +8,5 @@
     $content = "";
     $DOM = file_get_contents('./html/home.html');
     echo ($DOM);
-    include "./php/template/footer.php"
+    include "./php/template/footer.php";
 ?>

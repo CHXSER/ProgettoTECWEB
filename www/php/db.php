@@ -1,6 +1,5 @@
 <?php
     //Classe per gestione db
-    require_once('auth.php');
     class db {
         private static $host;
         private static $username;
@@ -8,7 +7,7 @@
         private static $dbname;
         private static $mysqli;
 
-        private static function connect($host = "db", $username = "root", $password = "", $dbname = "tecweb") {
+        private static function connect($host = "mysql-db", $username = "user", $password = "test", $dbname = "test_database") {
             try {
                 self::$host = $host;
                 self::$username = $username;
