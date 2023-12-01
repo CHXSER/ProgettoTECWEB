@@ -2,40 +2,40 @@
 
 # BOHEMY
 
-BOHEMY is a platform for selling art with a bohemian style. This README provides an overview of the project and includes technical details, authors, and instructions for running the project with Docker.
+BOHEMY è una piattaforma per la vendita di arte con uno stile bohemien. Questo README fornisce una panoramica del progetto e include dettagli tecnici, autori e istruzioni per l'esecuzione del progetto con Docker.
 
-## Authors
+## Autori
 
-The BOHEMY project was created by the following authors:
+Il progetto BOHEMY è stato creato dai seguenti autori:
 
 - Osama Chelhaoui
 - Rupi Anton Ricardo
 - Bilal El Moutaren
 
-## Technical Details
+## Dettagli Tecnici
 
-- PHP Version: 8.2
-- HTML Version: HTML5
+- Versione PHP: 8.2
+- Versione HTML: HTML5
 
-## Getting Started
+## Primi Passi
 
-To run this project using Docker, follow these steps:
+Per eseguire questo progetto utilizzando Docker, seguire questi passaggi:
 
-1. Make sure you have Docker and Docker Compose installed on your system.
-2. Clone the repository to your local machine.
-3. Open a terminal and navigate to the project's root directory.
-4. Run the following command to start the Docker containers:
+1. Assicurarsi di avere Docker e Docker Compose installati sul proprio sistema.
+2. Clonare il repository sulla propria macchina locale.
+3. Aprire un terminale e navigare nella directory principale del progetto.
+4. Eseguire il seguente comando per avviare i container Docker:
 
     ```bash
     docker-compose up -d
     ```
 
-    This command will start the necessary services and create the containers for the BOHEMY website.
+    Questo comando avvierà i servizi necessari e creerà i container per il sito web BOHEMY.
 
-5. Access the website by opening your web browser and navigating to `http://localhost:8001`.
+5. Accedere al sito web aprendo il proprio browser web e navigando su `http://localhost:8001`.
 
-## Additional Resources
+## Risorse Aggiuntive
 
-- [relazione.pdf](./relazione.pdf): Detailed documentation about the BOHEMY project.
+- [relazione.pdf](./relazione.pdf): documentazione dettagliata sul progetto BOHEMY.
 
-Please note that this README provides a basic overview of the project. For more detailed information, refer to the documentation provided in the `relazione.pdf` file.
+Si prega di notare che questo README fornisce una panoramica di base del progetto. Per informazioni più dettagliate, fare riferimento alla documentazione fornita nel file `relazione.pdf`.
