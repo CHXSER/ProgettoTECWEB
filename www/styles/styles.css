@@ -127,14 +127,23 @@ header {
 }
 
 .nav-link {
+  padding: 10px;
   font-size: 1rem;
   color: var(--inactive-text);
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.nav-link:hover {
+.nav-link:not(.active):hover {
   color: var(--text-color);
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  background-color: var(--inactive-border);
+  border-radius: 5px;
+}
+
+.nav-link.nav-link.active {
+  color: var(--background-color);
+  background-color: var(--text-color);
+  border-radius: 5px;
 }
 
 .nav-icons {
