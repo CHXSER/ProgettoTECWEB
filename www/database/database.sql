@@ -40,8 +40,6 @@ CREATE TABLE `metodopagamento` (
   `nomedisegno` varchar(30),
   `nomeordinante` varchar(40),
   `nomebeneficiario` varchar(40),
-  `causale` text,
-  `iban` varchar(30),
   `numerocarta` varchar(16),
   `datascadenza` date,
   `cvc` varchar(3),
@@ -51,17 +49,17 @@ CREATE TABLE `metodopagamento` (
 --
 -- Dump dei dati per la tabella `metodopagamento`
 --
-INSERT INTO `metodopagamento` (`metodopagamento`, `nomedisegno`, `nomeordinante`, `nomebeneficiario`, `causale`, `iban`, `numerocarta`, `datascadenza`, `cvc`) VALUES
-('bonifico', 'felice distorto', 'Marco', 'Francesco', 'disegno molto bello', '602055086243080061197717896', NULL, NULL, NULL),
-('bonifico', 'sorriso con gli occhiali', 'Luca', 'Chiara', 'disegno molto bello', '443452499420729341725556817', NULL, NULL, NULL),
-('bonifico', 'non soddisfatto', 'Stefano', 'Sofia', 'disegno molto bello', '824973621874492601795221598', NULL, NULL, NULL),
-('bonifico', 'wow', 'Giovanni', 'Giorgia', 'disegno molto bello', '077216626817659395352971672', NULL, NULL, NULL),
-('bonifico', 'non impressionato', 'Laura', 'Elena', 'disegno molto bello', '836506052144180062211296010', NULL, NULL, NULL),
-('carta', 'una roccia', 'Paolo', 'Martina', NULL, NULL, '0967356306490846', '2023-04-15', '117'),
-('carta', 'sguardo fisso', 'Davide', 'Luca', NULL, NULL, '5796213327187679', '2023-08-02', '039'),
-('carta', 'cane', 'Francesco', 'Marco', NULL, NULL, '6089308417790668', '2023-11-22', '016'),
-('carta', 'sorriso inquietante', 'Mauro', 'Alessandro', NULL, NULL, '8213238592311246', '2024-03-10', '646'),
-('carta', 'sguardo accattivante', 'Franco', 'Massimiliano', NULL, NULL, '3058022108081899', '2024-06-28', '601');
+INSERT INTO `metodopagamento` (`metodopagamento`, `nomedisegno`, `nomeordinante`, `nomebeneficiario`, `numerocarta`, `datascadenza`, `cvc`) VALUES
+('carta', 'felice distorto', 'Marco', 'Francesco', '1513766270350508', '2025-05-12', '438'),
+('carta', 'sorriso con gli occhiali', 'Luca', 'Chiara', '6029916024957293', '2025-09-03', '264'),
+('carta', 'non soddisfatto', 'Stefano', 'Sofia', '8995918624320528', '2025-11-21', '427'),
+('carta', 'wow', 'Giovanni', 'Giorgia', '9350791418136922', '2026-03-07', '527'),
+('carta', 'non impressionato', 'Laura', 'Elena', '0954444877704974', '2026-07-18', '665'),
+('carta', 'una roccia', 'Paolo', 'Martina', '0967356306490846', '2023-04-15', '117'),
+('carta', 'sguardo fisso', 'Davide', 'Luca', '5796213327187679', '2023-08-02', '039'),
+('carta', 'cane', 'Francesco', 'Marco', '6089308417790668', '2023-11-22', '016'),
+('carta', 'sorriso inquietante', 'Mauro', 'Alessandro', '8213238592311246', '2024-03-10', '646'),
+('carta', 'sguardo accattivante', 'Franco', 'Massimiliano', '3058022108081899', '2024-06-28', '601');
 
 --
 -- Struttura della tabella `utente`
