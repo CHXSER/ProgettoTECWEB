@@ -245,19 +245,100 @@ a:hover {
   margin-bottom: 1rem;
 }
 
-.home-text a {
-  color: var(--inactive-text);
-  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
-}
 
 .home-text p {
   font-size: 1.1rem;
   margin-bottom: 1rem;
 }
 
-.home-text a:hover {
+.small-collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  justify-content: space-between;
+  gap: 2rem;
+  border-radius: 1.5rem;
+  padding: 40px 60px;
+}
+
+.small-collection-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--inactive-border);
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.small-collection-card:hover {
+  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  border: 1px solid var(--text-color);
+}
+
+.small-collection-card img {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  object-fit: cover;
+  box-shadow: 0 0 2px var(--inactive-text);
+}
+
+.small-collection-card h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.small-collection-card p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.small-collection-card a {
+  color: var(--inactive-text);
+  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.small-collection-card a:hover {
   color: var(--text-color);
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.small-collection-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.small-collection-text span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.small-collection-text .ph {
+  padding: 8px;
+  background-color: var(--inactive-border);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.small-collection-text .ph:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.explore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  width: fit-content;
 }
 
 .reviews {
@@ -354,27 +435,22 @@ a:hover {
 
 .login, .register {
   text-align: center;
-}
-
-.login-form, .register-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1rem;
   width: 100%;
 }
 
-.container form {
+#login-form, #register-form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 100%;
+  gap: 1rem;
+  margin: 1rem auto;
+  width: 25%;
 }
 
-.container form .form-input {
-  margin: 1rem 0;
+#login-form .form-input, #register-form .form-input {
   padding: 10px;
-  width:max-content;
+  width: 100%;
   border: 1px solid var(--inactive-border);
   transition: .4 all cubic-bezier(0.075, 0.82, 0.165, 1);
   border-radius: 5px;
@@ -384,47 +460,113 @@ a:hover {
   background-color: var(--inactive-border);
 }
 
-.container form .form-input:focus {
+#login-form .form-input:focus, #register-form .form-input:focus {
   border: 1px solid var(--text-color);
   transition: .4 all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.container form .button {
+#login-form .form-input, #register-form .form-input, #login-form button, #register-form button {
+  display: grid;
+  justify-items: center;
+  width: 80%; /* adjust as needed */
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.input-group label {
+  width: 30%; /* adjust as needed */
+  text-align: left;
+}
+
+.input-group input {
+  width: 70%; /* adjust as needed */
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  gap: 1.5rem;
+}
+
+.product-grid .product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%; /* adjust as needed */
+  height: auto;
+}
+
+.product-grid .product-text {
+  margin-bottom: 1.5rem;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.product-grid .product-text span {
+  font-size: .88rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-top: 1.5rem !important;
+}
+
+.product-grid .product-text .product-actions {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   margin-top: 1rem;
-  margin-bottom: 3.5rem;
-  padding: 10px 20px;
-  width:max-content;
-  border: none;
+  gap: 1rem;
+}
+
+
+
+.product-actions input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid var(--inactive-border);
+  transition: .4 all cubic-bezier(0.075, 0.82, 0.165, 1);
   border-radius: 5px;
-  background-color: var(--text-color);
-  color: var(--background-color);
+  outline: none;
+  font-family: var(--serif);
+  color: var(--text-color);
+  background-color: var(--inactive-border);
+}
+
+.product-actions input:focus {
+  border: 1px solid var(--text-color);
+  transition: .4 all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.button.button {
+  width: fit-content;
+  padding: 8px;
+  background-color: var(--inactive-border);
+  cursor: pointer;
+  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-radius: 5px;
   font-family: var(--sans);
   font-size: 1rem;
-  cursor: pointer;
-  transition: .4 all cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.container form .button:hover {
-  background-color: var(--inactive-text);
-  color: var(--background-color);
-  transition: .4 all cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.container form .button:disabled {
-  background-color: var(--inactive-border);
-  color: var(--inactive-text);
-  cursor: not-allowed;
-}
-
-.container form .button:disabled:hover {
-  background-color: var(--inactive-border);
-  color: var(--inactive-text);
-  transition: .4 all cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.container form .button:focus {
+  border: none;
   outline: none;
-  transition: .4 all cubic-bezier(0.075, 0.82, 0.165, 1);
+  text-decoration: none;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.button.button:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.product-grid .product-text p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* width */
@@ -505,9 +647,8 @@ a:hover {
   .navbar .nav-link:hover {
     color: var(--text-color);
   }
-
-
 }
+
 
 @media (max-width: 380px) {
 }

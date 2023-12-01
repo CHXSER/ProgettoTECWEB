@@ -1,16 +1,43 @@
 <main id="main">
-    <div class="login container">
-        <h2 class="heading">Login</h2>
-        <form name="login-form" onsubmit="return validateLogin()" action="auth_manager.php" method="post" autocomplete="on" >
-            <!--Username-->
-           <label for="username">Username</label>
-                <input type="text" class="form-input" name="username" id="username" placeholder="Username" onblur="validateUsername()" required>
-            <!--Password-->
-            <label for="password">Password</label>
-                <input type="password" class="form-input" name="password" id="password" placeholder="Password" onblur="validatePassword()" required>
-             <!--Login button-->
-            <input class="button" type="submit" value="Login">
-        </form>
-        <p>Non possiedi un account? <a href="register.php">Registrati</a></p>
-    </div>
+  <div class="login container">
+    <h2 class="heading">Login</h2>
+    <form
+      id="login-form"
+      name="login-form"
+      onsubmit="return validateLogin()"
+      action="auth_manager.php"
+      method="post"
+      autocomplete="on"
+    >
+      <!--Username-->
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          class="form-input"
+          name="username"
+          id="username"
+          placeholder="Username"
+          onblur="validateUsername()"
+          required
+        />
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          class="form-input"
+          name="password"
+          id="password"
+          placeholder="Password"
+          onblur="validatePassword()"
+          required
+        />
+      </div>
+      <!--Password-->
+      <!--Login button-->
+      <input class="button" type="submit" value="Login" />
+    </form>
+    <p>Non possiedi un account? <a href="register.php">Registrati</a></p>
+  </div>
 </main>
