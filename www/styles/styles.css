@@ -324,6 +324,7 @@ a:hover {
 
 .small-collection-text button {
   padding: 8px;
+  color: var(--text-color);
   background-color: var(--inactive-border);
   border-radius: 50%;
   cursor: pointer;
