@@ -20,7 +20,7 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
-const btn = document.querySelector(".theme-button");
+/* const btn = document.querySelector(".theme-button");
 
 if (localStorage.getItem("theme") == "dark") {
   document.body.classList.add("dark-theme");
@@ -37,7 +37,7 @@ btn.addEventListener("click", function () {
   } else {
     btn.classList.replace('ph-moon', 'ph-sun-dim');
   }
-});
+}); */
 
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,

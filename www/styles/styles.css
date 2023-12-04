@@ -236,11 +236,12 @@ a:hover {
 }
 
 .home {
-  /* min-height: 650px; */
+  min-height: 650px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 1.5rem;
+  height: 85vh;
 }
 
 .home-text h1 {
@@ -443,7 +444,11 @@ a:hover {
 
 .error {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 1rem;
+}
+
+.error img {
+  width: 20%;
 }
 
 .login, .register {
@@ -660,6 +665,20 @@ a:hover {
   .menu-icon {
     display:flex;
   }
+
+  .home {
+    grid-template-columns: repeat(1, 1fr);
+    height: 90vh;
+    align-items: start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .home img {
+    margin-top: 0 auto;
+  }
+
+
   .navbar {
     position: absolute;
     top: 10%;
