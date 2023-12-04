@@ -21,16 +21,16 @@ CREATE TABLE `disegni` (
 -- Dump dei dati per la tabella `disegni`
 --
 INSERT INTO `disegni` (`nome`, `disegno`, `descrizione`, `autore`) VALUES
-('felice distorto', '..\images\immagini\1.png', 'felice distorto', 'bilal'),
-('sorriso con gli occhiali', '..\images\immagini\2.png', 'sorriso con gli occhiali', 'bilal'),
-('non soddisfatto', '..\images\immagini\3.png', 'non soddisfatto', 'osama'),
-('wow', '..\images\immagini\4.png', 'wow', 'rupi'),
-('non impressionato', '..\images\immagini\5.png', 'non impressionato', 'bilal'),
-('una roccia', '..\images\immagini\6.png', 'una roccia', 'osama'),
-('sguardo fisso', '..\images\immagini\7.png', 'sguardo fisso', 'rupi'),
-('cane', '..\images\immagini\8.png', 'cane', 'bilal'),
-('sorriso inquietante', '..\images\immagini\9.png', 'sorriso inquietante', 'osama'),
-('sguardo accattivante', '..\images\immagini\10.png', 'sguardo accattivante', 'rupi');
+('felice distorto', '1.png', 'felice distorto', 'bilal'),
+('sorriso con gli occhiali', '2.png', 'sorriso con gli occhiali', 'bilal'),
+('non soddisfatto', '3.png', 'non soddisfatto', 'osama'),
+('wow', '4.png', 'wow', 'rupi'),
+('non impressionato', '5.png', 'non impressionato', 'bilal'),
+('una roccia', '6.png', 'una roccia', 'osama'),
+('sguardo fisso', '7.png', 'sguardo fisso', 'rupi'),
+('cane', '8.png', 'cane', 'bilal'),
+('sorriso inquietante', '9.png', 'sorriso inquietante', 'osama'),
+('sguardo accattivante', '10.png', 'sguardo accattivante', 'rupi');
 
 
 --

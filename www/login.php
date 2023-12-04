@@ -1,16 +1,21 @@
 <?php   
     $title = "Login - BOHEMY";
     $page = "login";
-    $description = "Login to use BOHEMY at its fullest";
-    $keywords = "login, BOHEMY, account";
+    $description = "Accedi al tuo profilo per acquistare quadri";
+    $keywords = "login, BOHEMY, account, accedi";
 
     $script = "validate";
     require "php/auth.php";
 
     session_start();
-    // if(is_logged()) {}
+    if(isset($_SESSION["username"])) {
+        header("location: account.php");
+    }
+
     $template = (file_get_contents("html/login.html"));
-    $err = isset($_SESSION["error-login"]) ? $_SESSION["error-login"] : null;
+    // Errori relativi alle credenziali login
+    $err = isset($_SESSION["error-log"]) ? $_SESSION["error-log"] : null;
+
     session_write_close();
     session_abort();
 

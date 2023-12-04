@@ -21,4 +21,8 @@
         return db::run_query('SELECT * FROM utente WHERE username=?, password=?', $username, $password);
     }
 
+    function delete_user($username) {
+        db::run_query('DELETE FROM utente WHERE username=?', $username);
+    }
+
 ?>

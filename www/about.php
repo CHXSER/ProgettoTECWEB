@@ -1,8 +1,8 @@
 <?php
-    $title = "About - BOHEMY";
+    $title = "Chi siamo - BOHEMY";
     $page = "about";
-    $description = "BOHEMY is an art society from Antartica with a passion for creating art, bringing fictional, imaginary worlds to life.";
-    $keywords = "BOHEMY, art society, Antartica, art, imaginary worlds";
+    $description = "BOHEMY è una società artistica dell'Antartide con una passione per la creazione d'arte, dando vita a mondi immaginari e fantastici.";
+    $keywords = "BOHEMY, società artistica, Antartide, arte, mondi immaginaris";
     include "php/template/header.php";
     $DOM = file_get_contents("html/about.html");
     echo ($DOM);

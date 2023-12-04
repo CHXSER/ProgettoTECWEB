@@ -1,8 +1,8 @@
 <?php
     $title = "Register - BOHEMY";
     $page = "register";
-    $description = "Register ...";
-    $keywords = "register, account, BOHEMY";
+    $description = "Crea il tuo profilo per poter acquistare quadri";
+    $keywords = "register, account, BOHEMY, registrazione";
 
     $script = "validate";
     require_once "php/auth.php";

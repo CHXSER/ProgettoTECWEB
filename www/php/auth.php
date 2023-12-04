@@ -75,7 +75,7 @@
             $_SESSION["username"] = $username;
             return True;
         }
-        return "Errore nell'accesso";
+        return "Errore nel login";
     }
 
     function server_error() {
