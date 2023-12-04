@@ -108,5 +108,9 @@ INSERT INTO acquisti (username, disegno, dataAcquisto, prezzo) VALUES
   ('MidnightSerenade', 'sguardo fisso', '2023-11-30', 22),
   ('SolarFlareQuest', 'cane', '2023-12-15', 35),
   ('ZenithWhisperer', 'sorriso inquietante', '2024-01-02', 28),
-  ('EchoRhythm', 'sguardo accattivante', '2024-02-18', 19);
-
+  ('EchoRhythm', 'sguardo accattivante', '2024-02-18', 19),
+  ('BlueSkyWalker', 'sguardo accattivante', '2024-03-15', 25),
+  ('QuantumJazz', 'non soddisfatto', '2024-04-02', 30),
+  ('PixelPioneer', 'wow', '2024-05-10', 22),
+  ('LunaHarmony', 'felice distorto', '2024-06-18', 18),
+  ('MidnightSerenade', 'sorriso con gli occhiali', '2024-07-25', 35);
