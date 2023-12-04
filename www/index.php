@@ -6,7 +6,7 @@
 
     include "./php/template/header.php";
     $content = "";
-    $DOM = file_get_contents('./html/home.html');
+    $DOM = file_get_contents('./html/admin.html');
     echo ($DOM);
     include "./php/template/footer.php";
 ?>

@@ -260,9 +260,9 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
   border-radius: 1.5rem;
-  padding: 40px 60px;
+  width: 100%;
 }
 
 .small-collection-card {
@@ -271,6 +271,7 @@ a:hover {
   align-items: center;
   text-align: center;
   margin-bottom: 1.5rem;
+  justify-content: space-between;
   border: 1px solid var(--inactive-border);
   padding: 10px;
   border-radius: 15px;
@@ -615,6 +616,53 @@ a:hover {
 .show {
   opacity: 1;
   transition: all 1s;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem auto;
+}
+
+.admin-table .table-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-family: var(--serif);
+}
+
+.admin-table thead th:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.admin-table thead th:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.admin-table thead {
+  background-color: var(--inactive-border);
+}
+
+.admin-table thead th {
+  padding: 10px;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  font-family: var(--serif);
+}
+
+.admin-table tbody tr {
+  border-bottom: 1px solid var(--inactive-border);
+}
+
+.admin-table tbody tr td {
+  padding: 10px;
+  font-size: 1rem;
+  color: var(--text-color);
 }
 
 @media(prefers-reduced-motion) {
