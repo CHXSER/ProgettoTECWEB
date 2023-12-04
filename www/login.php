@@ -16,14 +16,13 @@
     // Errori relativi alle credenziali login
     $err = isset($_SESSION["error-log"]) ? $_SESSION["error-log"] : null;
 
-    session_write_close();
-    session_abort();
-
     include "php/template/header.php";
     try {
         if(isset($err))
             $template = str_replace("<!-- errors -->", $err, $template);
         echo $template;
+        session_unset();
+        session_destroy();
     } catch (Exception $e) {
         server_error();
     }
