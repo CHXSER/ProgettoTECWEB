@@ -114,3 +114,10 @@ INSERT INTO acquisti (username, disegno, dataAcquisto, prezzo) VALUES
   ('PixelPioneer', 'wow', '2024-05-10', 22),
   ('LunaHarmony', 'felice distorto', '2024-06-18', 18),
   ('MidnightSerenade', 'sguardo accattivante', '2024-07-25', 35);
+
+SELECT disegno, COUNT(*) AS DisegniAcquistati
+FROM acquisti
+GROUP BY disegno
+ORDER BY DisegniAcquistati DESC
+LIMIT 4;
+
