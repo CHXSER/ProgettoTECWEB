@@ -1,6 +1,7 @@
 -- Delete delle tabelle se esistono
 SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `utente`;
+DROP TABLE IF EXISTS `admin`;
 DROP TABLE IF EXISTS `disegni`;
 DROP TABLE IF EXISTS `carta`;
 DROP TABLE IF EXISTS `acquisti`;
@@ -22,16 +23,16 @@ CREATE TABLE `disegni` (
 -- Dump dei dati per la tabella `disegni`
 --
 INSERT INTO `disegni` (`nome`, `disegno`, `descrizione`, `autore`,`prezzo`) VALUES
-('felice distorto', '1.png', 'felice distorto', 'bilal',14),
-('sorriso con gli occhiali', '2.png', 'sorriso con gli occhiali', 'bilal',13),
-('non soddisfatto', '3.png', 'non soddisfatto', 'osama',28),
-('wow', '4.png', 'wow', 'rupi',25),
-('non impressionato', '5.png', 'non impressionato', 'bilal',22),
-('una roccia', '6.png', 'una roccia', 'osama',19),
-('sguardo fisso', '7.png', 'sguardo fisso', 'rupi',23),
-('cane', '8.png', 'cane', 'bilal',20),
-('sorriso inquietante', '9.png', 'sorriso inquietante', 'osama',24),
-('sguardo accattivante', '10.png', 'sguardo accattivante', 'rupi',12);
+('felice distorto', '1.png', 'felice distorto', 'Bilal El Moutaren',14),
+('sorriso con gli occhiali', '2.png', 'sorriso con gli occhiali', 'Bilal El Moutaren',13),
+('non soddisfatto', '3.png', 'non soddisfatto', 'Osama Chelhaoui',28),
+('wow', '4.png', 'wow', 'Ricardo Anton Rupi',25),
+('non impressionato', '5.png', 'non impressionato', 'Bilal El Moutaren',22),
+('una roccia', '6.png', 'una roccia', 'Osama Chelhaoui',19),
+('sguardo fisso', '7.png', 'sguardo fisso', 'Ricardo Anton Rupi',23),
+('cane', '8.png', 'cane', 'Bilal El Moutaren',20),
+('sorriso inquietante', '9.png', 'sorriso inquietante', 'Osama Chelhaoui',24),
+('sguardo accattivante', '10.png', 'sguardo accattivante', 'Ricardo Anton Rupi',12);
 
 
 --

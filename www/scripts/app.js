@@ -71,3 +71,15 @@ navLinks.forEach((navLink) => {
     navLink.classList.add('active');
   }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  var cards = document.querySelectorAll('.small-collection-card');
+
+  cards.forEach(function(card){
+    card.addEventListener('click', function() {
+      var form = card.querySelector('.view_product');
+      form.submit();
+    });
+  });
+});
+
