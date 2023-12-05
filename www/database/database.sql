@@ -39,8 +39,6 @@ INSERT INTO `disegni` (`nome`, `disegno`, `descrizione`, `autore`,`prezzo`) VALU
 --
 CREATE TABLE `utente`(
   `username` varchar(30) NOT NULL,
-  `nome` varchar(30),
-  `cognome` varchar(30),
   `password` varchar(20),
   `email` varchar(30),
   PRIMARY KEY(username)
@@ -49,17 +47,34 @@ CREATE TABLE `utente`(
 --
 -- Dump dei dati per la tabella `utente`
 --
-INSERT INTO `utente` (`username`, `nome`, `cognome`, `password`, `email`) VALUES
-('BlueSkyWalker', 'Marco', 'Rossi', 'ETZYvza5BMiYwX4', 'BlueSkyWalker@gmail.com'),
-('CipherNomad', 'Paolo', 'De Luca', 'STsabw9BbUijrbo', 'CipherNomad@gmail.com'),
-('EchoRhythm', 'Franco', 'Russo', 'eXS94ByU5Sl5vrW', 'EchoRhythm@gmail.com'),
-('LunaHarmony', 'Giovanni', 'Moretti', 't8CIvU4DxT0iXZU', 'LunaHarmony@gmail.com'),
-('MidnightSerenade', 'Davide', 'Santoro', 'Pt5xVlwEYOCHvL2', 'MidnightSerenade@gmail.com'),
-('NebulaDreamer', 'Laura', 'Marini', 't1aCKMhZyovJJdW', 'NebulaDreamer@gmail.com'),
-('PixelPioneer', 'Stefano', 'Bianchi', '96YvHmFBwxV7vqb', 'PixelPioneer@gmail.com'),
-('QuantumJazz', 'Luca', 'Conti', 'Dd6lb4f38xVuEBX', 'QuantumJazz@gmail.com'),
-('SolarFlareQuest', 'Francesco', 'Lombardi', 'BkkM3h58wrpfZ2Y', 'SolarFlareQuest@gmail.com'),
-('ZenithWhisperer', 'Mauro', 'Ferrara', 'lEko1RWez1sno6U', 'ZenithWhisperer@gmail.com');
+INSERT INTO `utente` (`username`, `password`, `email`) VALUES
+('BlueSkyWalker', 'ETZYvza5BMiYwX4', 'BlueSkyWalker@gmail.com'),
+('CipherNomad', 'STsabw9BbUijrbo', 'CipherNomad@gmail.com'),
+('EchoRhythm', 'eXS94ByU5Sl5vrW', 'EchoRhythm@gmail.com'),
+('LunaHarmony', 't8CIvU4DxT0iXZU', 'LunaHarmony@gmail.com'),
+('MidnightSerenade', 'Pt5xVlwEYOCHvL2', 'MidnightSerenade@gmail.com'),
+('NebulaDreamer', 't1aCKMhZyovJJdW', 'NebulaDreamer@gmail.com'),
+('PixelPioneer', '96YvHmFBwxV7vqb', 'PixelPioneer@gmail.com'),
+('QuantumJazz', 'Dd6lb4f38xVuEBX', 'QuantumJazz@gmail.com'),
+('SolarFlareQuest', 'BkkM3h58wrpfZ2Y', 'SolarFlareQuest@gmail.com'),
+('ZenithWhisperer', 'lEko1RWez1sno6U', 'ZenithWhisperer@gmail.com');
+
+--
+-- Struttura della tabella `admin`
+CREATE TABLE `admin` (
+  `username` varchar(30) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  PRIMARY KEY(username)
+);
+
+--
+-- Dump dei dati per la tabella `admin`
+--
+INSERT INTO `admin` (`username`, `password`) VALUES
+('admin', 'password'),
+('CHXSER', 'password'),
+('oslaman', 'password'),
+('gogetashenron', 'password');
 
 --
 -- Struttura della tabella `carta`
@@ -114,10 +129,3 @@ INSERT INTO acquisti (username, disegno, dataAcquisto) VALUES
   ('PixelPioneer', 'wow', '2024-05-10'),
   ('LunaHarmony', 'felice distorto', '2024-06-18'),
   ('MidnightSerenade', 'sguardo accattivante', '2024-07-25');
-
-SELECT acquisti.disegno as nome, disegni.disegno as path, disegni.descrizione, COUNT(*) AS DisegniAcquistati
-  FROM acquisti
-  INNER JOIN disegni ON acquisti.disegno = disegni.nome
-  GROUP BY acquisti.disegno
-  ORDER BY DisegniAcquistati DESC
-  LIMIT 4;
