@@ -153,20 +153,29 @@ header {
 
 .nav-icons {
   display: flex;
- align-items: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
   column-gap: 1rem;
 }
 
 .nav-icons .fa {
-  color: var(--text-color);
   font-size: 20px;
+  color: var(--text-color);
+}
+
+.nav-icon {
+  cusr: pointer;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
 }
 
 .menu-icon {
   display: none;
   cursor: pointer;
-  z-index: 200;
-  transform: .3s;
+  vertical-align: middle;
 }
 
 .footer {
@@ -628,6 +637,11 @@ form label {
   border-radius: 5px;
 }
 
+.button.button .ph {
+  text-align: center;
+  vertical-align: middle;
+}
+
 .product-grid .product-text p {
   font-size: 1rem;
   margin-bottom: 1rem;
@@ -750,6 +764,8 @@ form label {
   }
   .menu-icon {
     display:flex;
+    vertical-align: middle;
+    text-align: center;
   }
 
   .home {
@@ -767,7 +783,6 @@ form label {
   .ph {
     font-size: 18px;
     text-align: center;
-    vertical-align: middle;
   }
 
   .navbar {
