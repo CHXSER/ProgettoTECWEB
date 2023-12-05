@@ -165,7 +165,7 @@ header {
 }
 
 .nav-icon {
-  cusr: pointer;
+  cursor: pointer;
   vertical-align: middle;
   justify-content: center;
   align-items: center;
