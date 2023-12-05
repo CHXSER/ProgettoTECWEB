@@ -23,16 +23,16 @@ CREATE TABLE `disegni` (
 -- Dump dei dati per la tabella `disegni`
 --
 INSERT INTO `disegni` (`nome`, `disegno`, `descrizione`, `autore`,`prezzo`) VALUES
-('felice distorto', '1.png', 'felice distorto', 'Bilal El Moutaren',14),
-('sorriso con gli occhiali', '2.png', 'sorriso con gli occhiali', 'Bilal El Moutaren',13),
-('non soddisfatto', '3.png', 'non soddisfatto', 'Osama Chelhaoui',28),
-('wow', '4.png', 'wow', 'Ricardo Anton Rupi',25),
-('non impressionato', '5.png', 'non impressionato', 'Bilal El Moutaren',22),
-('una roccia', '6.png', 'una roccia', 'Osama Chelhaoui',19),
-('sguardo fisso', '7.png', 'sguardo fisso', 'Ricardo Anton Rupi',23),
-('cane', '8.png', 'cane', 'Bilal El Moutaren',20),
-('sorriso inquietante', '9.png', 'sorriso inquietante', 'Osama Chelhaoui',24),
-('sguardo accattivante', '10.png', 'sguardo accattivante', 'Ricardo Anton Rupi',12);
+('Felice Distorto', '1.png', 'felice distorto', 'Bilal El Moutaren',14),
+('Sorriso Con Gli Occhiali', '2.png', 'sorriso con gli occhiali', 'Bilal El Moutaren',13),
+('Non Soddisfatto', '3.png', 'non soddisfatto', 'Osama Chelhaoui',28),
+('WOW', '4.png', 'wow', 'Ricardo Anton Rupi',25),
+('Non Impressionato', '5.png', 'non impressionato', 'Bilal El Moutaren',22),
+('Una Roccia', '6.png', 'una roccia', 'Osama Chelhaoui',19),
+('Sguardo Fisso', '7.png', 'sguardo fisso', 'Ricardo Anton Rupi',23),
+('Cane', '8.png', 'cane', 'Bilal El Moutaren',20),
+('Sorriso Inquietante', '9.png', 'sorriso inquietante', 'Osama Chelhaoui',24),
+('Sguardo Accattivante', '10.png', 'sguardo accattivante', 'Ricardo Anton Rupi',12);
 
 
 --
