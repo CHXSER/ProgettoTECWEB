@@ -134,12 +134,13 @@ header {
   padding: 10px;
   font-size: 1rem;
   color: var(--inactive-text);
-  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-radius: 5px;
 }
 
 .nav-link:not(.active):hover {
   color: var(--text-color);
-  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
   background-color: var(--inactive-border);
   border-radius: 5px;
 }
@@ -273,12 +274,13 @@ a:hover {
   margin-bottom: 1.5rem;
   justify-content: space-between;
   border: 1px solid var(--inactive-border);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
   padding: 10px;
   border-radius: 15px;
 }
 
 .small-collection-card:hover {
-  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
   border: 1px solid var(--text-color);
 }
 
@@ -332,6 +334,11 @@ a:hover {
   cursor: pointer;
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
   border: 1px solid var(--inactive-border);
+}
+
+.small-collection-text button .ph {
+  text-align: center;
+  vertical-align: middle;
 }
 
 .small-collection-text button:hover {
@@ -457,7 +464,7 @@ a:hover {
   width: 100%;
 }
 
-#login-form, #register-form {
+form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -467,12 +474,12 @@ a:hover {
   width: 50%;
 }
 
-#login-form .form-input, #register-form .form-input {
+form .form-input {
   box-sizing: border-box;
   padding: 10px;
   width: 100%;
   border: 1px solid var(--inactive-border);
-  transition: .4 all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
   border-radius: 5px;
   outline: none;
   font-family: var(--serif);
@@ -480,15 +487,24 @@ a:hover {
   background-color: var(--inactive-border);
 }
 
-#login-form .form-input:focus, #register-form .form-input:focus {
+form .form-input:focus, form .form-input:focus {
   border: 1px solid var(--text-color);
-  transition: .4 all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-#login-form .form-input, #register-form .form-input, #login-form button, #register-form button {
+form .form-input, form button {
   display: grid;
   justify-items: center;
   width: 80%; /* adjust as needed */
+}
+
+form label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  font-family: var(--serif);
+  text-align: start;
+  width: 80%;
 }
 
 .input-group {
@@ -507,6 +523,15 @@ a:hover {
 
 .input-group input {
   width: 70%; /* adjust as needed */
+}
+
+.submit-group {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: row;
+  text-align: center;
+  gap: 1rem;
 }
 
 .product-grid {
@@ -624,6 +649,19 @@ a:hover {
   margin: 1rem auto;
 }
 
+.admin-table table {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.admin-table .table-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
 .admin-table .table-heading {
   display: flex;
   justify-content: space-between;
@@ -705,7 +743,7 @@ a:hover {
     top: 15px;
   }
   .nav {
-    padding: 15px 20px;
+    width: 100%;
   }
   .logo {
     font-size: 1.25rem;
@@ -726,6 +764,11 @@ a:hover {
     margin-top: 0 auto;
   }
 
+  .ph {
+    font-size: 18px;
+    text-align: center;
+    vertical-align: middle;
+  }
 
   .navbar {
     position: absolute;
@@ -765,8 +808,9 @@ a:hover {
     color: var(--text-color);
   }
 
-  #login-form, #register-form {
-    width: 75%;
+  form {
+    width: 100%;
+    margin: 1rem auto;
   }
 
   .input-group {
@@ -776,6 +820,25 @@ a:hover {
   .input-group label {
     width: 100%;
     text-align: center;
+  }
+
+  .table-responsive table {
+    width: 100%;
+    display: block;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    display: block;
+    text-align: right;
+  }
+  .table-responsive th::before,
+  .table-responsive td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+  .table-responsive thead {
+    display: none;
   }
 }
 
