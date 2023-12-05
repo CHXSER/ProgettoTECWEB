@@ -115,9 +115,9 @@ INSERT INTO acquisti (username, disegno, dataAcquisto, prezzo) VALUES
   ('LunaHarmony', 'felice distorto', '2024-06-18', 18),
   ('MidnightSerenade', 'sguardo accattivante', '2024-07-25', 35);
 
-SELECT disegno, COUNT(*) AS DisegniAcquistati
-FROM acquisti
-GROUP BY disegno
-ORDER BY DisegniAcquistati DESC
-LIMIT 4;
-
+SELECT acquisti.disegno as nome, disegni.disegno as path, disegni.descrizione, COUNT(*) AS DisegniAcquistati
+  FROM acquisti
+  INNER JOIN disegni ON acquisti.disegno = disegni.nome
+  GROUP BY acquisti.disegno
+  ORDER BY DisegniAcquistati DESC
+  LIMIT 4;

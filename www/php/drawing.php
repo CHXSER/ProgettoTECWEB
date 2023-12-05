@@ -8,4 +8,14 @@
     function count_drawings() {
         return count(db::run_query("SELECT * FROM disegni"));
     }
+
+    function best_seller() {
+        return db::run_query
+        ("SELECT acquisti.disegno as nome, disegni.disegno as path, disegni.descrizione, COUNT(*) AS DisegniAcquistati
+        FROM acquisti
+        INNER JOIN disegni ON acquisti.disegno = disegni.nome
+        GROUP BY acquisti.disegno
+        ORDER BY DisegniAcquistati DESC
+        LIMIT 4");
+    }
 ?>
