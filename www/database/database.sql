@@ -14,23 +14,24 @@ CREATE TABLE `disegni` (
   `disegno` varchar(40),
   `descrizione` text,
   `autore` varchar(40),
+  `prezzo` int,
   PRIMARY KEY(nome)
 );
 
 --
 -- Dump dei dati per la tabella `disegni`
 --
-INSERT INTO `disegni` (`nome`, `disegno`, `descrizione`, `autore`) VALUES
-('felice distorto', '1.png', 'felice distorto', 'bilal'),
-('sorriso con gli occhiali', '2.png', 'sorriso con gli occhiali', 'bilal'),
-('non soddisfatto', '3.png', 'non soddisfatto', 'osama'),
-('wow', '4.png', 'wow', 'rupi'),
-('non impressionato', '5.png', 'non impressionato', 'bilal'),
-('una roccia', '6.png', 'una roccia', 'osama'),
-('sguardo fisso', '7.png', 'sguardo fisso', 'rupi'),
-('cane', '8.png', 'cane', 'bilal'),
-('sorriso inquietante', '9.png', 'sorriso inquietante', 'osama'),
-('sguardo accattivante', '10.png', 'sguardo accattivante', 'rupi');
+INSERT INTO `disegni` (`nome`, `disegno`, `descrizione`, `autore`,`prezzo`) VALUES
+('felice distorto', '1.png', 'felice distorto', 'bilal',14),
+('sorriso con gli occhiali', '2.png', 'sorriso con gli occhiali', 'bilal',13),
+('non soddisfatto', '3.png', 'non soddisfatto', 'osama',28),
+('wow', '4.png', 'wow', 'rupi',25),
+('non impressionato', '5.png', 'non impressionato', 'bilal',22),
+('una roccia', '6.png', 'una roccia', 'osama',19),
+('sguardo fisso', '7.png', 'sguardo fisso', 'rupi',23),
+('cane', '8.png', 'cane', 'bilal',20),
+('sorriso inquietante', '9.png', 'sorriso inquietante', 'osama',24),
+('sguardo accattivante', '10.png', 'sguardo accattivante', 'rupi',12);
 
 
 --
@@ -92,28 +93,27 @@ CREATE TABLE `acquisti` (
   `username` varchar(30),
   `disegno` varchar(40),
   `dataAcquisto`date,
-  `prezzo` int,
   PRIMARY KEY(IDAcquisto),
   FOREIGN KEY(username) REFERENCES utente(username) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY(disegno) REFERENCES disegni(nome) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-INSERT INTO acquisti (username, disegno, dataAcquisto, prezzo) VALUES
-  ('BlueSkyWalker', 'felice distorto', '2023-05-15', 20),
-  ('QuantumJazz', 'sorriso con gli occhiali', '2023-06-20', 15),
-  ('PixelPioneer', 'non soddisfatto', '2023-07-10', 30),
-  ('LunaHarmony', 'wow', '2023-08-05', 25),
-  ('NebulaDreamer', 'non impressionato', '2023-09-12', 18),
-  ('CipherNomad', 'una roccia', '2023-10-25', 12),
-  ('MidnightSerenade', 'sguardo fisso', '2023-11-30', 22),
-  ('SolarFlareQuest', 'cane', '2023-12-15', 35),
-  ('ZenithWhisperer', 'sorriso inquietante', '2024-01-02', 28),
-  ('EchoRhythm', 'sguardo accattivante', '2024-02-18', 19),
-  ('BlueSkyWalker', 'sguardo accattivante', '2024-03-15', 25),
-  ('QuantumJazz', 'non soddisfatto', '2024-04-02', 30),
-  ('PixelPioneer', 'wow', '2024-05-10', 22),
-  ('LunaHarmony', 'felice distorto', '2024-06-18', 18),
-  ('MidnightSerenade', 'sguardo accattivante', '2024-07-25', 35);
+INSERT INTO acquisti (username, disegno, dataAcquisto) VALUES
+  ('BlueSkyWalker', 'felice distorto', '2023-05-15'),
+  ('QuantumJazz', 'sorriso con gli occhiali', '2023-06-20'),
+  ('PixelPioneer', 'non soddisfatto', '2023-07-10'),
+  ('LunaHarmony', 'wow', '2023-08-05'),
+  ('NebulaDreamer', 'non impressionato', '2023-09-12'),
+  ('CipherNomad', 'una roccia', '2023-10-25'),
+  ('MidnightSerenade', 'sguardo fisso', '2023-11-30'),
+  ('SolarFlareQuest', 'cane', '2023-12-15'),
+  ('ZenithWhisperer', 'sorriso inquietante', '2024-01-02'),
+  ('EchoRhythm', 'sguardo accattivante', '2024-02-18'),
+  ('BlueSkyWalker', 'sguardo accattivante', '2024-03-15'),
+  ('QuantumJazz', 'non soddisfatto', '2024-04-02'),
+  ('PixelPioneer', 'wow', '2024-05-10'),
+  ('LunaHarmony', 'felice distorto', '2024-06-18'),
+  ('MidnightSerenade', 'sguardo accattivante', '2024-07-25');
 
 SELECT acquisti.disegno as nome, disegni.disegno as path, disegni.descrizione, COUNT(*) AS DisegniAcquistati
   FROM acquisti
