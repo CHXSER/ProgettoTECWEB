@@ -628,6 +628,11 @@ form .button.button {
   flex: left;
 }
 
+.product-grid .product-text h2 {
+  width: 100% !important;
+  text-align: start !important;
+}
+
 .product-grid .product-text .product-actions {
   display: flex;
   justify-content: space-between;
