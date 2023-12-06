@@ -189,7 +189,6 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(150px, auto));
   justify-content: space-between;
   gap: 1rem;
-  color: var(body-color);
   margin-top: 3rem !important;
 }
 
@@ -296,7 +295,7 @@ a:hover {
   margin-bottom: 1.5rem;
   justify-content: space-between;
   transition: .5s all cubic-bezier(0.075, 0.82, 0.165, 1);
-  color: var(--body-color));
+  color: var(--body-color);
   padding: 10px;
   border-radius: 15px;
 }
@@ -329,6 +328,19 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+.small-collection-card .small-button {
+  color: var(--body-color);
+  width: 100% !important;
+  border-radius: 5px;
+  font-family: var(--sans);
+  font-size: .7rem;
+  padding: .5rem;
+  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  text-decoration: none;
+  background-color: var(--background-color);
+  border: 1px solid var(--body-color);
+}
+
 .small-collection-card a {
   color: var(--inactive-text);
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -342,8 +354,11 @@ a:hover {
 .small-collection-text {
   display: flex;
   align-items: start;
+  flex-direction: column;
   justify-content: space-between;
   width: 100%;
+  margin: 0;
+  gap: 1rem;
 }
 
 .small-collection-text span {
@@ -543,7 +558,7 @@ form .form-input {
 form .form-input, form button {
   display: grid;
   justify-items: center;
-  width: 80%; /* adjust as needed */
+  width: 80%; 
 }
 
 form label {
@@ -569,12 +584,12 @@ form .button.button {
 }
 
 .input-group label {
-  width: 70%; /* adjust as needed */
+  width: 70%; 
   text-align: left;
 }
 
 .input-group input {
-  width: 70%; /* adjust as needed */
+  width: 70%; 
 }
 
 .submit-group {
@@ -593,10 +608,9 @@ form .button.button {
 }
 
 .product-grid .product-image {
-  display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 100%; /* adjust as needed */
+  max-width: 100%; 
   height: auto;
 }
 
@@ -663,7 +677,6 @@ product-actions.product-actions button {
   max-width: 50%;
   margin: auto;
   object-fit: cover;
-  box-shadow: 0 0 10px var(--inactive-border);
 }
 
 .button.button {
@@ -948,12 +961,22 @@ product-actions.product-actions button {
     align-items: center;
     text-align: top;
     gap: 1rem;
+    width: 100%;
+  }
+
+  .small-collection-card img {
+    width: 100%;
   }
 
   .small-collection-text {
     flex-direction: column;
     height: 100%;
     justify-content: start;
+    width: 100% !important;
+  }
+
+  .small-collection-text h2 {
+    width: 100%;
   }
 
   .small-collection-card img {
@@ -961,8 +984,13 @@ product-actions.product-actions button {
     margin-bottom: 0;
   }
 
-  .small-collection-card button {
-    margin: 0;
+  .small-collection-text .small-button {
+    width: 100% !important;
+    padding: .5rem;
+  }
+
+  .small-collection-text .small-button .ph {
+    display: none;
   }
 }
 
