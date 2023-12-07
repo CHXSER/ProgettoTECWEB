@@ -15,7 +15,7 @@
     $template = "";
     $row = get_all_drawings();
     for($i = 0;$i < count_drawings(); $i++) {
-        $template = str_replace("<img src=\"\" alt=\"\" />",  "<img src=\"./images/immagini/" . $row[$i]["disegno"] . "\" alt=\"" . $row[$i]["descrizione"] . "\" />", $card);
+        $template = str_replace("<!-- Immagine -->",  "./images/immagini/" . $row[$i]["disegno"], $card);
         $template = str_replace("<input type=\"hidden\" name=\"nome\" value=\"\">","<input type=\"hidden\" name=\"nome\" value=\"" . $row[$i]["nome"] . "\">", $template);
         $template = str_replace("<!-- Nome -->", $row[$i]["nome"], $template);
         $template = str_replace("<!-- Prezzo -->", $row[$i]["prezzo"] . " €", $template);
