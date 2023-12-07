@@ -22,4 +22,9 @@
     function get_drawing($nome) {
         return db::run_query("SELECT * FROM disegni WHERE nome = ?", $nome);
     }
+
+    function mod_drawing($nome, $prezzo, $immagine, $descrizione, $autore, $origine) {
+        return db::run_query("UPDATE disegni SET nome=?, disegno=?, descrizione=?, autore=?, prezzo=?
+        WHERE nome=?", $nome, $immagine, $descrizione, $autore, $prezzo, $origine);
+    }
 ?>

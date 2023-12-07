@@ -17,7 +17,6 @@
     }
 
     $template = (file_get_contents("html/login.html"));
-    // Errori relativi alle credenziali login
     $err = isset($_SESSION["error-log"]) ? $_SESSION["error-log"] : null;
 
     include "php/template/header.php";

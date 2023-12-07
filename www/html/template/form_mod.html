@@ -1,0 +1,28 @@
+<main id="main">
+    <section class="register container hidden">
+        <h1 class="heading">Modifica disegno</h1>
+        <form id="register-form" name="register-form" onsubmit="return validateRegister()" action="mod_drawing.php?nome=<!-- Nome -->" method="post" autocomplete="off">
+            <div class="input-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-input" name="nome" id="nome" placeholder="Nome" value="<!-- Nome -->" required>
+            </div>
+            <div class="input-group">
+                <label for="prezzo">Prezzo €</label>
+                <input type="number" class="form-input" name="prezzo" id="prezzo" placeholder="Prezzo" value="<!-- Prezzo -->" required>
+            </div>
+            <div class="input-group">
+                <label for="immagine">Immagine</label>
+                <input type="text" class="form-input" name="immagine" id="immagine" placeholder="Immagine" value="<!-- Immagine -->" required>
+            </div>
+            <div class="input-group">
+                <label for="descrizione">Descrizione</label>
+                <input type="text" class="form-input" name="descrizione" id="descrizione" placeholder="Descrizione" value="<!-- Descrizione -->" required>
+            </div>
+            <div class="input-group">
+                <label for="autore">Autore</label>
+                <input type="text" class="form-input" name="autore" id="autore" placeholder="Autore" value="<!-- Autore -->" required>
+            </div>
+            <input class="button" type="submit" value="Modifica" />
+        </form>
+    </section>
+</main>
