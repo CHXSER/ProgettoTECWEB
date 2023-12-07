@@ -1,18 +1,17 @@
 <tr>
-    <!--<td data-label="Id"></td>-->
-    <td data-label="Nome"></td>
-    <td data-label="Prezzo"></td>
-    <td data-label="Immagine"></td>
-    <td data-label="Descrizione"></td>
-    <td data-label="Autore"></td>
+    <td data-label="Nome"><!-- Nome --></td>
+    <td data-label="Prezzo"><!-- Prezzo --></td>
+    <td data-label="Immagine"><!-- Immagine --></td>
+    <td data-label="Descrizione"><!-- Descrizione --></td>
+    <td data-label="Autore"><!-- Autore --></td>
     <td data-label="Azione">
         <form method="get" action="mod_drawing.php">
-            <input type="hidden" name="nome" value="">
-            <button title="edit" type="submit" class="button"><i class="ph ph-pencil-simple"></i></button>
+            <input type="hidden" name="nome" value="<!-- Nome -->">
+            <button type="submit" class="button"><i class="ph ph-pencil-simple"></i></button>
         </form>
         <form method="get" action="del_drawing.php">
-            <input type="hidden" name="nome" value="">
-            <button title="delete" type="submit" class="button"><i class="ph ph-trash"></i></button>
+            <input type="hidden" name="nome" value="<!-- Nome -->">
+            <button class="button"><i class="ph ph-trash"></i></button>
         </form>
     </td>
 </tr>

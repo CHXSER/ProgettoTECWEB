@@ -5,7 +5,11 @@
         $result = login();
         if($result === true) {
             $_SESSION['error-log'] = null;
-            header('Location: index.php');
+            if(is_admin($_SESSION["username"])) {
+                header("Location: admin.php");
+            } else {
+                header('Location: index.php');
+            }
         } else {
             $_SESSION['error-log'] = $result;
             header('Location: login.php');

@@ -9,8 +9,8 @@
         return db::run_query('SELECT * FROM utente WHERE email = ?',$email);
     }
 
-    function add_user($username, $nome, $cognome, $password, $email) {
-        db::run_query('INSERT INTO `utente` (`username`, `nome`, `cognome`, `password`, `email`) VALUES (?,?,?,?,?)', $username, $nome, $cognome, $password, $email);
+    function add_user($username, $password, $email) {
+        db::run_query('INSERT INTO `utente` (`username`, `password`, `email`) VALUES (?,?,?)', $username, $password, $email);
     }
 
     function get_password($username) {

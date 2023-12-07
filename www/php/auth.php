@@ -1,7 +1,7 @@
 <?php
 
     require_once("php/user.php");
-
+    require_once("php/admins.php");
     function check_username($username) {
         $pattern = '/^[\w]{1,30}$/';
         if (!preg_match($pattern, $username))
@@ -49,9 +49,13 @@
             return "Questo <span lang=\"en\">username</span> è già in uso";
         }
 
-        add_user($username, "Wow", "Rudy", $password, $email);
+        add_user($username, $password, $email);
         return True;
         
+    }
+
+    function is_admin($username) {
+        return get_admin($username);
     }
 
     function login() {
@@ -64,7 +68,14 @@
         if(check_username($username) !== True) {
             return check_username($username);
         }
-
+        if(is_admin($username)) {
+            $admin = get_admin_password($username);
+            if(empty($admin)) {
+                return "Errore nel login";
+            }
+            $_SESSION["username"] = $username;
+            return True;
+        }
         $username = filter_var($username, FILTER_UNSAFE_RAW);
         $utente = get_password($username);
 

@@ -9,7 +9,11 @@
 
     session_start();
     if(isset($_SESSION["username"])) {
-        header("location: account.php");
+        if(is_admin($_SESSION["username"])) {
+            header("Location: admin.php");
+        } else {
+            header("Location: account.php");
+        }
     }
 
     $template = (file_get_contents("html/login.html"));
