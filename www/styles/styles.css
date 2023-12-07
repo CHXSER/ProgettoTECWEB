@@ -768,7 +768,7 @@ product-actions.product-actions button {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
-  font-family: var(--serif);
+  font-family: var(--sans);
 }
 
 .admin-table thead th:first-child {
@@ -782,7 +782,9 @@ product-actions.product-actions button {
 }
 
 .admin-table thead {
-  background-color: var(--inactive-border);
+  background-color: var(--heading-color);
+  color: var(--background-color);
+  font-family: var(--sans);
 }
 
 .admin-table thead th {
@@ -790,18 +792,69 @@ product-actions.product-actions button {
   text-align: left;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--text-color);
-  font-family: var(--serif);
 }
 
 .admin-table tbody tr {
-  border-bottom: 1px solid var(--inactive-border);
+  border-bottom: 1px solid var(--body-color);
+}
+
+.admin-table tbody tr:last-child {
+  border-bottom: none;
 }
 
 .admin-table tbody tr td {
   padding: 10px;
   font-size: 1rem;
-  color: var(--text-color);
+  color: var(--body-color);
+}
+
+.admin-table td[data-label="Azione"] {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.admin-table #table-actions {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.table-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  background-color: var(--background-color);
+  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-radius: 5px;
+  color: var(--body-color);
+  border: 2px solid var(--body-color);
+}
+
+.table-button .ph {
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+.table-button:hover {
+  border: 2px solid var(--text-color);
+  background-color: var(--text-color);
+  color: var(--background-color);
+  border-radius: 5px;
+  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.table-button:active {
+  border: 2px solid var(--text-color);
+  background-color: var(--text-color);
+  color: var(--background-color);
+  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-radius: 5px;
 }
 
 @media(prefers-reduced-motion) {
@@ -958,12 +1011,14 @@ product-actions.product-actions button {
     display: block;
     text-align: right;
   }
+
   .table-responsive th::before,
   .table-responsive td::before {
     content: attr(data-label);
     float: left;
     font-weight: bold;
   }
+
   .table-responsive thead {
     display: none;
   }
@@ -1004,6 +1059,8 @@ product-actions.product-actions button {
   .small-collection-text .small-button .ph {
     display: none;
   }
+
+
 }
 
 

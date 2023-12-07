@@ -5,13 +5,16 @@
     <td data-label="Descrizione"><!-- Descrizione --></td>
     <td data-label="Autore"><!-- Autore --></td>
     <td data-label="Azione">
-        <form method="get" action="mod_drawing.php">
-            <input type="hidden" name="nome" value="<!-- Nome -->">
-            <button type="submit" class="button"><i class="ph ph-pencil-simple"></i></button>
-        </form>
-        <form method="get" action="del_drawing.php">
-            <input type="hidden" name="nome" value="<!-- Nome -->">
-            <button class="button"><i class="ph ph-trash"></i></button>
-        </form>
+        <div id="table-actions">
+            <form method="get" action="mod_drawing.php">
+                <input type="hidden" name="nome" value="<!-- Nome -->">
+                <button class="table-button" type="submit" aria-label="Modifica"><i class="ph ph-pencil-simple"></i></button>
+            </form>
+            <form method="get" action="del_drawing.php">
+                <input type="hidden" name="nome" value="<!-- Nome -->">
+                <button class="table-button" type="submit" aria-label="Elimina"><i class="ph ph-trash"></i></button>
+            </form>
+        </div>
+        
     </td>
 </tr>
