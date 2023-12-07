@@ -3,22 +3,20 @@
         
         <div class="product-grid">
             <div class="product-image">
-                <img src="" alt="" />
+                <img src="" alt="" title="Immagine del disegno"/>
             </div>
             <div class="product-text">
-                <h2 class="heading">
-                    <h2 class="heading" id="nome"></h2>
-                </h2>
-                <p>
+                <h1 class="heading" id="nome" aria-label="Nome del disegno"></h1>
+                <p aria-label="Descrizione">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
                     voluptatum, quibusdam, quia, quod voluptate voluptatem reprehenderit.
                 </p>
                 <p class="author"></p>
+                <h2 class="product-price" aria-label="Costo">un miliardo di euri</h2>
                 <form class="product-actions" method="" id="" action="">
-                    <h3>un miliardo di euri</h3>
                     <label for="size">Quantità: </label>
                     <input class="form-input" id="size" type="number" step="1" min="1" />
-                    <button type="submit" class="button">
+                    <button type="submit" class="button" aria-label="Aggiungi al carrello">
                         Aggiungi al carrello
                     </button>
                 </form>

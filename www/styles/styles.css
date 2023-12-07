@@ -49,7 +49,6 @@
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
 }
 
 html {
@@ -313,7 +312,7 @@ a:hover {
 }
 
 
-.small-collection-card h2 {
+.small-collection-card h3 {
   font-size: .88rem;
   font-weight: 500;
   text-align: start;
@@ -366,7 +365,8 @@ a:hover {
   font-weight: 500;
 }
 
-.small-collection-text h2 {
+.small-collection-text h3 {
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -403,6 +403,7 @@ a:hover {
   align-items: center;
   text-align: center;
   margin-bottom: 1.5rem;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -428,6 +429,14 @@ a:hover {
   text-transform: uppercase;
 }
 
+h1.heading {
+  font-size: 2rem;
+}
+
+h2.heading {
+  font-size: 1.5rem;
+}
+
 .review-text {
   display: flex;
   flex-direction: column;
@@ -436,7 +445,7 @@ a:hover {
   margin-bottom: 3.5rem !important;
 }
 
-.review-text h2 {
+.review-text h3 {
   font-size: 1rem;
   font-weight: 500;
   margin: 1rem 0;
@@ -475,7 +484,7 @@ a:hover {
   font-size: .88rem;
 }
 
-.team-card h2 {
+.team-card h3 {
   font-size: 1.1rem;
   font-weight: 500;
   color: var(--text-color);
@@ -631,6 +640,9 @@ form .button.button {
 .product-grid .product-text h2 {
   width: 100% !important;
   text-align: start !important;
+  color: var(--text-color);
+  font-family: var(--sans);
+  text-align: start;
 }
 
 .product-grid .product-text .product-actions {
@@ -664,11 +676,6 @@ form .button.button {
   width: 100%;
 }
 
-.product-actions h3 {
-  color: var(--text-color);
-  font-family: var(--sans);
-  text-align: start;
-}
 
 product-actions.product-actions button {
   width: 50% !important;
@@ -685,6 +692,7 @@ product-actions.product-actions button {
 }
 
 .button.button {
+  width: -moz-fit-content;
   width: fit-content;
   padding: 8px;
   background-color: var(--background-color);
@@ -746,7 +754,6 @@ product-actions.product-actions button {
 .admin-table table {
   width: 100%;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 .admin-table .table-heading {
@@ -980,7 +987,7 @@ product-actions.product-actions button {
     width: 100% !important;
   }
 
-  .small-collection-text h2 {
+  .small-collection-text h3 {
     width: 100%;
   }
 
