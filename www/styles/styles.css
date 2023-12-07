@@ -1078,7 +1078,7 @@ hr {
   }
 
   .navbar .nav-link:hover {
-    color: var(--text-color);
+    color: var(--background-color);
   }
 
   .navbar .nav-link.active {
