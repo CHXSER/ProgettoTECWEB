@@ -24,8 +24,7 @@
         if(isset($err))
             $template = str_replace("<!-- errors -->", $err, $template);
         echo $template;
-        session_unset();
-        session_destroy();
+        $_SESSION["error-log"] = null;
     } catch (Exception $e) {
         server_error();
     }
