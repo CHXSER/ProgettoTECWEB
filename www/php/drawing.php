@@ -27,4 +27,8 @@
         return db::run_query("UPDATE disegni SET nome=?, disegno=?, descrizione=?, autore=?, prezzo=?
         WHERE nome=?", $nome, $immagine, $descrizione, $autore, $prezzo, $origine);
     }
+
+    function delete_drawing($nome) {
+        return db::run_query("DELETE FROM disegni WHERE nome=?", $nome);
+    }
 ?>
