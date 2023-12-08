@@ -8,7 +8,7 @@
             if(is_admin($_SESSION["username"])) {
                 header("Location: admin.php");
             } else {
-                header('Location: index.php');
+                header('Location: account.php');
             }
         } else {
             $_SESSION['error-log'] = $result;
