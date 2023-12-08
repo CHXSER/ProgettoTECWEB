@@ -87,10 +87,6 @@ body {
   margin: 1rem;
 }
 
-a {
-  text-decoration: none;
-}
-
 img {
   width: 100%;
 }
@@ -103,15 +99,6 @@ section {
   max-width: 1060px;
   margin: auto;
   width: 100%;
-}
-
-.container a {
-  text-decoration: none;
-  color: var(--inactive-text);
-}
-
-.container a:hover {
-  color: var(--text-color);
 }
 
 header {
@@ -238,16 +225,6 @@ header {
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-a {
-  color: var(--body-color);
-  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-a:hover {
-  color: var(--text-color);
-  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
 .copyright {
   padding: 30px;
   color: var(--body-color);
@@ -262,6 +239,19 @@ a:hover {
   align-items: center;
   gap: 1.5rem;
   height: 85vh;
+}
+
+.home-button.home-button {
+  font-family: var(--sans);
+  color: var(--body-color);
+  border-bottom: 2px solid var(--body-color);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.home-button:hover {
+  color: var(--text-color);
+  border-bottom: 2px solid var(--text-color);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .home-text h1 {
@@ -580,10 +570,6 @@ form label {
   width: 80%;
 }
 
-form .button.button {
-  width: 30%;
-}
-
 .input-group {
   display: flex;
   justify-content: space-between;
@@ -638,7 +624,7 @@ form .button.button {
   flex: left;
 }
 
-.product-grid .product-text h2 {
+.product-grid .product-text h1 {
   width: 100% !important;
   text-align: start !important;
   color: var(--text-color);
@@ -693,15 +679,18 @@ product-actions.product-actions button {
 }
 
 .button.button {
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 8px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  padding: 8px 16px;
   background-color: var(--background-color);
   cursor: pointer;
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
   border-radius: 5px;
   font-family: var(--sans);
-  font-size: 1rem;
   border: none;
   outline: none;
   text-decoration: none;
@@ -744,6 +733,15 @@ product-actions.product-actions button {
 .show {
   opacity: 1;
   transition: all 1s;
+}
+
+.admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
 }
 
 .admin-table {
