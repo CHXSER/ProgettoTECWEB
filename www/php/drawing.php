@@ -31,4 +31,10 @@
     function delete_drawing($nome) {
         return db::run_query("DELETE FROM disegni WHERE nome=?", $nome);
     }
+    
+
+    function add_drawing($nome, $prezzo, $immagine, $descrizione, $autore) {
+        return db::run_query("INSERT INTO `disegni` (`nome`, `prezzo`, `disegno`, `descrizione`, `autore`) 
+        VALUES (?, ?, ?, ?, ?)", $nome, $prezzo, $immagine, $descrizione, $autore);    
+    }
 ?>
