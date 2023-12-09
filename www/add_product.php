@@ -21,7 +21,7 @@
         } else {
 
             $DOM = str_replace("<!-- Errori -->", "Questo nome è già stato preso", $DOM);
-            echo $DOM;
+            //echo $DOM;
         }
     }
     echo $DOM;
