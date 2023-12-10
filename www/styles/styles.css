@@ -535,6 +535,13 @@ form label {
   width: 100%;
 }
 
+.login span, .register span {
+  font-size: .88rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-top: 1.5rem !important;
+}
+
 .input-group label {
   width: 70%; 
   text-align: left;
