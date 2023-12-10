@@ -4,6 +4,8 @@
         if(!isset($_SESSION["carrello"])) {
             $_SESSION["carrello"] = array();
         } 
+    } else {
+        header("Location: login.php");
     }
 
     function add_to_cart($product_name, $quantity) {
