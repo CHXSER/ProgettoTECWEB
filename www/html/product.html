@@ -12,9 +12,10 @@
                 </p>
                 <p class="author"></p>
                 <h2 class="product-price" aria-label="Costo"><!-- Prezzo --></h2>
-                <form class="product-actions" method="" id="" action="">
+                <form class="product-actions" method="post" id="" action="aggiungi_car.php">
                     <label for="size">Quantità: </label>
-                    <input class="form-input" id="size" type="number" step="1" min="1" value="1"/>
+                    <input type="hidden" name="nome" value="<!-- Nome -->"/     >
+                    <input class="form-input" id="size" name="size" type="number" step="1" min="1" value="1"/>
                     <button type="submit" class="button" aria-label="Aggiungi al carrello">
                         <i class="ph ph-basket"></i> Aggiungi al carrello
                     </button>
