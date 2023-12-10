@@ -1,42 +1,21 @@
 @font-face {
-  font-family: "Comico";
-  src: url("../fonts/Comico-Regular.ttf") format("truetype");
-  font-style: normal;
+  font-family: 'Stardom-Regular';
+  src: url('../fonts/Stardom-Regular.woff2') format('woff2'),
+       url('../fonts/Stardom-Regular.woff') format('woff'),
+       url('../fonts/Stardom-Regular.ttf') format('truetype');
+       font-weight: 400;
+       font-display: swap;
+       font-style: normal;
 }
 
 @font-face {
-  font-family: "Melodrama";
-  src: url("../fonts/Melodrama-Variable.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "GeneralSans";
-  src: url("../fonts/GeneralSans-Variable.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Zodiak";
-  src: url("../fonts/Zodiak-Regular.ttf") format("truetype");
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Zodiak";
-  src: url("../fonts/Zodiak-Bold.ttf") format("truetype");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Zodiak";
-  src: url("../fonts/Zodiak-Italic.ttf") format("truetype");
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Zodiak";
-  src: url("../fonts/Zodiak-BoldItalic.ttf") format("truetype");
-  font-style: italic;
-  font-weight: bold;
+  font-family: 'Gambarino-Regular';
+  src: url('../fonts/Gambarino-Regular.woff2') format('woff2'),
+       url('../fonts/Gambarino-Regular.woff') format('woff'),
+       url('../fonts/Gambarino-Regular.ttf') format('truetype');
+       font-weight: 400;
+       font-display: swap;
+       font-style: normal;
 }
 
 * {
@@ -63,8 +42,8 @@ body {
   --inactive-border: #FFFDF2;
   --inactive-text: #D32D1F;
   --alternative-background-color: #FDF5DF;
-  --sans: "GeneralSans", sans-serif;
-  --serif: "Zodiak", serif;
+  --display: "Stardom-Regular";
+  --serif: "Gambarino-Regular";
 }
 
 /* Dark mode styles */
@@ -77,6 +56,19 @@ body.dark-theme {
 
 body.dark-theme img .fa{
     filter: brightness(.8) contrast(1.2);
+}
+
+::-moz-selection {
+  background: var(--text-color);
+  color: var(--body-color);
+  padding: .5rem;
+}
+
+::selection {
+  background: var(--text-color);
+  padding: 1rem;
+  border-radius: 5px;
+  color: var(--body-color);
 }
 
 
@@ -93,12 +85,15 @@ img {
 
 section {
   padding: 3rem 0 2rem;
+  scroll-snap-align: center;
 }
 
 .container {
   max-width: 1060px;
   margin: auto;
   width: 100%;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
 }
 
 header {
@@ -117,7 +112,7 @@ header {
 }
 
 .logo {
-  font-family: var(--sans);
+  font-family: var(--display);
   font-size: var(--step-0);
   color: var(--text-color);
   font-weight: bold;
@@ -136,7 +131,7 @@ header {
   color: var(--inactive-text);
   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
   border-radius: 5px;
-  font-family: var(--sans);
+  font-family: var(--display);
 }
 
 .nav-link.nav-link.active {
@@ -213,7 +208,7 @@ header {
 }
 
 .footer-box a {
-  font-family: var(--sans);
+  font-family: var(--display);
   font-weight: 600;
   color: var(--body-color);
   margin-bottom: 10px;
@@ -242,7 +237,7 @@ header {
 }
 
 .home-button.home-button {
-  font-family: var(--sans);
+  font-family: var(--display);
   color: var(--body-color);
   border-bottom: 2px solid var(--body-color);
   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -256,7 +251,7 @@ header {
 
 .home-text h1 {
   font-size: 3rem;
-  font-family: var(--sans);
+  font-family: var(--display);
   color: var(--text-color);
   margin-bottom: 1rem;
 }
@@ -308,7 +303,7 @@ header {
   font-weight: 500;
   text-align: start;
   width: 100%;
-  font-family: var(--sans);
+  font-family: var(--display);
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -316,19 +311,6 @@ header {
 .small-collection-card p {
   font-size: 1rem;
   margin-bottom: 1rem;
-}
-
-.small-collection-card .small-button {
-  color: var(--body-color);
-  width: 100% !important;
-  border-radius: 5px;
-  font-family: var(--sans);
-  font-size: .7rem;
-  padding: .5rem;
-  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
-  text-decoration: none;
-  background-color: var(--background-color);
-  border: 1px solid var(--body-color);
 }
 
 .small-collection-card a {
@@ -348,7 +330,6 @@ header {
   justify-content: space-between;
   width: 100%;
   margin: 0;
-  gap: 1rem;
 }
 
 .small-collection-text span {
@@ -361,33 +342,7 @@ header {
   width: fit-content;
 }
 
-.small-collection-text button {
-  color: var(--text-color);
-  background-color: var(--inactive-border);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
-  border: 1px solid var(--inactive-border);
-}
-
-.small-collection-text button .ph {
-  text-align: center;
-  vertical-align: middle;
-}
-
-.small-collection-text button:hover {
-  border: 1px solid var(--inactive-text);
-  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.small-collection-text button:active {
-  background-color: var(--text-color);
-  color: var(--background-color);
-  border: 1px solid var(--text-color);
-  transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.explore {
+.explore{
   display: flex;
   color: var(--body-color);
   flex-direction: column;
@@ -396,14 +351,12 @@ header {
   margin-bottom: 1.5rem;
   width: -moz-fit-content;
   width: fit-content;
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-#explore {
-  color: var(--body-color);
-}
-
-#explore:hover {
+.explore:hover {
   color: var(--text-color);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .reviews {
@@ -413,19 +366,26 @@ header {
 }
 
 .heading {
-  font-family: var(--sans);
+  font-family: var(--display);
+  font-weight: bold;
   text-align: center;
   color: var(--text-color);
   margin-bottom: 2.5rem;
-  text-transform: uppercase;
 }
 
 h1.heading {
   font-size: 2rem;
+  text-transform: uppercase;
 }
 
 h2.heading {
   font-size: 1.5rem;
+  margin-top: 3rem;
+}
+
+h3.heading {
+  font-size: 1.3rem;
+  margin-top: 2rem;
 }
 
 .review-text {
@@ -444,7 +404,7 @@ h2.heading {
 }
 
 .review-text span {
-  font-family: var(--sans);
+  font-family: var(--display);
   font-size: 1.4rem;
   margin-bottom: 1rem;
   font-weight: 500;
@@ -479,7 +439,7 @@ h2.heading {
   font-size: 1.1rem;
   font-weight: 500;
   color: var(--text-color);
-  font-family: var(--sans);
+  font-family: var(--display);
 }
 
 .team-card p {
@@ -501,18 +461,21 @@ h2.heading {
   margin-top: 1.5rem !important;
 }
 
-.contact a {
+.contact a, .error a, #Orders a {
   color: var(--body-color);
   border-bottom: 2px solid var(--body-color);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.contact a:hover {
+.contact a:hover, .error a:hover, #Orders a:hover {
   color: var(--text-color);
   border-bottom: 2px solid var(--text-color);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .about div {
   text-align: center;
+  justify-content: center;
 }
 
 .about div:not(:last-child) {
@@ -555,19 +518,12 @@ form {
   background-color: var(--inactive-border);
 }
 
-.form-input, form button {
-  display: grid;
-  justify-items: center;
-  width: 80%; 
-}
-
 form label {
-  font-size: 1rem;
   font-weight: 500;
   color: var(--body-color);
   font-family: var(--serif);
   text-align: start;
-  width: 80%;
+  width: 100%;
 }
 
 .input-group {
@@ -628,7 +584,7 @@ form label {
   width: 100% !important;
   text-align: start !important;
   color: var(--text-color);
-  font-family: var(--sans);
+  font-family: var(--display);
   text-align: start;
 }
 
@@ -663,11 +619,6 @@ form label {
   width: 100%;
 }
 
-
-product-actions.product-actions button {
-  width: 50% !important;
-}
-
 .product-grid .product-image {
   display: flex;
 }
@@ -690,7 +641,8 @@ product-actions.product-actions button {
   cursor: pointer;
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
   border-radius: 5px;
-  font-family: var(--sans);
+  font-family: var(--serif);
+  font-weight: bold;
   border: none;
   outline: none;
   text-decoration: none;
@@ -735,13 +687,17 @@ product-actions.product-actions button {
   transition: all 1s;
 }
 
-.admin {
+.admin, .account {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   width: 100%;
+}
+
+.admin #logout, .account #logout {
+  margin-top: 3rem;
 }
 
 .admin-table {
@@ -767,7 +723,7 @@ product-actions.product-actions button {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
-  font-family: var(--sans);
+  font-family: var(--display);
 }
 
 .admin-table thead th:first-child {
@@ -783,7 +739,7 @@ product-actions.product-actions button {
 .admin-table thead {
   background-color: var(--heading-color);
   color: var(--background-color);
-  font-family: var(--sans);
+  font-family: var(--display);
 }
 
 .admin-table thead th {
@@ -911,7 +867,7 @@ product-actions.product-actions button {
   width: 100%;
   text-align: start;
   color: var(--body-color);
-  font-family: var(--sans);
+  font-family: var(--display);
   text-align: start;
 }
 
@@ -963,7 +919,7 @@ hr {
 .product-summary-name {
   text-align: start;
   color: var(--body-color);
-  font-family: var(--sans);
+  font-family: var(--display);
   text-align: start;
   font-weight: bold;
 }
@@ -977,6 +933,102 @@ hr {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+}
+
+.tab {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: .5s;
+  color: var(--body-color);
+  font-family: var(--display);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.tab button:hover {
+  color: var(--text-color);
+}
+
+.tab button.active {
+  color: var(--text-color);
+}
+
+.hide-tab {
+  display: none;
+  width: 100%;
+}
+
+.account .account-heading {
+  font-family: var(--display);
+  width: 100%;
+  text-align: start;
+  margin: 2rem 0 1rem 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.account-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.account-form button {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.account-inputs label {
+  font-weight: 300;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.no-orders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.inspiration-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  width: 100%;
+  margin: 1rem auto;
+  font-size: 1.2rem;
+}
+
+.inspiration-text p {
+  font-size: 1rem;
+  margin: 1rem auto;
+}
+
+.inspiration-text span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+  text-align: start;
 }
 
 
@@ -1088,18 +1140,9 @@ hr {
     margin: 1rem auto;
   }
 
-  form .button.button {
-    width: 50%;
-    font-weight: regular;
-  }
-
   .input-group {
     flex-direction: column;
     width: 100%;
-  }
-
-  .input-group input {
-    width: 80%;
   }
 
   .input-group label {
@@ -1156,15 +1199,6 @@ hr {
     margin-bottom: 0;
   }
 
-  .small-collection-text .small-button {
-    width: 100% !important;
-    padding: .5rem;
-  }
-
-  .small-collection-text .small-button .ph {
-    display: none;
-  }
-
   .product-list h1{
     text-align: center;
   }
@@ -1193,6 +1227,31 @@ hr {
 
   .cart-grid {
     width: 100% !important;
+  }
+
+  .account .account-heading {
+    width: 100%;
+  }
+  
+  .account-form {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+
+  .account-form button {
+    width: 100%;
+  }
+
+  #delete-account-form {
+    width: 100%;
+  }
+
+  #delete-account-form label, #delete-account-form input, #delete-account-form button {
+    width: 100%;
+  }
+
+  #delete-account-form .account-inputs {
+    width: 100%;
   }
 }
 

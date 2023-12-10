@@ -1,6 +1,69 @@
 <main id="main">
     <section class="account container hidden">
         <h1 class="heading">Account</h1>
-        <a href="logout.php" class="button"><i class="ph ph-sign-out"></i> LOG OUT</a>
+        <div class="tab">
+            <button class="tab-links active" onclick="openTab(event, 'Account')">
+                Profilo
+            </button>
+            <button class="tab-links" onclick="openTab(event, 'Orders')">
+                Ordini
+            </button>
+        </div>
+        <!-- Informazioni Account -->
+        <div id="Account" class="tab-content hidden show-tab">
+            <p class="account-heading">Informazioni account</p>
+            <!-- Modifica informazioni -->
+            <form class="account-form" action="account.php" method="post">
+                <div class="account-inputs">
+                    <label for="name">Nome</label>
+                    <input class="form-input" type="text" name="name" id="name" required>
+                </div>
+                <div class="account-inputs">
+                    <label for="email">Email</label>
+                    <input class="form-input" type="email" name="email" id="email" required>
+                </div>
+                <div class="account-inputs">
+                    <label for="password">Password</label>
+                    <input class="form-input" type="password" name="password" id="password" required>
+                </div>
+                <button class="button" type="submit" value="Save">
+                    <i class="ph ph-pencil-simple"></i> Salva
+                </button>
+            </form>
+            <p class="account-heading">Modifica password</p>
+            <!-- Modifica password -->
+            <form class="account-form" action="account.php" method="post">
+                <div class="account-inputs">
+                    <label for="new_password">Nuova password</label>
+                    <input class="form-input" type="password" name="new_password" id="new_password" required>
+                </div>
+                <div class="account-inputs">
+                    <label for="confirm_password">Conferma nuova password</label>
+                    <input class="form-input" type="password" name="confirm_password" id="confirm_password" required>
+                </div>
+                <button class="button" type="submit"><i class="ph ph-pencil-simple"></i> Modifica password</button>
+            </form>
+            <p class="account-heading">Elimina Account</p>
+            <!-- Eliminazione Account -->
+            <form id="delete-account-form" action="account.php" method="post">
+                <div class="account-inputs">
+                    <label for="delete_password">Password</label>
+                    <input class="form-input" type="password" name="delete_password" id="delete_password" required>
+                </div>
+                <button class="button" type="submit"><i class="ph ph-trash"></i> Elimina account</button>
+            </form>
+        </div>
+        <!-- Informazioni Ordini -->
+        <div id="Orders" class="tab-content hidden hide-tab">
+            <div class="no-orders">
+                <h2 class="account-heading">Al momento non hai ordini</h2>
+                <a href="collection.php" >
+                    Esplora la nostra collezione
+                </a>
+            </div>
+        </div>
+        <a href="logout.php" class="button" id="logout">
+            <i class="ph ph-sign-out"></i> LOG OUT
+        </a>
     </section>
 </main>
