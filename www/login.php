@@ -1,10 +1,11 @@
 <?php   
-    $title = "Login - BOHEMY";
+    $title = "Accedi - BOHEMY";
     $page = "login";
     $description = "Accedi al tuo profilo per acquistare quadri";
     $keywords = "login, BOHEMY, account, accedi";
 
-    $script = "validate";
+
+    
     require "php/auth.php";
 
     session_start();

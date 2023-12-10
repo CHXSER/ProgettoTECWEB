@@ -1,8 +1,9 @@
 <?php
-    $title = "Contact - BOHEMY";
+    $title = "Contattaci - BOHEMY";
     $page = "contact";
-    $description = "BOHEMY is an art society from Antartica with a passion for creating art, bringing fictional, imaginary worlds to life.";
-    $keywords = "BOHEMY, art society, Antartica, art, imaginary worlds";
+    $description = "Scopri le origini di BOHEMY e tutti i suoi segreti";
+    $keywords = "BOHEMY, origini, segreti, faq";
+
     include "php/template/header.php";
     $DOM = file_get_contents("html/contact.html");
     echo ($DOM);

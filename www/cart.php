@@ -2,8 +2,8 @@
     
     $title = "Carello - BOHEMY";
     $page = "cart";
-    $description = "";
-    $keywords = "";
+    $description = "Visualizza elementi nel carello e procedi al pagamento";
+    $keywords = "carello, cart";
 
 
     include "php/template/header.php";

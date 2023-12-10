@@ -1,6 +1,6 @@
 <?php
     require_once("php/drawing.php");
-    $title = "Product - BOHEMY";
+    $title = "Prodotto - BOHEMY";
     $page = "product";
     $description = "Visualizza il prodotto in dettaglio";
     $keywords = "";

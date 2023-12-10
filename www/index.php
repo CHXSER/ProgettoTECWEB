@@ -4,8 +4,8 @@
 
     $title = "BOHEMY";
     $page = "index";
-    $description = "descrizione";
-    $keywords = "";
+    $description = "BOHEMY, la porta verso l'arte bohémien";
+    $keywords = "home, arte, bohemy, bohemien";
 
     include "./php/template/header.php";
     $DOM = file_get_contents('./html/home.html');

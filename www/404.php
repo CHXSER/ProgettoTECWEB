@@ -2,7 +2,7 @@
     http_response_code(404);
     $title = "Pagina non trovata - BOHEMY";
     $page  = "404";
-    $description = "Pagina non trovata - BOHEMY";
+    $description = "Pagina non trovata nel server";
     $keywords = "404";
     include "php/template/header.php";
 
