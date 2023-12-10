@@ -836,6 +836,15 @@ form label {
   border-bottom: 2px solid var(--text-color);
 }
 
+.cart > .heading {
+  font-family: var(--display);
+  width: 100%;
+  text-align: start;
+  margin: 2rem 0 1rem 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .cart-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
@@ -971,6 +980,7 @@ hr {
 
 .tab button.active {
   color: var(--text-color);
+  border-bottom: 2px solid var(--text-color);
 }
 
 .hide-tab {
