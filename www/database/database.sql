@@ -24,8 +24,8 @@ CREATE TABLE `disegni` (
 --
 INSERT INTO `disegni` (`nome`, `disegno`, `descrizione`, `autore`,`prezzo`) VALUES
 ('Felice Distorto', '1.png', 'felice distorto', 'Bilal El Moutaren',14),
-('Sorriso Con Gli Occhiali', '2.png', 'sorriso con gli occhiali', 'Bilal El Moutaren',13),
-('Non Soddisfatto', '3.png', 'non soddisfatto', 'Osama Chelhaoui',28),
+('Non Soddisfatto', '2.png', 'sorriso con gli occhiali', 'Bilal El Moutaren',13),
+('Sorriso con gli occhiali', '3.png', 'non soddisfatto', 'Osama Chelhaoui',28),
 ('WOW', '4.png', 'wow', 'Ricardo Anton Rupi',25),
 ('Non Impressionato', '5.png', 'non impressionato', 'Bilal El Moutaren',22),
 ('Una Roccia', '6.png', 'una roccia', 'Osama Chelhaoui',19),
