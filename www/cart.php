@@ -42,9 +42,11 @@
         }
 
         // Summary
+        $totalSummary = str_replace("<!-- Subtotale -->", $prezzo_totale, $totalSummary);
+        $tasse = ($prezzo_totale * 22) / 100;
+        $prezzo_totale = $prezzo_totale + $tasse + 4;
         $totalSummary = str_replace("<!-- Totale -->", $prezzo_totale, $totalSummary);
         $DOM = str_replace("<!-- Vuoto -->", $totalSummary, $DOM);
-        // TODO: Prezzo spedizione e tasse, subtotale
     }
 
     echo ($DOM);

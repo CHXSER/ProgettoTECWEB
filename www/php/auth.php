@@ -91,7 +91,6 @@
 
     function server_error() {
         http_response_code(500);
-        file_get_contents("500.php");
-        die();
+        header("Location: 500.php");
     }
 ?>

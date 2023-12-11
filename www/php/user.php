@@ -25,4 +25,20 @@
         db::run_query('DELETE FROM utente WHERE username=?', $username);
     }
 
+    function purchase($username, $disegno, $data, $quantita) {
+        db::run_query("INSERT INTO acquisti (username, disegno, dataAcquisto, quantita) VALUES (?,?,?,?)", $username, $disegno, $data, $quantita);
+    }
+
+    function mod_username($username_old, $username_new) {
+        db::run_query("UPDATE utente SET username = ? WHERE username = ?", $username_new, $username_old);
+    }
+
+    function mod_email($username, $email) {
+        db::run_query("UPDATE utente SET email = ? WHERE username = ?", $email, $username);
+    }
+
+    function change_password($username, $password) {
+        db::run_query("UPDATE utente SET password = ? WHERE username = ?", $password, $username);
+    }
+
 ?>

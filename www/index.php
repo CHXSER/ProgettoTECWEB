@@ -14,7 +14,6 @@
     $row = best_seller();
     for($i=0; $i < 4; $i++) {
         $template = str_replace("<!-- Immagine -->",  "./images/immagini/" . $row[$i]["path"], $card);
-        $template = str_replace("<input type=\"hidden\" name=\"nome\" value=\"\">","<input type=\"hidden\" name=\"nome\" value=\"" . $row[$i]["nome"] . "\">", $template);
         $template = str_replace("<!-- Nome -->", $row[$i]["nome"], $template);
         $template = str_replace("<!-- Prezzo -->", $row[$i]["prezzo"] . " €", $template);
         $template = $template . "\n<!-- Collezione db -->";

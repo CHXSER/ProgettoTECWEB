@@ -11,12 +11,15 @@
 
     function best_seller() {
         return db::run_query
-        ("SELECT acquisti.disegno as nome, disegni.disegno as path, disegni.prezzo as prezzo, disegni.descrizione, COUNT(*) AS DisegniAcquistati
-        FROM acquisti
-        INNER JOIN disegni ON acquisti.disegno = disegni.nome
-        GROUP BY acquisti.disegno
-        ORDER BY DisegniAcquistati DESC
-        LIMIT 4");
+        ("SELECT d.nome AS nome, d.descrizione AS descrizione, d.disegno AS path, d.prezzo AS prezzo, s.total_quantity_sold
+        FROM disegni d
+        JOIN (
+            SELECT disegno, SUM(quantita) as total_quantity_sold
+            FROM acquisti
+            GROUP BY disegno
+            ORDER BY total_quantity_sold DESC
+            LIMIT 4
+        ) s ON d.nome = s.disegno");
     }
 
     function get_drawing($nome) {

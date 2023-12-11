@@ -13,7 +13,7 @@
         <div id="Account" class="tab-content hidden show-tab">
             <p class="account-heading">Informazioni account</p>
             <!-- Modifica informazioni -->
-            <form class="account-form" action="account.php" method="post">
+            <form class="account-form" action="mod_user.php" method="post">
                 <div class="account-inputs">
                     <label for="name">Nome</label>
                     <input class="form-input" type="text" name="name" id="name" value="<!-- Username -->" required>
@@ -22,13 +22,15 @@
                     <label for="email">Email</label>
                     <input class="form-input" type="email" name="email" id="email" value="<!-- Email -->" required>
                 </div>
+                <input type="hidden" name="type" value="info"/>
                 <button class="button" type="submit" value="Save">
                     <i class="ph ph-pencil-simple"></i> Salva
                 </button>
+                <span><!-- Errore mod info --></span>
             </form>
             <p class="account-heading">Modifica password</p>
             <!-- Modifica password -->
-            <form class="account-form" action="account.php" method="post">
+            <form class="account-form" action="mod_user.php" method="post">
                 <div class="account-inputs">
                     <label for="new_password">Nuova password</label>
                     <input class="form-input" type="password" name="new_password" id="new_password" required>
@@ -37,16 +39,19 @@
                     <label for="confirm_password">Conferma nuova password</label>
                     <input class="form-input" type="password" name="confirm_password" id="confirm_password" required>
                 </div>
+                <input type="hidden" name="type" value="password"/>
                 <button class="button" type="submit"><i class="ph ph-pencil-simple"></i> Modifica password</button>
+                <span><!-- Errore mod pass --></span>
             </form>
             <p class="account-heading">Elimina Account</p>
             <!-- Eliminazione Account -->
-            <form id="delete-account-form" action="account.php" method="post">
+            <form id="delete-account-form" action="del_user.php" method="post">
                 <div class="account-inputs">
                     <label for="delete_password">Password</label>
                     <input class="form-input" type="password" name="delete_password" id="delete_password" required>
                 </div>
                 <button class="button" type="submit"><i class="ph ph-trash"></i> Elimina account</button>
+                <span><!-- Errore del pass --></span>
             </form>
         </div>
         <!-- Informazioni Ordini -->
