@@ -103,7 +103,6 @@ header {
 
 .logo {
   font-family: var(--display);
-  font-size: var(--step-0);
   color: var(--text-color);
   font-weight: bold;
   letter-spacing: 0.1rem;
@@ -116,7 +115,6 @@ header {
 }
 
 .nav-link {
-  font-size: 1rem;
   color: var(--inactive-text);
   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
   font-weight: bold;
@@ -137,7 +135,6 @@ header {
 }
 
 .nav-icons .fa {
-  font-size: 20px;
   color: var(--text-color);
 }
 
@@ -191,7 +188,7 @@ header {
 }
 
 .footer-box h2 {
-  font-size: 1.1rem;
+  font-size: 1.1em;
   font-weight: 400;
   margin-bottom: 1rem;
 }
@@ -213,7 +210,6 @@ header {
   padding: 30px;
   color: var(--body-color);
   text-align: center;
-  font-size: .88rem;
 }
 
 .home {
@@ -239,15 +235,15 @@ header {
 }
 
 .home-text h1 {
-  font-size: 3rem;
+  font-size: 3em;
   font-family: var(--display);
   color: var(--text-color);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 
 .home-text p {
-  font-size: 1.1rem;
+  font-size: 1.1em;
   margin-bottom: 1rem;
 }
 
@@ -285,7 +281,7 @@ header {
 
 
 .small-collection-card h3 {
-  font-size: .88rem;
+  font-size: .88em;
   font-weight: 500;
   text-align: start;
   width: 100%;
@@ -295,7 +291,6 @@ header {
 }
 
 .small-collection-card p {
-  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -319,7 +314,6 @@ header {
 }
 
 .small-collection-text span {
-  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -360,17 +354,17 @@ header {
 }
 
 h1.heading {
-  font-size: 2rem;
+  font-size: 2em;
   text-transform: uppercase;
 }
 
 h2.heading {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   margin-top: 3rem;
 }
 
 h3.heading {
-  font-size: 1.3rem;
+  font-size: 1.3em;
   margin-top: 2rem;
 }
 
@@ -383,7 +377,6 @@ h3.heading {
 }
 
 .review-text h3 {
-  font-size: 1rem;
   font-weight: 500;
   margin: 1rem 0;
   color: var(--text-color);
@@ -391,14 +384,13 @@ h3.heading {
 
 .review-text span {
   font-family: var(--display);
-  font-size: 1.4rem;
+  font-size: 1.4em;
   margin-bottom: 1rem;
   font-weight: 500;
   color: var(--text-color)
 }
 
 .review-text p {
-  font-size: 1rem;
   margin: 1rem;
 }
 
@@ -422,14 +414,13 @@ h3.heading {
 }
 
 .team-card h3 {
-  font-size: 1.1rem;
+  font-size: 1.1em;
   font-weight: 500;
   color: var(--text-color);
   font-family: var(--display);
 }
 
 .team-card p {
-  font-size: 1rem;
   margin: 1rem 0;
 }
 
@@ -441,7 +432,7 @@ h3.heading {
 }
 
 .contact-grid span {
-  font-size: .77rem;
+  font-size: .77em;
   font-weight: bold;
   color: var(--text-color);
   margin-top: 1.5rem !important;
@@ -522,7 +513,7 @@ form label {
 }
 
 .login span, .register span {
-  font-size: .88rem;
+  font-size: .88em;
   font-weight: 500;
   color: var(--text-color);
   margin-top: 1.5rem !important;
@@ -566,7 +557,7 @@ form label {
 }
 
 .product-grid .product-text span {
-  font-size: .88rem;
+  font-size: .88em;
   font-weight: bold;
   color: var(--body-color);
   margin-top: 1.5rem !important;
@@ -604,7 +595,6 @@ form label {
 }
 
 .product-actions label {
-  font-size: 1rem;
   font-weight: 500;
   color: var(--body-colo);
   font-family: var(--serif);
@@ -666,7 +656,6 @@ form label {
 }
 
 .product-grid .product-text p {
-  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -738,7 +727,6 @@ form label {
 .admin-table thead th {
   padding: 10px;
   text-align: left;
-  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -752,7 +740,6 @@ form label {
 
 .admin-table tbody tr td {
   padding: 10px;
-  font-size: 1rem;
   color: var(--body-color);
 }
 
@@ -865,7 +852,7 @@ form label {
 }
 
 .product-info h2 {
-  font-size: 1.1rem;
+  font-size: 1.1em;
   width: 100%;
   text-align: start;
   color: var(--body-color);
@@ -911,7 +898,6 @@ hr {
 
 .receipt-item:last-child {
   font-weight: bold;
-  font-size: 1rem;
 }
 
 .product-summary {
@@ -957,7 +943,6 @@ hr {
   color: var(--body-color);
   font-family: var(--display);
   font-weight: bold;
-  font-size: 1rem;
 }
 
 .tab button:hover {
@@ -1023,16 +1008,15 @@ hr {
   gap: 1rem;
   width: 100%;
   margin: 1rem auto;
-  font-size: 1.2rem;
+  font-size: 1.2em;
 }
 
 .inspiration-text p {
-  font-size: 1rem;
   margin: 1rem auto;
 }
 
 .inspiration-text span {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: 500;
   color: var(--text-color);
   text-align: start;
@@ -1062,11 +1046,11 @@ input:user-invalid {
   padding: 1rem;
   border-radius: 5px;
   background-color: var(--alternative-background-color);
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .services-card i {
-  font-size: 2rem;
+  font-size: 2em;
   color: var(--text-color);
 }
 
@@ -1109,7 +1093,7 @@ input:user-invalid {
     width: 100%;
   }
   .logo {
-    font-size: 1.25rem;
+    font-size: 1.25em;
   }
   .menu-icon {
     display:flex;
@@ -1306,7 +1290,5 @@ input:user-invalid {
 
 @media (max-width: 400px) {
   /* */
-  p {
-    font-size: 1rem;
-  }
+  
 }
