@@ -10,6 +10,7 @@
     include "php/template/header.php";
     $DOM = file_get_contents("html/cart.html");
     $vuoto = file_get_contents("html/empty_cart.html");
+    $productList = file_get_contents("html/template/product_list.html");
     $productHTML = file_get_contents("html/template/cart_product.html");
     $summaryProduct = file_get_contents("html/template/product_summary_item.html");
     $totalSummary = file_get_contents("html/summary.html");
@@ -29,7 +30,7 @@
             $template = str_replace("<!-- Prezzo -->", $row[0]["prezzo"], $template);
             $template = str_replace("<!-- Quantità -->", $quantity, $template);
             $template = $template . "<!-- Informazioni prodotto -->";
-            $DOM = str_replace("<!-- Informazioni prodotto -->", $template, $DOM);
+            $productList = str_replace("<!-- Informazioni prodotto -->", $template, $productList);
             $prezzo_totale += $row[0]["prezzo"] * $quantity;
             $template = "";
 
@@ -46,7 +47,7 @@
         $tasse = ($prezzo_totale * 22) / 100;
         $prezzo_totale = $prezzo_totale + $tasse + 4;
         $totalSummary = str_replace("<!-- Totale -->", $prezzo_totale, $totalSummary);
-        $DOM = str_replace("<!-- Titolo vuoto -->", '<h1 class="heading">Il tuo carrello</h1>', $DOM);
+        $DOM = str_replace("<!-- Lista prodotti -->", $productList, $DOM);
         $DOM = str_replace("<!-- Vuoto -->", $totalSummary, $DOM);
     }
 
