@@ -23,16 +23,16 @@ CREATE TABLE `disegni` (
 -- Dump dei dati per la tabella `disegni`
 --
 INSERT INTO `disegni` (`nome`, `disegno`, `descrizione`, `autore`,`prezzo`) VALUES
-('Felice Distorto', '1.png', 'felice distorto', 'Bilal El Moutaren',14),
-('Non Soddisfatto', '2.png', 'sorriso con gli occhiali', 'Bilal El Moutaren',13),
-('WOW', '3.png', 'non soddisfatto', 'Osama Chelhaoui',28),
-('Non impressionato', '4.png', 'wow', 'Ricardo Anton Rupi',25),
-('La roccia', '5.png', 'non impressionato', 'Bilal El Moutaren',22),
-('Sguardo assassino', '6.png', 'una roccia', 'Osama Chelhaoui',19),
-('Cane', '7.png', 'sguardo fisso', 'Ricardo Anton Rupi',23),
-('Smiley', '8.png', 'cane', 'Bilal El Moutaren',20),
-('Sorriso malizioso', '9.png', 'sorriso inquietante', 'Osama Chelhaoui',24),
-('Persona spensierata', '10.png', 'sguardo accattivante', 'Ricardo Anton Rupi',12);
+('felice distorto', '1.png', 'felice distorto', 'Bilal El Moutaren',14),
+('non soddisfatto', '2.png', 'sorriso con gli occhiali', 'Bilal El Moutaren',13),
+('wow', '3.png', 'non soddisfatto', 'Osama Chelhaoui',28),
+('non impressionato', '4.png', 'wow', 'Ricardo Anton Rupi',25),
+('la roccia', '5.png', 'non impressionato', 'Bilal El Moutaren',22),
+('sguardo assassino', '6.png', 'una roccia', 'Osama Chelhaoui',19),
+('cane', '7.png', 'sguardo fisso', 'Ricardo Anton Rupi',23),
+('smiley', '8.png', 'cane', 'Bilal El Moutaren',20),
+('sorriso malizioso', '9.png', 'sorriso inquietante', 'Osama Chelhaoui',24),
+('persona spensierata', '10.png', 'sguardo accattivante', 'Ricardo Anton Rupi',12);
 
 
 --
@@ -92,17 +92,18 @@ CREATE TABLE `acquisti` (
 
 INSERT INTO acquisti (username, disegno, dataAcquisto, quantita) VALUES
   ('BlueSkyWalker', 'felice distorto', '2023-05-15', 1),
-  ('QuantumJazz', 'sorriso con gli occhiali', '2023-06-20', 2),
-  ('PixelPioneer', 'non soddisfatto', '2023-07-10', 3),
-  ('LunaHarmony', 'wow', '2023-08-05', 1),
-  ('NebulaDreamer', 'non impressionato', '2023-09-12', 1),
-  ('CipherNomad', 'una roccia', '2023-10-25', 2),
-  ('MidnightSerenade', 'sguardo fisso', '2023-11-30', 3),
-  ('SolarFlareQuest', 'cane', '2023-12-15', 1),
-  ('ZenithWhisperer', 'sorriso inquietante', '2024-01-02', 1),
-  ('EchoRhythm', 'sguardo accattivante', '2024-02-18', 1),
-  ('BlueSkyWalker', 'sguardo accattivante', '2024-03-15', 1),
+  ('QuantumJazz', 'non soddisfatto', '2023-06-20', 2),
+  ('PixelPioneer', 'wow', '2023-07-10', 3),
+  ('LunaHarmony', 'non impressionato', '2023-08-05', 1),
+  ('NebulaDreamer', 'la roccia', '2023-09-12', 1),
+  ('CipherNomad', 'sguardo assassino', '2023-10-25', 2),
+  ('MidnightSerenade', 'cane', '2023-11-30', 3),
+  ('SolarFlareQuest', 'smiley', '2023-12-15', 1),
+  ('ZenithWhisperer', 'sorriso malizioso', '2024-01-02', 1),
+  ('EchoRhythm', 'persona spensierata', '2024-02-18', 1),
+  ('BlueSkyWalker', 'felice distorto', '2024-03-15', 1),
   ('QuantumJazz', 'non soddisfatto', '2024-04-02', 1),
   ('PixelPioneer', 'wow', '2024-05-10', 1),
-  ('LunaHarmony', 'felice distorto', '2024-06-18', 1),
-  ('MidnightSerenade', 'sguardo accattivante', '2024-07-25', 1);
+  ('LunaHarmony', 'non impressionato', '2024-06-18', 1),
+  ('MidnightSerenade', 'la roccia', '2024-07-25', 1);
+
