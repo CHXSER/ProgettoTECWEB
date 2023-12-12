@@ -41,4 +41,14 @@
         db::run_query("UPDATE utente SET password = ? WHERE username = ?", $password, $username);
     }
 
+    function get_acquisti($username) {
+        return db::run_query("SELECT a.dataAcquisto, d.nome AS drawing_name, d.prezzo AS drawing_price, SUM(a.quantita) AS total_quantity 
+        FROM acquisti a 
+        JOIN disegni d ON a.disegno = d.nome 
+        WHERE a.username = ? 
+        GROUP BY a.dataAcquisto, d.nome, d.prezzo 
+        ORDER BY a.dataAcquisto DESC;
+        ", $username);
+    }
+
 ?>

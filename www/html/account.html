@@ -13,7 +13,7 @@
         <div id="Account" class="tab-content hidden show-tab">
             <p class="account-heading">Informazioni account</p>
             <!-- Modifica informazioni -->
-            <form class="account-form" action="mod_user.php" method="post">
+            <form class="account-form" action="mod_user.php" method="post" onsubmit="return validateRegisterForm()">
                 <div class="account-inputs">
                     <label for="name">Nome</label>
                     <input class="form-input" type="text" name="name" id="name" value="<!-- Username -->" required>
@@ -30,7 +30,7 @@
             </form>
             <p class="account-heading">Modifica password</p>
             <!-- Modifica password -->
-            <form class="account-form" action="mod_user.php" method="post">
+            <form class="account-form" action="mod_user.php" method="post" onsubmit="return validateRegisterForm()">
                 <div class="account-inputs">
                     <label for="new_password">Nuova password</label>
                     <input class="form-input" type="password" name="new_password" id="new_password" required>
@@ -56,12 +56,7 @@
         </div>
         <!-- Informazioni Ordini -->
         <div id="Orders" class="tab-content hidden hide-tab">
-            <div class="no-orders">
-                <h2 class="account-heading">Al momento non hai ordini</h2>
-                <a href="collection.php" >
-                    Esplora la nostra collezione
-                </a>
-            </div>
+            <!-- No ordini -->
         </div>
         <a href="logout.php" class="button" id="logout">
             <i class="ph ph-sign-out"></i> LOG OUT
