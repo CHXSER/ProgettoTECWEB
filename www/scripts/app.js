@@ -99,3 +99,10 @@ function openTab(evt, tabName) {
   document.getElementById(tabName).classList.remove("hide-tab");
   evt.currentTarget.classList.add("active");
 }
+
+function sendQuestion() {
+  var nome = document.getElementById("nome").value;
+  var email = document.getElementById("email").value;
+  var mex = "Ciao, " + nome + " abbiamo ricevuto la tua domanda. Riceverai risposta all'indirizzo " + email;
+  alert(mex);
+}

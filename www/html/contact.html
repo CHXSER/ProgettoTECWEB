@@ -24,7 +24,7 @@
   </section>
   <section class="contact container">
     <h2 class="heading">Hai qualche domanda ?</h2>
-    <form method="post" id="contact" action="contact.php">
+    <form method="POST" id="contact" onsubmit="sendQuestion()">
       <label for="nome">Nome</label>
       <input class="form-input" type="text" name="nome" id="nome" placeholder="Nome" autocomplete="name" required>
       <label for="email">Email</label>
