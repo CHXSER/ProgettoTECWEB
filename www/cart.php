@@ -46,6 +46,7 @@
         $tasse = ($prezzo_totale * 22) / 100;
         $prezzo_totale = $prezzo_totale + $tasse + 4;
         $totalSummary = str_replace("<!-- Totale -->", $prezzo_totale, $totalSummary);
+        $DOM = str_replace("<!-- Titolo vuoto -->", '<h1 class="heading">Il tuo carrello</h1>', $DOM);
         $DOM = str_replace("<!-- Vuoto -->", $totalSummary, $DOM);
     }
 
