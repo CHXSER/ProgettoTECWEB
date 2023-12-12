@@ -106,3 +106,12 @@ function sendQuestion() {
   var mex = "Ciao, " + nome + " abbiamo ricevuto la tua domanda. Riceverai risposta all'indirizzo " + email;
   alert(mex);
 }
+
+window.addEventListener('scroll', function() {
+  const nav = document.querySelector('.nav');
+  if (window.scrollY > 0) {
+    nav.classList.add('nav-scrolled');
+  } else {
+    nav.classList.remove('nav-scrolled');
+  }
+});

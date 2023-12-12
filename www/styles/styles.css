@@ -56,7 +56,7 @@ body {
 }
 
 ::selection {
-  background: var(--text-color);
+  background: var(--alternative-background-color, contrast 0.7);
   padding: 1rem;
   border-radius: 5px;
   color: var(--body-color);
@@ -66,7 +66,7 @@ body {
   font-family: var(--serif);
   background-color: var(--background-color);
   color: var(--body-color);
-  margin: 1rem;
+  margin: 0;
 }
 
 img {
@@ -75,6 +75,7 @@ img {
 
 section {
   padding: 3rem 0 2rem;
+  padding-top: 7rem;
   scroll-snap-align: center;
 }
 
@@ -87,8 +88,7 @@ section {
 }
 
 header {
-  position: static;
-  top: 20px;
+  position: fixed;
   left: 0;
   width: 100%;
   z-index: 100;
@@ -99,6 +99,15 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 17px 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: var(--background-color);
+}
+
+.nav-scrolled {
+  border-bottom: 1px solid var(--text-color);
 }
 
 .logo {
@@ -119,11 +128,6 @@ header {
   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
   font-weight: bold;
   font-family: var(--display);
-}
-
-.nav-link.nav-link.active {
-  color: var(--text-color);
-  border-bottom: 2px solid var(--text-color);
 }
 
 .nav-icons {
@@ -438,13 +442,13 @@ h3.heading {
   margin-top: 1.5rem !important;
 }
 
-.contact a, .error a, #Orders a {
+.contact a, .error a, #Orders a, .no-orders a {
   color: var(--body-color);
   border-bottom: 2px solid var(--body-color);
   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.contact a:hover, .error a:hover, #Orders a:hover {
+.contact a:hover, .error a:hover, #Orders a:hover, .no-orders a:hover {
   color: var(--text-color);
   border-bottom: 2px solid var(--text-color);
   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -1086,11 +1090,9 @@ input:user-invalid {
 }
 
 @media (max-width: 700px) {
-  header {
-    top: 15px;
-  }
   .nav {
     width: 100%;
+    position: static;
   }
   .logo {
     font-size: 1.25em;
@@ -1121,7 +1123,7 @@ input:user-invalid {
   .navbar {
     width: 100% !important;
     position: absolute;
-    top: 10%;
+    top: 100%;
     left: 50%;
     transform: translate(-50%);
     width: 90vw;
