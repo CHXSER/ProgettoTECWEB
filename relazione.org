@@ -1,0 +1,72 @@
+#+title: BOHEMY
+#+author: Osama Chelhaoui, Rupi Anton Ricardo, Bilal El Moutaren
+#+date: 2023-2024
+#+language: it
+
+Componenti:
+ - Osama Chelhaoui 2042333
+ - Bilal El Moutaren 2053470
+ - Rupi Anton Ricardo 2054304
+
+                                  Credenziali
+
+| Tipo           | Username | Password |
+|----------------+----------+----------|
+| Amministratore | admin    | admin    |
+| Utente         | user     | user     |
+
+* Introduzione
+BOHEMY è un sito e-commerce nato in Antartide per la vendita di disegni in stile bohémien. Lo stile bohemian è un'espressione vibrante ed elettrica della creatività che abbraccia l'inconsueto. Non è vincolato da regole, spesso fonde diverse forme d'arte, culture e influenze storiche. È caratterizzato da ricchi motivi e colori vibranti, mescolando il naturale e il surreale. Per alcuni, esprime una celebrazione dell'individualità, della libertà e della gioia di creare senza confini. Per altri, è un'espressione di sperimentazione, esplorazione e di un'estetica personale del mondo.
+
+Il codice è stato versionato tramite una repository GitHub, per permettere ai membri del gruppo di collaborare in maniera efficiente e produttiva, segnalare le problematiche e bug e mantenere sincronizzati i file del progetto. Inoltre, è stato utilizzato un container Docker, per permettere di sviluppare il progetto in maniera omogenea, come alternativa a XAMPP.
+
+* Analisi dei requisiti
+** Obbiettivi
+L'obiettivo principale del sito è la vendita di stampe e quadri di opere d'arte in stile bohémien, uno stile sempre meno adottato con il passare degli anni. Il sito inoltre offre una dashboard per permettere all'amministratore di gestire le opere, facilitando di conseguenza la gestione complessiva del sito.
+** Target
+Il sito è stato sviluppato con attenzione per soddisfare di un pubblico ampio e diversificato. Rivolto principalmente agli adulti e giovani adulti, il sito offre un'ampia varietà di opere d'arte da poter collezionare. L'interfaccia utente è stata studiata per accogliere intuitivamente sia esperti che principianti, garantendo un'esperienza senza soluzione di continuità a chiunque desideri esplorare i contenuti del sito. Inoltre, il design responsivo del sito garantisce un'ottima esperienza su desktop, tablet, e smartphone.
+* Progettazione e Sviluppo
+** Architettura del sito
+Il sito è strutturato con le seguenti pagine:
+- Home: la pagina principale del sito; contiene un'introduzione sintetica e generale degli obbiettivi e servizi offerti dal sito;
+- Collezione: mette in mostra la collezione completa dei disegni;
+- Chi siamo: contiene le informazioni riguardanti l'impresa e una breve definizione dello stile bohémien;
+- Contattaci: una pagina contenente le informazioni riguardanti il negozio fisico e un modulo per contattare in modo diretto l'impresa.
+** Area privata
+L'area privata è stata gestita dalle seguenti pagine
+- Pagina di login: la pagina dove l'utente può accedere al sito per poter acquistare le stampe e i quadri, oltre a gestire le informazioni personali;
+- Pagina di registrazione: la pagina dove l'utente può registrarsi per effettuare le operazioni sensitive, come procedere con l'acquisto delle stampe;
+- Pagina dell'account: la pagina dove è possibile gestire le informazioni relative all'utente, offrendo la possibilità di modificare username, email, password ed eliminare completamente l'account.
+** Suddivisione del lavoro
+Il sito è stato progettato per essere sviluppato da tre persone, organizzando il carico di lavoro nel seguente modo:
+- Osama Chelhaoui
+  - Progettazione e sviluppo del codice HTML
+  - Progettazione e sviluppo del codice CSS
+  - Gestione dell'ambiente di sviluppo
+  - Validazione del sito e test dell'accessibilità
+  - Stesura e verifica della relazione
+- Bilal El Moutaren
+  - Progettazione e sviluppo codice PHP
+  - Implementazione del modello PRG
+  - Validazione dell'usabilità del sito
+  - Stesura e validazione del sito
+- Rupi Anton Ricardo
+  - Progettazione e implementazione del database
+  - Redazione del contenuto web
+  - Sviluppo validazione di input front-end in Javascript
+  - Stesura e verifica della relazione
+** Front-End
+*** HTML
+*** CSS
+*** Javascript
+** Back-End
+*** Database
+*** PHP
+* Design
+** User Interface (UI)
+** User Experience (UX)
+* Test e Valutazione
+* Accessibilità
+* SEO
+
+

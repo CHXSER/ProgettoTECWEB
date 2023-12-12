@@ -65,13 +65,13 @@ function validateLoginForm() {
     let password = document.getElementById('password').value;
 
     // Valida lo username
-    if (!validateUsername(username)) {
+    if (username.trim() === '') {
         document.getElementById('form-error').innerHTML = 'Username non valido'
         return false;
     }
 
     // Valida la password
-    if (!validatePassword(password)) {
+    if (password.trim() === '') {
         document.getElementById('form-error').innerHTML = 'Password non valida'
         return false;
     }

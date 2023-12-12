@@ -49,6 +49,7 @@ CREATE TABLE `utente`(
 -- Dump dei dati per la tabella `utente`
 --
 INSERT INTO `utente` (`username`, `password`, `email`) VALUES
+('user', 'user', 'user@user.com'),
 ('BlueSkyWalker', 'ETZYvza5BMiYwX4', 'BlueSkyWalker@gmail.com'),
 ('CipherNomad', 'STsabw9BbUijrbo', 'CipherNomad@gmail.com'),
 ('EchoRhythm', 'eXS94ByU5Sl5vrW', 'EchoRhythm@gmail.com'),
