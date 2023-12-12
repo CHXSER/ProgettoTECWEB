@@ -25,14 +25,14 @@ CREATE TABLE `disegni` (
 INSERT INTO `disegni` (`nome`, `disegno`, `descrizione`, `autore`,`prezzo`) VALUES
 ('Felice Distorto', '1.png', 'felice distorto', 'Bilal El Moutaren',14),
 ('Non Soddisfatto', '2.png', 'sorriso con gli occhiali', 'Bilal El Moutaren',13),
-('Sorriso con gli occhiali', '3.png', 'non soddisfatto', 'Osama Chelhaoui',28),
-('WOW', '4.png', 'wow', 'Ricardo Anton Rupi',25),
-('Non Impressionato', '5.png', 'non impressionato', 'Bilal El Moutaren',22),
-('Una Roccia', '6.png', 'una roccia', 'Osama Chelhaoui',19),
-('Sguardo Fisso', '7.png', 'sguardo fisso', 'Ricardo Anton Rupi',23),
-('Cane', '8.png', 'cane', 'Bilal El Moutaren',20),
-('Sorriso Inquietante', '9.png', 'sorriso inquietante', 'Osama Chelhaoui',24),
-('Sguardo Accattivante', '10.png', 'sguardo accattivante', 'Ricardo Anton Rupi',12);
+('WOW', '3.png', 'non soddisfatto', 'Osama Chelhaoui',28),
+('Non impressionato', '4.png', 'wow', 'Ricardo Anton Rupi',25),
+('La roccia', '5.png', 'non impressionato', 'Bilal El Moutaren',22),
+('Sguardo assassino', '6.png', 'una roccia', 'Osama Chelhaoui',19),
+('Cane', '7.png', 'sguardo fisso', 'Ricardo Anton Rupi',23),
+('Smiley', '8.png', 'cane', 'Bilal El Moutaren',20),
+('Sorriso malizioso', '9.png', 'sorriso inquietante', 'Osama Chelhaoui',24),
+('Persona spensierata', '10.png', 'sguardo accattivante', 'Ricardo Anton Rupi',12);
 
 
 --
