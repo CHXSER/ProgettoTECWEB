@@ -32,6 +32,9 @@
 
 html {
   overflow-y: scroll;
+  font-size: 100%;
+  margin: auto;
+  line-height: 1.5em;
 }
 
 body {
@@ -964,6 +967,10 @@ hr {
 .tab button.active {
   color: var(--text-color);
   border-bottom: 2px solid var(--text-color);
+}
+
+.tab-content {
+  width: 100%;
 }
 
 .hide-tab {
