@@ -1,16 +1,6 @@
 function validateUsername(username) {
     // Check if the username is empty
-    if (username.trim() === '') {
-        return false;
-    }
-
-    // Check if the username contains only alphanumeric characters
-    if (!/^[a-zA-Z0-9]+$/.test(username)) {
-        return false;
-    }
-
-    // Check if the username is between 3 and 20 characters long
-    if (username.length < 3 || username.length > 30) {
+    if (username.trim() === '' || !/^[a-zA-Z0-9]+$/.test(username) || username.length < 3 || username.length > 30) {
         return false;
     }
 
@@ -19,12 +9,7 @@ function validateUsername(username) {
 
 function validateEmail(email) {
     // Controlla se l'email è vuota
-    if (email.trim() === '') {
-        return false;
-    }
-
-    // Controlla se l'email è un indirizzo valido
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (email.trim() === '' || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         return false;
     }
 
@@ -33,12 +18,7 @@ function validateEmail(email) {
 
 function validatePassword(password) {
     // Controlla se la password è vuota
-    if (password.trim() === '') {
-        return false;
-    }
-
-    // Controlla se la password è lunga almeno 6 caratteri
-    if (password.length < 8 || password.length > 30) {
+    if (password.trim() === '' || password.length < 8 || password.length > 30) {
         return false;
     }
 
@@ -47,12 +27,7 @@ function validatePassword(password) {
 
 function validateConfirmPassword(password, confirmPassword) {
     // Controlla se la conferma della password è vuota
-    if (confirmPassword.trim() === '') {
-        return false;
-    }
-
-    // Controlla se la conferma della password corrisponde alla password
-    if (password !== confirmPassword) {
+    if (confirmPassword.trim() === '' || password !== confirmPassword) {
         return false;
     }
 
@@ -100,7 +75,7 @@ function validateRegisterForm() {
 
     // Valida la password
     if (!validatePassword(password)) {
-        document.getElementById('form-error').innerHTML = 'Password non valida. Assicurati di aver inserito almeno 8 caratteri e di non aver inserito spazi e solo caratteri alfanumerici'
+        document.getElementById('form-error').innerHTML = 'La password deve essere lunga almeno 8 caratteri e non più di 30'
         return false;
     }
 
@@ -149,12 +124,7 @@ function validateAddProductForm() {
 
 function validatePrice(price) {
     // Controlla se il prezzo è vuoto
-    if (price.trim() === '') {
-        return false;
-    }
-
-    // Controlla se il prezzo è un numero
-    if (isNaN(price)) {
+    if (price.trim() === '' || isNaN(price)) {
         return false;
     }
 
@@ -163,12 +133,7 @@ function validatePrice(price) {
 
 function validateDescription(description) {
     // Controlla se la descrizione è vuota
-    if (description.trim() === '') {
-        return false;
-    }
-
-    // Controlla se la descrizione ha una lunghezza compresa tra 3 e 20 caratteri
-    if (description.length < 3 || description.length > 30) {
+    if (description.trim() === '' || description.length < 3 || description.length > 30) {
         return false;
     }
 
@@ -177,56 +142,6 @@ function validateDescription(description) {
 
 function validateImage(image) {
     // Controlla se l'immagine è vuota
-    if (image.trim() === '') {
-        return false;
-    }
-
-    return true;
-}
-
-function validateAddToCartForm() {
-    // Ottieni i valori dagli input del form
-    let quantity = document.getElementById('quantity').value;
-
-    // Valida la quantità
-    if (!validateQuantity(quantity)) {
-        document.getElementById('form-error').innerHTML = 'Quantità non valida';
-        return false;
-    }
-
-    return true;
-}
-
-function validatePrice(price) {
-    // Controlla se il prezzo è vuoto
-    if (price.trim() === '') {
-        return false;
-    }
-
-    // Controlla se il prezzo è un numero
-    if (isNaN(price)) {
-        return false;
-    }
-
-    return true;
-}
-
-function validateDescription(description) {
-    // Controlla se la descrizione è vuota
-    if (description.trim() === '') {
-        return false;
-    }
-
-    // Controlla se la descrizione ha una lunghezza compresa tra 3 e 20 caratteri
-    if (description.length < 3 || description.length > 30) {
-        return false;
-    }
-
-    return true;
-}
-
-function validateImage(image) {
-    // Contralla se l'immagine è vuota
     if (image.trim() === '') {
         return false;
     }

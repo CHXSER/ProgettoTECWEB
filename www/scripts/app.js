@@ -115,3 +115,19 @@ window.addEventListener('scroll', function() {
     nav.classList.remove('nav-scrolled');
   }
 });
+
+function togglePasswordVisibility(passwordId, toggleId) {
+  const passwordInput = document.getElementById(passwordId);
+  const toggleInput = document.getElementById(toggleId);
+
+  toggleInput.addEventListener('change', function() {
+    if (this.checked) {
+      passwordInput.type = 'text';
+    } else {
+      passwordInput.type = 'password';
+    }
+  });
+}
+
+togglePasswordVisibility('password', 'toggle-password');
+togglePasswordVisibility('confirm-password', 'toggle-confirm-password');

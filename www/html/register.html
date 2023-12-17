@@ -19,7 +19,7 @@
           id="username"
           placeholder="Username"
           autocomplete="username"
-          onblur="validateUsername()"
+          onblur="validateUsername(this.value)"
           required
         />
       </div>
@@ -33,9 +33,13 @@
           id="password"
           placeholder="Password"
           autocomplete="new-password"
-          onblur="validatePassword()"
+          onblur="validatePassword(this.value)"
           required
         />
+        <div class="toggle-input">
+          <input type="checkbox" id="toggle-password">
+          <label for="toggle-password">Mostra Password</label>
+        </div>
       </div>
       <!--Confirm Password-->
       <div class="input-group">
@@ -46,9 +50,13 @@
           name="confirm-password"
           id="confirm-password"
           placeholder="Conferma Password"
-          onblur="validateConfirmPassword()"
+          onblur="validateConfirmPassword(document.getElementById('password').value, this.value)"
           required
         />
+        <div class="toggle-input">
+          <input type="checkbox" class="form-input" id="toggle-confirm-password">
+          <label for="toggle-confirm-password">Mostra Password</label>
+        </div>
       </div>
       <!--Email-->
       <div class="input-group">
@@ -60,7 +68,7 @@
           id="email"
           placeholder="Email"
           autocomplete="email"
-          onblur="validateEmail()"
+          onblur="validateEmail(this.value)"
           required
         />
       </div>

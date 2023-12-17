@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'Stardom-Regular';
-  src: url('../fonts/Stardom-Regular.woff2') format('woff2'),
-       url('../fonts/Stardom-Regular.woff') format('woff'),
-       url('../fonts/Stardom-Regular.ttf') format('truetype');
+  src: url('../fonts/stardom/Stardom-Regular.woff2') format('woff2'),
+       url('../fonts/stardom/Stardom-Regular.woff') format('woff'),
+       url('../fonts/stardom/Stardom-Regular.ttf') format('truetype');
        font-weight: 400;
        font-display: swap;
        font-style: normal;
@@ -10,17 +10,38 @@
 
 @font-face {
   font-family: 'Gambarino-Regular';
-  src: url('../fonts/Gambarino-Regular.woff2') format('woff2'),
-       url('../fonts/Gambarino-Regular.woff') format('woff'),
-       url('../fonts/Gambarino-Regular.ttf') format('truetype');
+  src: url('../fonts/gambarino/Gambarino-Regular.woff2') format('woff2'),
+       url('../fonts/gambarino/Gambarino-Regular.woff') format('woff'),
+       url('../fonts/gambarino/Gambarino-Regular.ttf') format('truetype');
        font-weight: 400;
        font-display: swap;
        font-style: normal;
 }
 
+@font-face {
+  font-family: 'Author-Variable';
+  src: url('../fonts/author/Author-Variable.woff2') format('woff2'),
+       url('../fonts/author/Author-Variable.woff') format('woff'),
+       url('../fonts/author/Author-Variable.ttf') format('truetype');
+       font-weight: 200 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'Author-VariableItalic';
+  src: url('../fonts/author/Author-VariableItalic.woff2') format('woff2'),
+       url('../fonts/author/Author-VariableItalic.woff') format('woff'),
+       url('../fonts/author/Author-VariableItalic.ttf') format('truetype');
+       font-weight: 200 700;
+       font-display: swap;
+       font-style: italic;
+}
+
 * {
   padding: 0;
   margin: 0;
+  min-width: none;
   box-sizing: border-box;
   list-style: none;
   scroll-behavior: smooth;
@@ -47,6 +68,8 @@ body {
   --alternative-background-color: #FDF5DF;
   --display: "Stardom-Regular";
   --serif: "Gambarino-Regular";
+  --sans: "Author-Variable";
+  --sans-italic: "Author-VariableItalic";
 }
 
 body {
@@ -261,6 +284,7 @@ header {
 
 .small-collection-card:hover {
   color: var(--text-color);
+  cursor: pointer;
 }
 
 .small-collection-card img {
@@ -402,6 +426,8 @@ h3.heading {
 
 .team-card span {
   font-size: .88rem;
+  font-weight: 500;
+  font-family: var(--sans);
 }
 
 .team-card h3 {
@@ -489,9 +515,29 @@ form {
 form label {
   font-weight: 500;
   color: var(--body-color);
-  font-family: var(--serif);
+  font-family: var(--sans);
   text-align: start;
   width: 100%;
+}
+
+label {
+  font-weight: 500;
+  color: var(--body-color);
+  font-family: var(--sans);
+  text-align: start;
+  width: 100%;
+}
+
+.toggle-input {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  width: 70%;
+}
+
+.toggle-input input {
+  width: min-content !important;
+  text-align: left;
 }
 
 .input-group {
@@ -512,7 +558,9 @@ form label {
 
 .input-group label {
   width: 70%; 
-  text-align: left;
+  text-align: start;
+  font-family: var(--sans);
+  font-weight: 500;
 }
 
 .input-group input {
@@ -588,7 +636,7 @@ form label {
 .product-actions label {
   font-weight: 500;
   color: var(--body-colo);
-  font-family: var(--serif);
+  font-family: var(--sans);
   text-align: start;
   width: 100%;
 }
@@ -615,8 +663,8 @@ form label {
   cursor: pointer;
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
   border-radius: 5px;
-  font-family: var(--serif);
-  font-weight: bold;
+  font-family: var(--sans);
+  font-size: 1em;
   border: none;
   outline: none;
   text-decoration: none;
@@ -976,9 +1024,8 @@ hr {
 }
 
 .account-inputs label {
-  font-weight: 300;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  font-weight: 500;
+  font-family: var(--sans);
 }
 
 .no-orders {
@@ -996,9 +1043,7 @@ hr {
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 1rem;
   width: 100%;
-  margin: 1rem auto;
   font-size: 1.2em;
 }
 
