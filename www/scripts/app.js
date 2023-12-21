@@ -1,8 +1,8 @@
-document.querySelector('.menu-icon').addEventListener('click', function() {
+document.querySelector('.menu-icon').addEventListener('click', function () {
   document.querySelector('.navbar').classList.toggle('open-menu');
 });
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
   document.querySelector('.navbar').classList.remove('open-menu');
 });
 
@@ -72,11 +72,11 @@ navLinks.forEach((navLink) => {
   }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   var cards = document.querySelectorAll('.small-collection-card');
 
-  cards.forEach(function(card){
-    card.addEventListener('click', function() {
+  cards.forEach(function (card) {
+    card.addEventListener('click', function () {
       var form = card.querySelector('.view_product');
       form.submit();
     });
@@ -107,7 +107,7 @@ function sendQuestion() {
   alert(mex);
 }
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
   const nav = document.querySelector('.nav');
   if (window.scrollY > 0) {
     nav.classList.add('nav-scrolled');
@@ -120,14 +120,18 @@ function togglePasswordVisibility(passwordId, toggleId) {
   const passwordInput = document.getElementById(passwordId);
   const toggleInput = document.getElementById(toggleId);
 
-  toggleInput.addEventListener('change', function() {
-    if (this.checked) {
-      passwordInput.type = 'text';
-    } else {
-      passwordInput.type = 'password';
-    }
-  });
+  if (passwordInput && toggleInput) {
+    toggleInput.addEventListener('change', function () {
+      if (this.checked) {
+        passwordInput.type = 'text';
+      } else {
+        passwordInput.type = 'password';
+      }
+    });
+  }
 }
 
-togglePasswordVisibility('password', 'toggle-password');
-togglePasswordVisibility('confirm-password', 'toggle-confirm-password');
+document.addEventListener('DOMContentLoaded', function () {
+  togglePasswordVisibility('password', 'toggle-password');
+  togglePasswordVisibility('confirm-password', 'toggle-confirm-password');
+})
