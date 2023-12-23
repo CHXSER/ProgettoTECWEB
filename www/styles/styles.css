@@ -96,6 +96,16 @@ section {
   scroll-snap-type: y mandatory;
 }
 
+.header-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 3rem 2rem 3rem;
+  text-align: center;
+}
+
 header {
   position: fixed;
   left: 0;
@@ -141,20 +151,16 @@ header {
 
 .nav-icons {
   display: flex;
-  align-items: center;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   column-gap: 1rem;
 }
 
-.nav-icons .fa {
-  color: var(--text-color);
-}
-
-.nav-icon {
+.nav-icons i, .nav-icons a {
   cursor: pointer;
-  vertical-align: middle;
   justify-content: center;
+  vertical-align: middle;
   align-items: center;
   color: var(--text-color);
 }
@@ -165,12 +171,45 @@ header {
   vertical-align: middle;
 }
 
+.basket {
+  position:relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:32px;
+  height:32px;
+  margin:0 10px;
+  cursor:pointer;
+}
+
+.basket[data-badge]:after {
+  content:attr(data-badge);
+  position:absolute;
+  top:-10px;
+  right:-10px;
+  font-size:.7em;
+  background:var(--text-color);
+  color:var(--background-color);
+  width:18px;
+  height:18px;
+  text-align:center;
+  line-height:18px;
+  border-radius:50%;
+  box-shadow:0 0 1px #333;
+  font-family: var(--sans);
+}
+
 .footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, auto));
   justify-content: space-between;
   gap: 1rem;
   margin-top: 3rem !important;
+}
+
+.footer-box:not(h2) {
+  font-weight: normal;
+  font-family: var(--sans);
 }
 
 .footer .logo {
@@ -204,11 +243,11 @@ header {
   font-size: 1.1em;
   font-weight: 400;
   margin-bottom: 1rem;
+  font-family: var(--serif);
 }
 
 .footer-box a {
-  font-family: var(--display);
-  font-weight: 600;
+  font-family: var(--sans);
   color: var(--body-color);
   margin-bottom: 10px;
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -1096,6 +1135,15 @@ input:user-invalid {
 }
 
 
+.faq h2, .faq p {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: .5rem;
+  width: 100%;
+}
+
 
 
 /* width */
@@ -1177,7 +1225,7 @@ input:user-invalid {
     transition: .5s all cubic-bezier(0.075, 0.82, 0.165, 1);
   }
    
-  .nav-icons {
+  .nav-icons i {
     font-size: 24px;
   }
 
@@ -1191,6 +1239,10 @@ input:user-invalid {
     display: block;
     margin: 1rem 0;
     color: var(--background-color);
+  }
+
+  .header-description {
+    margin: 1rem 1rem 2rem 1rem;
   }
 
   form {

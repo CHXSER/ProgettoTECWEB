@@ -5,7 +5,7 @@
     $keywords = "BOHEMY, società artistica, Antartide, arte, mondi immaginaris";
     
     include "php/template/header.php";
-    $DOM = file_get_contents("html/about.html");
+    $DOM = file_get_contents("html/faq.html");
     echo ($DOM);
     include "php/template/footer.php";
 ?>
