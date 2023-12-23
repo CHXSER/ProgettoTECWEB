@@ -84,8 +84,7 @@ img {
 }
 
 section {
-  padding: 3rem 0 2rem;
-  padding-top: 7rem;
+  padding: 7rem 0 2rem 0;
   scroll-snap-align: center;
 }
 
@@ -721,25 +720,25 @@ label {
   margin-top: 3rem;
 }
 
-.admin-table {
+.responsive-table {
   width: 100%;
   border-collapse: collapse;
   margin: 1rem auto;
 }
 
-.admin-table table {
+.responsive-table table {
   width: 100%;
   overflow-x: auto;
 }
 
-.admin-table .table-heading {
+.responsive-table .table-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-.admin-table .table-heading {
+.responsive-table .table-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -747,60 +746,60 @@ label {
   font-family: var(--display);
 }
 
-.admin-table caption {
+.responsive-table caption {
   margin: 1rem auto;
   font-family: var(--sans);
   color: var(--text-color);
   font-weight: 600;
 }
 
-.admin-table caption span {
+.responsive-table caption span {
   font-weight: 500;
 }
 
-.admin-table thead th:first-child {
+.responsive-table thead th:first-child {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-.admin-table thead th:last-child {
+.responsive-table thead th:last-child {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
-.admin-table thead {
+.responsive-table thead {
   background-color: var(--heading-color);
   color: var(--background-color);
   font-family: var(--display);
 }
 
-.admin-table thead th {
+.responsive-table thead th {
   padding: 10px;
   text-align: left;
   font-weight: 500;
 }
 
-.admin-table tbody tr {
+.responsive-table tbody tr {
   border-bottom: 1px solid var(--body-color);
 }
 
-.admin-table tbody tr:last-child {
+.responsive-table tbody tr:last-child {
   border-bottom: none;
 }
 
-.admin-table tbody tr td {
+.responsive-table tbody tr td {
   padding: 10px;
   color: var(--body-color);
 }
 
-.admin-table td[data-label="Azione"] {
+.responsive-table td[data-label="Azione"] {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
 }
 
-.admin-table #table-actions {
+.responsive-table #table-actions {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -1149,9 +1148,11 @@ input:user-invalid {
   .home {
     grid-template-columns: repeat(1, 1fr);
     height: 90vh;
-    align-items: start;
-    gap: 1rem;
-    margin-bottom: 1rem;
+  }
+
+  .home-text {
+    text-align: center;
+    order: 1;
   }
 
   .home img {
@@ -1197,14 +1198,6 @@ input:user-invalid {
     color: var(--background-color);
   }
 
-  .navbar .nav-link:hover {
-    color: var(--background-color);
-  }
-
-  .navbar .nav-link.active {
-    color: var(--background-color);
-  }
-
   form {
     width: 100%;
     margin: 1rem auto;
@@ -1228,6 +1221,7 @@ input:user-invalid {
     width: 100%;
     display: block;
   }
+
   .table-responsive th,
   .table-responsive td {
     display: block;
@@ -1250,10 +1244,6 @@ input:user-invalid {
     align-items: center;
     text-align: top;
     gap: 1rem;
-    width: 100%;
-  }
-
-  .small-collection-card img {
     width: 100%;
   }
 
