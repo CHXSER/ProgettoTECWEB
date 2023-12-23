@@ -466,11 +466,6 @@ h3.heading {
   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.about div {
-  text-align: center;
-  justify-content: center;
-}
-
 .about div:not(:last-child) {
   margin-bottom: 1rem;
 }
@@ -1273,6 +1268,15 @@ input:user-invalid {
     align-items: center;
   }
 
+  .product-grid .product-text .heading {
+    text-align: center !important;
+    width: 100%;
+  }
+
+  .product-actions {
+    align-items: center !important;
+  }
+
   .product-summary {
     display: none;
   }
@@ -1302,15 +1306,11 @@ input:user-invalid {
     width: 100%;
   }
 
-  .account-form button {
-    width: 100%;
-  }
-
   #delete-account-form {
     width: 100%;
   }
 
-  #delete-account-form label, #delete-account-form input, #delete-account-form button {
+  #delete-account-form label, #delete-account-form input {
     width: 100%;
   }
 
