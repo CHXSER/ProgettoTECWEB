@@ -1,6 +1,6 @@
-<main id="main">
-  <section class="home container hidden">
-    <div class="home-text">
+<main role="main">
+  <section class="home container hidden" aria-labelledby="foldheader">
+    <div class="home-text" id="foldheader">
       <h1 id="logo" class="Main">BOHEMY</h1>
       <p>La porta verso l'arte bohémien</p>
       <a href="#small-collection" class="home-button">
@@ -12,17 +12,18 @@
       <img src="../images/abs03.webp" alt="Bohemian illustration" />
     </div>
   </section>
-  <section class="inspiration container hidden">
+  <section class="inspiration container hidden" aria-labelledby="inspirationheader">
+    <h2 class="heading" id="inspirationheader">Ispirazione</h2>
     <div class="inspiration-text container">
       <p><span>Bohéme</span> /bo'ɛm/</p>
       <p>
-        Vita povera e disordinata, libera e anticonformista, tipica di alcuni
-        artisti e poeti della seconda metà dell’Ottocento.
+        <blockquote>Vita povera e disordinata, libera e anticonformista, tipica di alcuni
+          artisti e poeti della seconda metà dell’Ottocento.</blockquote>
       </p>
     </div>
   </section>
-  <section class="services container">
-    <h2 class="heading">I nostri servizi</h2>
+  <section class="services container" aria-labelledby="servicesheader">
+    <h2 class="heading" id="servicesheader">I nostri servizi</h2>
     <div class="services-list">
       <div class="services-card hidden">
         <i class="ph ph-palette"></i>
@@ -74,8 +75,8 @@
       </div>
     </div>
   </section>
-  <section class="small-collection container hidden" id="small-collection">
-    <h2 class="heading">I nostri best seller</h2>
+  <section class="small-collection container hidden" id="small-collection" aria-labelledby="smallcollectionheader">
+    <h2 class="heading" id="smallcollectionheader">I nostri best seller</h2>
     <div class="small-collection-grid">
       <!-- Collezione db -->
     </div>
@@ -86,10 +87,8 @@
       </a>
     </div>
   </section>
-  <section class="reviews container hidden">
-    <div class="heading">
-      <h2>Recensioni</h2>
-    </div>
+  <section class="reviews container hidden" id="reviews" aria-labelledby="reviewsheader">
+    <h2 class="heading" id="reviewsheader">Recensioni</h2>
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <!-- Review 1 -->
@@ -138,10 +137,8 @@
       <div class="swiper-pagination"></div>
     </div>
   </section>
-  <section class="team container hidden" id="team">
-    <div class="heading">
-      <h2>Gli artisti</h2>
-    </div>
+  <section class="team container hidden" id="team" aria-labelledby="teamheader">
+    <h2 id="teamheader" class="heading">Gli artisti</h2>
     <div class="team-grid">
       <div class="team-card">
         <h3>Bilal El Moutaren</h3>

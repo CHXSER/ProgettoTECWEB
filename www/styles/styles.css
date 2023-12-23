@@ -747,6 +747,17 @@ label {
   font-family: var(--display);
 }
 
+.admin-table caption {
+  margin: 1rem auto;
+  font-family: var(--sans);
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.admin-table caption span {
+  font-weight: 500;
+}
+
 .admin-table thead th:first-child {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;

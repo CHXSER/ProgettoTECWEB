@@ -1,13 +1,15 @@
-<main>
-    <section class="admin container">
-        <h1 class="heading">Admin</h1>
+<main role="main">
+    <section class="admin container" aria-labelledby="adminheader">
+        <h1 class="heading" id="adminheader">Admin</h1>
         <div class="admin-table">
             <div class="table-heading">
                 <a class="button" href="add_product.php"><i class="ph ph-plus"></i> Aggiungi prodotto</a>
             </div>
-            <p id="descrizione-tabella">La tabella permette di visualizzare e gestire i dettagli dei prodotti, compresi nome, prezzo, immagine, descrizione e autore, con funzionalità per aggiungere nuovi prodotti o eliminarli</p>
-            <table class="admin-table table-responsive" aria-describedby="descrizione-tabella">
-                <caption class="heading">Prodotti</caption>
+            <table class="admin-table table-responsive">
+                <caption>
+                    Prodotti<br>
+                    <span id="descrizione-tabella">Visualizza e gestisci i disegni da mettere in vendita</span>
+                </caption>
                 <thead>
                     <tr>
                         <th data-label="Nome">Nome</th>
