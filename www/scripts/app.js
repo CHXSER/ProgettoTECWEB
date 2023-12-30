@@ -80,6 +80,18 @@ window.addEventListener('scroll', function () {
   }
 });
 
+document.addEventListener('click', function (e) {
+  const nav = document.querySelector('.nav');
+  if (!nav.contains(e.target)) {
+    nav.classList.remove('nav-scrolled');
+  }
+});
+
+document.addEventListener('click', function () {
+  const nav = document.querySelector('.nav');
+  nav.classList.add('nav-scrolled');
+});
+
 function togglePasswordVisibility(passwordId, toggleId) {
   const passwordInput = document.getElementById(passwordId);
   const toggleInput = document.getElementById(toggleId);

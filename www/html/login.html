@@ -1,4 +1,4 @@
-<main role="main">
+<main>
   <section class="login container hidden" aria-labelledby="loginheader">
     <h1 class="heading" id="loginheader">Login</h1>
     <form
@@ -21,7 +21,7 @@
           autocomplete="username"
           onblur="validateUsername()"
           required
-        />
+        >
       </div>
       <div class="input-group">
         <label for="password">Password</label>
@@ -34,7 +34,7 @@
           autocomplete="current-password"
           onblur="validatePassword()"
           required
-        />
+        >
         <div class="toggle-input">
           <input type="checkbox" id="toggle-password">
           <label for="toggle-password">Mostra Password</label>

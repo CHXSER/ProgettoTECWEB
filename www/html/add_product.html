@@ -1,4 +1,4 @@
-<main role="main">
+<main>
     <section class="login container hidden" aria-labelledby="addproductheader">
       <h1 class="heading" id="addproductheader">Aggiungi un prodotto</h1>
       <form
@@ -19,7 +19,7 @@
             placeholder="Nome"
             onblur="validateUsername()"
             required
-          />
+          >
         </div>
         <div class="input-group">
           <label for="prezzo">Prezzo</label>
@@ -31,7 +31,7 @@
             placeholder="Prezzo"
             onblur="validatePassword()"
             required
-          />
+          >
         </div>
         <div class="input-group">
             <label for="immagine">Immagine</label>
@@ -43,7 +43,7 @@
               placeholder="Immagine"
               onblur="validateUsername()"
               required
-            />
+            >
         </div>
         <div class="input-group">
             <label for="descrizione">Descrizione</label>
@@ -55,7 +55,7 @@
               placeholder="Descrizione"
               onblur="validateUsername()"
               required
-            />
+            >
         </div>
         <div class="input-group">
             <label for="autore">Autore</label>
@@ -67,9 +67,9 @@
               placeholder="Autore"
               onblur="validateUsername()"
               required
-            />
+            >
         </div>
-        <input class="button" type="submit" value="Aggiungi" />
+        <input class="button" type="submit" value="Aggiungi">
       </form>
       <span><!-- Errori --></span>
     </section>

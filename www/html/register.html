@@ -1,4 +1,4 @@
-<main role="main">
+<main>
   <section class="register container hidden" aria-labelledby="registerheader">
     <h1 class="heading" id="registerheader">Register</h1>
     <form
@@ -21,7 +21,7 @@
           autocomplete="username"
           onblur="validateUsername(this.value)"
           required
-        />
+        >
       </div>
       <!--Password-->
       <div class="input-group">
@@ -35,7 +35,7 @@
           autocomplete="new-password"
           onblur="validatePassword(this.value)"
           required
-        />
+        >
         <div class="toggle-input">
           <input type="checkbox" id="toggle-password">
           <label for="toggle-password">Mostra Password</label>
@@ -52,7 +52,7 @@
           placeholder="Conferma Password"
           onblur="validateConfirmPassword(document.getElementById('password').value, this.value)"
           required
-        />
+        >
         <div class="toggle-input">
           <input type="checkbox" class="form-input" id="toggle-confirm-password">
           <label for="toggle-confirm-password">Mostra Password</label>
@@ -70,7 +70,7 @@
           autocomplete="email"
           onblur="validateEmail(this.value)"
           required
-        />
+        >
       </div>
       <!--Register button-->
       <button class="button" type="submit" value="Sign up">
