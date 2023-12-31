@@ -536,14 +536,20 @@ form {
 
 .form-input {
   box-sizing: border-box;
-  padding: 10px;
   width: 100%;
+  padding: 10px;
   border: 1px solid var(--body-color);
   border-radius: 5px;
   outline: none;
   font-family: var(--serif);
   color: var(--body-color);
   background-color: var(--inactive-border);
+}
+
+select.form-input {
+  border: 0;
+  outline: 1px solid var(--body-color);
+  border-right: 10px solid transparent;
 }
 
 form label {
