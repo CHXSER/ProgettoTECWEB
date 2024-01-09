@@ -130,7 +130,7 @@ selectElements.forEach((select, index) => {
 });
 
 function calculateTotal() {
-  let summaryPrices = document.querySelectorAll('.product-summary-price');
+  let summaryPrices = Array.from(document.querySelectorAll('.product-summary-price'));
   let deliveryPrice = parseInt(document.querySelector('.receipt-price-delivery').textContent);
   let tax = parseInt(document.querySelector('.receipt-price-tax').textContent);
   
