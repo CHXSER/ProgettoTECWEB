@@ -111,3 +111,33 @@ document.addEventListener('DOMContentLoaded', function () {
   togglePasswordVisibility('password', 'toggle-password');
   togglePasswordVisibility('confirm-password', 'toggle-confirm-password');
 })
+
+let selectElements = document.querySelectorAll('.quantity-available');
+let receipt = document.querySelector('.receipt');
+
+selectElements.forEach((select, index) => {
+  select.addEventListener('change', (event) => {
+    let quantity = event.target.value;
+    let summaryItem = document.querySelectorAll('.product-summary-item')[index];
+    let productItem = document.querySelectorAll('.product-item')[index];
+    let singlePrice = parseInt(productItem.querySelector('.product-price').textContent);
+    let totalPrice = singlePrice * quantity;
+
+    summaryItem.querySelector('.product-summary-price').textContent = totalPrice.toFixed(2) + '€';
+    summaryItem.querySelector('.quantity').textContent = 'x'+ quantity;
+    calculateTotal();
+  });
+});
+
+function calculateTotal() {
+  let summaryPrices = document.querySelectorAll('.product-summary-price');
+  let deliveryPrice = parseInt(document.querySelector('.receipt-price-delivery').textContent);
+  let tax = parseInt(document.querySelector('.receipt-price-tax').textContent);
+  
+  let subTotal = summaryPrices.reduce((total, price) => total + parseFloat(price.textContent), 0);
+  let taxAmount = (subTotal + deliveryPrice) * tax / 100;
+  let total = subTotal + deliveryPrice + taxAmount;
+
+  document.querySelector('.receipt-price-subtotal').textContent = subTotal.toFixed(2) + '€';
+  document.querySelector('.receipt-price-total').textContent = total.toFixed(2) + '€';
+}

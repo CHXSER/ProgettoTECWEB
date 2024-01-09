@@ -59,13 +59,11 @@ html {
 }
 
 body {
-  --background-color: #FFFDF2;
-  --heading-color: #D32D1F;
-  --body-color: black;
-  --text-color: #D32D1F;
-  --inactive-border: #FFFDF2;
-  --inactive-text: #D32D1F;
-  --alternative-background-color: #FDF5DF;
+  /* chir.ag */
+  --orchid-white: #FFFDF2;
+  --thunderbird: #D32D1F;
+  --black: black;
+  --old-lace: #FDF5DF;
   --display: "Stardom-Regular";
   --serif: "Gambarino-Regular";
   --sans: "Author-Variable";
@@ -74,8 +72,8 @@ body {
 
 body {
   font-family: var(--serif);
-  background-color: var(--background-color);
-  color: var(--body-color);
+  background-color: var(--orchid-white);
+  color: var(--black);
   margin: 0;
 }
 
@@ -121,16 +119,16 @@ header {
   left: 0;
   right: 0;
   z-index: 100;
-  background-color: var(--background-color);
+  background-color: var(--orchid-white);
 }
 
 .nav-scrolled {
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--thunderbird);
 }
 
 .logo {
   font-family: var(--display);
-  color: var(--text-color);
+  color: var(--thunderbird);
   font-weight: bold;
   letter-spacing: 0.1rem;
 }
@@ -142,7 +140,7 @@ header {
 }
 
 .nav-link {
-  color: var(--inactive-text);
+  color: var(--thunderbird);
   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
   font-weight: 600;
   font-family: var(--serif);
@@ -162,7 +160,7 @@ header {
   justify-content: center;
   vertical-align: middle;
   align-items: center;
-  color: var(--text-color);
+  color: var(--thunderbird);
 }
 
 .menu-icon {
@@ -188,8 +186,8 @@ header {
   top:-5px;
   right:-5px;
   font-size:.7em;
-  background:var(--text-color);
-  color:var(--background-color);
+  background:var(--thunderbird);
+  color:var(--orchid-white);
   width:18px;
   height:18px;
   text-align:center;
@@ -213,7 +211,7 @@ header {
 }
 
 .footer .logo {
-  color: var(--text-color);
+  color: var(--thunderbird);
 }
 
 .social {
@@ -225,12 +223,12 @@ header {
 
 .social a {
   font-size: 24px;
-  color: var(--body-color);
+  color: var(--black);
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .social a:hover {
-  color: var(--text-color);
+  color: var(--thunderbird);
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -248,19 +246,19 @@ header {
 
 .footer-box a {
   font-family: var(--sans);
-  color: var(--body-color);
+  color: var(--black);
   margin-bottom: 10px;
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .footer-box a:hover {
-  color: var(--text-color);
+  color: var(--thunderbird);
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .copyright {
   padding: 30px;
-  color: var(--body-color);
+  color: var(--black);
   text-align: center;
 }
 
@@ -275,21 +273,21 @@ header {
 
 .home-button.home-button {
   font-family: var(--display);
-  color: var(--body-color);
-  border-bottom: 2px solid var(--body-color);
+  color: var(--black);
+  border-bottom: 2px solid var(--black);
   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .home-button:hover {
-  color: var(--text-color);
-  border-bottom: 2px solid var(--text-color);
+  color: var(--thunderbird);
+  border-bottom: 2px solid var(--thunderbird);
   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .home-text h1 {
   font-size: 3em;
   font-family: var(--display);
-  color: var(--text-color);
+  color: var(--thunderbird);
   margin-bottom: 1.5rem;
 }
 
@@ -315,13 +313,13 @@ header {
   margin-bottom: 1.5rem;
   justify-content: space-between;
   transition: .5s all cubic-bezier(0.075, 0.82, 0.165, 1);
-  color: var(--body-color);
+  color: var(--black);
   padding: 10px;
   border-radius: 15px;
 }
 
 .small-collection-card:hover {
-  color: var(--text-color);
+  color: var(--thunderbird);
   cursor: pointer;
 }
 
@@ -348,12 +346,12 @@ header {
 }
 
 .small-collection-card a {
-  color: var(--inactive-text);
+  color: var(--thunderbird);
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .small-collection-card a:hover {
-  color: var(--text-color);
+  color: var(--thunderbird);
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -377,7 +375,7 @@ header {
 
 .explore{
   display: flex;
-  color: var(--body-color);
+  color: var(--black);
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -388,7 +386,7 @@ header {
 }
 
 .explore:hover {
-  color: var(--text-color);
+  color: var(--thunderbird);
   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -402,7 +400,7 @@ header {
   font-family: var(--display);
   font-weight: bold;
   text-align: center;
-  color: var(--text-color);
+  color: var(--thunderbird);
   margin-bottom: 2.5rem;
 }
 
@@ -432,7 +430,7 @@ h3.heading {
 .review-text h3 {
   font-weight: 500;
   margin: 1rem 0;
-  color: var(--text-color);
+  color: var(--thunderbird);
 }
 
 .review-text span {
@@ -440,7 +438,7 @@ h3.heading {
   font-size: 1.4em;
   margin-bottom: 1rem;
   font-weight: 500;
-  color: var(--text-color)
+  color: var(--thunderbird)
 }
 
 .review-text p {
@@ -448,12 +446,12 @@ h3.heading {
 }
 
 .swiper-pagination-bullet {
-  background: var(--inactive-text) !important;
+  background: var(--thunderbird) !important;
 }
 
 .swiper-pagination-bullet-active {
   size: 1.5rem !important;
-  background: var(--text-color) !important;
+  background: var(--thunderbird) !important;
 }
 
 .team-grid {
@@ -472,7 +470,7 @@ h3.heading {
 .team-card h3 {
   font-size: 1.1em;
   font-weight: 600;
-  color: var(--text-color);
+  color: var(--thunderbird);
   font-family: var(--display);
 }
 
@@ -490,19 +488,19 @@ h3.heading {
 .contact-grid span {
   font-size: .77em;
   font-weight: bold;
-  color: var(--text-color);
+  color: var(--thunderbird);
   margin-top: 1.5rem !important;
 }
 
 .contact a, .error a, #Orders a, .no-orders a {
-  color: var(--body-color);
-  border-bottom: 2px solid var(--body-color);
+  color: var(--black);
+  border-bottom: 2px solid var(--black);
   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .contact a:hover, .error a:hover, #Orders a:hover, .no-orders a:hover {
-  color: var(--text-color);
-  border-bottom: 2px solid var(--text-color);
+  color: var(--thunderbird);
+  border-bottom: 2px solid var(--thunderbird);
   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -538,23 +536,23 @@ form {
   box-sizing: border-box;
   width: 100%;
   padding: 10px;
-  border: 1px solid var(--body-color);
+  border: 1px solid var(--black);
   border-radius: 5px;
   outline: none;
   font-family: var(--serif);
-  color: var(--body-color);
-  background-color: var(--inactive-border);
+  color: var(--black);
+  background-color: var(--orchid-white);
 }
 
 select.form-input {
   border: 0;
-  outline: 1px solid var(--body-color);
+  outline: 1px solid var(--black);
   border-right: 10px solid transparent;
 }
 
 form label {
   font-weight: 500;
-  color: var(--body-color);
+  color: var(--black);
   font-family: var(--sans);
   text-align: start;
   width: 100%;
@@ -562,7 +560,7 @@ form label {
 
 label {
   font-weight: 500;
-  color: var(--body-color);
+  color: var(--black);
   font-family: var(--sans);
   text-align: start;
   width: 100%;
@@ -592,7 +590,7 @@ label {
 .login span, .register span {
   font-size: .77em;
   font-weight: 500;
-  color: var(--text-color);
+  color: var(--thunderbird);
   margin-top: 1.5rem !important;
   font-style: italic;
 }
@@ -639,7 +637,7 @@ label {
 .product-grid .product-text span {
   font-size: .88em;
   font-weight: bold;
-  color: var(--body-color);
+  color: var(--black);
   margin-top: 1.5rem !important;
   flex: left;
 }
@@ -647,7 +645,7 @@ label {
 .product-grid .product-text h1 {
   width: 100% !important;
   text-align: start !important;
-  color: var(--text-color);
+  color: var(--thunderbird);
   font-family: var(--display);
   text-align: start;
 }
@@ -709,7 +707,7 @@ label {
   gap: 5px;
   white-space: nowrap;
   padding: 8px 16px;
-  background-color: var(--background-color);
+  background-color: var(--orchid-white);
   cursor: pointer;
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
   border-radius: 5px;
@@ -718,23 +716,23 @@ label {
   border: none;
   outline: none;
   text-decoration: none;
-  color: var(--body-color);
+  color: var(--black);
   margin: 0;
-  border: 2px solid var(--body-color);
+  border: 2px solid var(--black);
 }
 
 .button:hover {
-  border: 2px solid var(--text-color);
-  background-color: var(--text-color);
-  color: var(--background-color);
+  border: 2px solid var(--thunderbird);
+  background-color: var(--thunderbird);
+  color: var(--orchid-white);
   border-radius: 5px;
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .button:active {
-  border: 2px solid var(--text-color);
-  background-color: var(--text-color);
-  color: var(--background-color);
+  border: 2px solid var(--thunderbird);
+  background-color: var(--thunderbird);
+  color: var(--orchid-white);
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
   border-radius: 5px;
 }
@@ -785,7 +783,7 @@ label {
 .responsive-table caption {
   margin: 1rem auto;
   font-family: var(--serif);
-  color: var(--text-color);
+  color: var(--thunderbird);
   font-weight: 600;
 }
 
@@ -808,8 +806,8 @@ label {
 }
 
 .responsive-table thead {
-  background-color: var(--heading-color);
-  color: var(--background-color);
+  background-color: var(--thunderbird);
+  color: var(--orchid-white);
   font-family: var(--display);
 }
 
@@ -820,7 +818,7 @@ label {
 }
 
 .responsive-table tbody tr {
-  border-bottom: 1px solid var(--body-color);
+  border-bottom: 1px solid var(--black);
 }
 
 .responsive-table tbody tr:last-child {
@@ -829,7 +827,7 @@ label {
 
 .responsive-table tbody tr td {
   padding: 10px;
-  color: var(--body-color);
+  color: var(--black);
 }
 
 .responsive-table td[data-label="Azione"] {
@@ -852,11 +850,11 @@ label {
   align-items: center;
   text-align: center;
   vertical-align: middle;
-  background-color: var(--background-color);
+  background-color: var(--orchid-white);
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
   border-radius: 5px;
-  color: var(--body-color);
-  border: 2px solid var(--body-color);
+  color: var(--black);
+  border: 2px solid var(--black);
 }
 
 .table-button .ph {
@@ -866,17 +864,17 @@ label {
 }
 
 .table-button:hover {
-  border: 2px solid var(--text-color);
-  background-color: var(--text-color);
-  color: var(--background-color);
+  border: 2px solid var(--thunderbird);
+  background-color: var(--thunderbird);
+  color: var(--orchid-white);
   border-radius: 5px;
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .table-button:active {
-  border: 2px solid var(--text-color);
-  background-color: var(--text-color);
-  color: var(--background-color);
+  border: 2px solid var(--thunderbird);
+  background-color: var(--thunderbird);
+  color: var(--orchid-white);
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
   border-radius: 5px;
 }
@@ -889,13 +887,13 @@ label {
 
 .login .extra a, .register .extra a{
   margin-top: 1rem;
-  color: var(--body-color);
-  border-bottom: 2px solid var(--body-color);
+  color: var(--black);
+  border-bottom: 2px solid var(--black);
 }
 
 .login .extra a:hover, .register .extra a:hover {
-  color: var(--text-color);
-  border-bottom: 2px solid var(--text-color);
+  color: var(--thunderbird);
+  border-bottom: 2px solid var(--thunderbird);
 }
 
 .cart > .heading {
@@ -944,7 +942,7 @@ label {
   font-size: 1.1em;
   width: 100%;
   text-align: start;
-  color: var(--body-color);
+  color: var(--black);
   font-family: var(--display);
   text-align: start;
 }
@@ -961,7 +959,7 @@ label {
 }
 
 hr {
-  border: .5px solid var(--body-color);
+  border: .5px solid var(--black);
   width: 100%;
   margin: 10px 0 10px 0;
 }
@@ -973,7 +971,7 @@ hr {
   justify-content: start;
   height: max-content;
   padding: 1rem;
-  background-color: var(--alternative-background-color);
+  background-color: var(--old-lace);
   border-radius: 5px;
 }
 
@@ -995,7 +993,7 @@ hr {
 
 .product-summary-name {
   text-align: start;
-  color: var(--body-color);
+  color: var(--black);
   font-family: var(--display);
   text-align: start;
   font-weight: bold;
@@ -1029,18 +1027,18 @@ hr {
   outline: none;
   cursor: pointer;
   transition: .5s;
-  color: var(--body-color);
+  color: var(--black);
   font-family: var(--display);
   font-weight: bold;
 }
 
 .tab button:hover {
-  color: var(--text-color);
+  color: var(--thunderbird);
 }
 
 .tab button.active {
-  color: var(--text-color);
-  border-bottom: 2px solid var(--text-color);
+  color: var(--thunderbird);
+  border-bottom: 2px solid var(--thunderbird);
 }
 
 .tab-content {
@@ -1094,7 +1092,7 @@ hr {
   align-items: center;
   text-align: center;
   vertical-align: middle;
-  background-color: var(--alternative-background-color);
+  background-color: var(--old-lace);
   padding-top: 2.5rem !important;
   padding-bottom: 2.5rem !important;
   margin-top: 7rem !important;
@@ -1122,7 +1120,7 @@ hr {
 .inspiration-text span {
   font-size: 1.5em;
   font-weight: 500;
-  color: var(--text-color);
+  color: var(--thunderbird);
   text-align: start;
 }
 
@@ -1150,13 +1148,13 @@ input:user-invalid {
   margin: 1rem auto;
   padding: 1rem;
   border-radius: 5px;
-  background-color: var(--alternative-background-color);
+  background-color: var(--old-lace);
   border-radius: 10px;
 }
 
 .services-card i {
   font-size: 2em;
-  color: var(--text-color);
+  color: var(--thunderbird);
 }
 
 .services-card p {
@@ -1189,6 +1187,10 @@ input:user-invalid {
   border: none;
 }
 
+.out-of-stock{
+  color: var(--thunderbird);
+}
+
 
 /* width */
 ::-webkit-scrollbar {
@@ -1197,17 +1199,17 @@ input:user-invalid {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--background-color); 
+  background: var(--orchid-white); 
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--inactive-border); 
+  background: var(--orchid-white); 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--text-color); 
+  background: var(--thunderbird); 
 }
 
 
@@ -1258,8 +1260,8 @@ input:user-invalid {
     left: 50%;
     transform: translate(-50%);
     width: 90vw;
-    background-color: var(--text-color);
-    color: var(--background-color);
+    background-color: var(--thunderbird);
+    color: var(--orchid-white);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1282,7 +1284,7 @@ input:user-invalid {
   .navbar .nav-link {
     display: block;
     margin: 1rem 0;
-    color: var(--background-color);
+    color: var(--orchid-white);
   }
 
   .header-description {
@@ -1381,7 +1383,7 @@ input:user-invalid {
     align-items: start;
     justify-content: start;
     height: max-content;;
-    background-color: var(--background-color);
+    background-color: var(--orchid-white);
     width: 100%;
     padding: 0;
     margin: 0;
