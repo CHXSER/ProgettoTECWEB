@@ -1,5 +1,7 @@
 <?php
     require_once("php/user.php");
+    
+    session_start();
     if (isset($_SESSION["username"])) {
         // Esegui pagamento
         foreach($_SESSION["cart"] as $product => $quantity) {

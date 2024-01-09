@@ -1,5 +1,6 @@
 <?php
     require_once "php/drawing.php";
+    require_once "php/gestione_carrello.php";
 
     $title = "Carello - BOHEMY";
     $page = "cart";

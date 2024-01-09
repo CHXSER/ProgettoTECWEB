@@ -1,7 +1,8 @@
 <?php
     require "php/auth.php";
     require "php/drawing.php";
-
+    
+    session_start();
     $title = "Elimina - BOHEMY";
     $page = "del_drawing";
     $description = "Elimina il prodotto";

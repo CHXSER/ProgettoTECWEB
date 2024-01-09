@@ -3,8 +3,10 @@
     $page = "account";
     $description = "Gestisci il tuo profilo di BOHEMY";
     $keywords = "account, profilo, login, registrati";
-
+    
     require_once "php/user.php";
+    session_start();
+
 
     include "php/template/header.php";
     $DOM = file_get_contents("html/account.html");
@@ -32,7 +34,6 @@
         $template = "";
         // Ordini
         $ordini = get_acquisti($_SESSION["username"]);
-        //print_r($ordini);
         if(empty($ordini)) {
             $DOM = str_replace("<!-- No ordini -->", $no_orders, $DOM);
         } else {
@@ -41,7 +42,7 @@
                 $disegno = $ordini[$i]["drawing_name"];
                 $data = $ordini[$i]["dataAcquisto"];
                 $quantita = $ordini[$i]["total_quantity"];
-                $prezzo = $ordini[$i]["drawing_price"];
+                $prezzo = $ordini[$i]["drawing_price"] * $quantita;
 
                 $template = str_replace("<!-- Data -->", $data, $template);
                 $template = str_replace("<!-- Disegni -->", $disegno, $template);

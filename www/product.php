@@ -1,6 +1,7 @@
 <?php
-    require_once("php/drawing.php");
-
+    require_once "php/drawing.php";
+    require_once "php/gestione_carrello.php";
+    
     $title = "Prodotto - BOHEMY";
     $page = "product";
     $description = "Visualizza il prodotto in dettaglio";

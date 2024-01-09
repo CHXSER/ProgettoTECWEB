@@ -2,6 +2,7 @@
 
     require_once("php/user.php");
     require_once("php/admins.php");
+    
     function check_username($username) {
         $pattern = '/^[\w]{1,30}$/';
         if (!preg_match($pattern, $username))

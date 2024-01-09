@@ -1,7 +1,8 @@
 <?php
     require_once("php/user.php");
     require_once("php/auth.php");
-
+    
+    session_start();
     if(isset($_SESSION["username"])) {
         switch($_POST["type"]) {
             case "info":

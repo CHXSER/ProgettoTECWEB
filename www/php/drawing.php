@@ -26,9 +26,9 @@
         return db::run_query("SELECT * FROM disegni WHERE nome = ?", $nome);
     }
 
-    function mod_drawing($nome, $prezzo, $immagine, $descrizione, $autore, $origine) {
-        return db::run_query("UPDATE disegni SET nome=?, disegno=?, descrizione=?, autore=?, prezzo=?
-        WHERE nome=?", $nome, $immagine, $descrizione, $autore, $prezzo, $origine);
+    function mod_drawing($nome, $prezzo, $immagine, $descrizione, $autore, $origine, $quantita) {
+        return db::run_query("UPDATE disegni SET nome=?, disegno=?, descrizione=?, autore=?, prezzo=?, quantita=?
+        WHERE nome=?", $nome, $immagine, $descrizione, $autore, $prezzo, $quantita, $origine);
     }
 
     function delete_drawing($nome) {
@@ -36,8 +36,8 @@
     }
     
 
-    function add_drawing($nome, $prezzo, $immagine, $descrizione, $autore) {
-        return db::run_query("INSERT INTO `disegni` (`nome`, `prezzo`, `disegno`, `descrizione`, `autore`) 
-        VALUES (?, ?, ?, ?, ?)", $nome, $prezzo, $immagine, $descrizione, $autore);    
+    function add_drawing($nome, $prezzo, $immagine, $descrizione, $autore, $quantita) {
+        return db::run_query("INSERT INTO `disegni` (`nome`, `prezzo`, `disegno`, `descrizione`, `autore`, `quantita`) 
+        VALUES (?, ?, ?, ?, ?, ?)", $nome, $prezzo, $immagine, $descrizione, $autore, $quantita);    
     }
 ?>

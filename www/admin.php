@@ -1,18 +1,18 @@
 <?php
     require_once("php/auth.php");
     require_once("php/drawing.php");
-
-
+    
     $title = "Admin - BOHEMY";
     $page = "admin";
     $description = "Pagina per eliminare/modificare o aggiungere disegni";
     $keywords = "";
     
-    include "php/template/header.php";  
+    session_start();
     if(!is_admin($_SESSION["username"])) {
         header("Location: account.php");
     }
-
+    
+    include "php/template/header.php";  
     $DOM = file_get_contents("html/admin.html");
     $riga_tabella = file_get_contents("html/template/admin_table.html");
     $template = "";
@@ -22,6 +22,7 @@
         $template = str_replace("<!-- Prezzo -->", $row[$i]["prezzo"] . " €", $template);
         $template = str_replace("<!-- Immagine -->", $row[$i]["disegno"], $template);
         $template = str_replace("<!-- Descrizione -->", $row[$i]["descrizione"], $template);
+        $template = str_replace("<!-- Quantita -->", $row[$i]["quantita"], $template);
         $template = str_replace("<!-- Autore -->", $row[$i]["autore"], $template);
         $template = $template . "\n <!-- Collezione db -->";
         $DOM = str_replace("<!-- Collezione db -->", $template, $DOM);

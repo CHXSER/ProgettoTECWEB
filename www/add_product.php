@@ -1,4 +1,4 @@
-<?php
+<?php 
     require_once("php/auth.php");
     require_once("php/drawing.php");
 
@@ -6,6 +6,8 @@
     $page = "add_product";
     $description = "Pagina per aggiungere un prodotto";
     $keywords = "";
+
+    session_start();
     if(!is_admin($_SESSION["username"]))
         header("Location: account.php");      
     
@@ -14,10 +16,9 @@
 
     if(isset($_POST["nome"])) {
         if(empty(get_drawing($_POST["nome"]))) {
-            add_drawing($_POST["nome"], $_POST["prezzo"], $_POST["immagine"], $_POST["descrizione"], $_POST["autore"]);
-            header("Location: admin.php");
+            add_drawing($_POST["nome"], $_POST["prezzo"], $_POST["immagine"], $_POST["descrizione"], $_POST["autore"], $_POST["quantita"]);
+            header("Location: admin.php");   
         } else {
-
             $DOM = str_replace("<!-- Errori -->", "Questo nome è già stato preso", $DOM);
         }
     }

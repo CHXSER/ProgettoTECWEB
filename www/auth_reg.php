@@ -1,5 +1,7 @@
 <?php
     require_once "php/auth.php";
+
+    session_start();
     if(!empty($_POST)) {
         $result = register();
         if($result == True) {
