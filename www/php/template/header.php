@@ -12,6 +12,5 @@
     } else {
         $DOM = str_replace('data-badge=""', 'data-badge="' . $numCarrello . '"', $DOM);
     }
-
     echo($DOM);
 ?>

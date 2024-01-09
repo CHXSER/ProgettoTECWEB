@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once("php/auth.php");
     if(!empty($_POST)) {
         $result = login();
@@ -14,4 +15,4 @@
             header('Location: login.php');
         }
     }
-?>
+?>  

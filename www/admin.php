@@ -8,8 +8,7 @@
     $description = "Pagina per eliminare/modificare o aggiungere disegni";
     $keywords = "";
     
-    include "php/template/header.php";
-    print_r($_SESSION);
+    include "php/template/header.php";  
     if(!is_admin($_SESSION["username"])) {
         header("Location: account.php");
     }

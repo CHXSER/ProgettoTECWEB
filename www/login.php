@@ -5,7 +5,7 @@
     $keywords = "login, BOHEMY, account, accedi";
 
 
-    
+    include "php/template/header.php";
     require "php/auth.php";
     if(isset($_SESSION["username"])) {
         if(is_admin($_SESSION["username"])) {
@@ -18,7 +18,6 @@
     $template = (file_get_contents("html/login.html"));
     $err = isset($_SESSION["error-log"]) ? $_SESSION["error-log"] : null;
 
-    include "php/template/header.php";
     try {
         if(isset($err))
             $template = str_replace("<!-- errors -->", $err, $template);
