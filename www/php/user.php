@@ -27,6 +27,7 @@
 
     function purchase($username, $disegno, $data, $quantita) {
         db::run_query("INSERT INTO acquisti (username, disegno, dataAcquisto, quantita) VALUES (?,?,?,?)", $username, $disegno, $data, $quantita);
+        db::run_query("UPDATE disegni SET quantita = quantita - ? WHERE disegni.nome = ?", $quantita, $disegno);
     }
 
     function mod_username($username_old, $username_new) {

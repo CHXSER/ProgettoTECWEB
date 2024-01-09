@@ -1,5 +1,4 @@
 <?php
-    require_once "php/gestione_carrello.php";
     require_once "php/drawing.php";
 
     $title = "Carello - BOHEMY";
@@ -28,7 +27,13 @@
             $template = str_replace("<!-- Nome -->", $row[0]["nome"], $productHTML);
             $template = str_replace("<!-- Immagine -->", "images/immagini/" . $row[0]["disegno"], $template);
             $template = str_replace("<!-- Prezzo -->", $row[0]["prezzo"], $template);
-            $template = str_replace("<!-- Quantità -->", $quantity, $template);
+            for($i=1;$i<$row[0]["quantita"] + 1;$i++) {
+                if($i == $quantity) {
+                    $template = str_replace("<!-- Quantita -->", '<option value="'. $i . '", selected="true">' . $i . '</option>\n<!-- Quantita -->', $template);      
+                } else {
+                    $template = str_replace("<!-- Quantita -->", '<option value="'. $i . '">' . $i . '</option>\n<!-- Quantita -->', $template);   
+                }
+            }
             $template = $template . "<!-- Informazioni prodotto -->";
             $productList = str_replace("<!-- Informazioni prodotto -->", $template, $productList);
             $prezzo_totale += $row[0]["prezzo"] * $quantity;

@@ -7,8 +7,6 @@
 
     
     require "php/auth.php";
-
-    session_start();
     if(isset($_SESSION["username"])) {
         if(is_admin($_SESSION["username"])) {
             header("Location: admin.php");

@@ -6,8 +6,6 @@
     $page = "add_product";
     $description = "Pagina per aggiungere un prodotto";
     $keywords = "";
-
-    session_start();
     if(!is_admin($_SESSION["username"]))
         header("Location: account.php");      
     

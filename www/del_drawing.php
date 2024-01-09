@@ -7,7 +7,6 @@
     $description = "Elimina il prodotto";
     $keywords = "";
 
-    session_start();
     if(isset($_POST["yes"]) && isset($_GET["nome"])) {
         delete_drawing($_GET["nome"]);
         header("Location: admin.php");

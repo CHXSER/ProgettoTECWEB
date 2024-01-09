@@ -7,7 +7,6 @@
     $description = "Modifica il prodotto";
     $keywords = "";
 
-    session_start();
     if(isset($_POST["nome"])) {
         mod_drawing($_POST["nome"], $_POST["prezzo"], $_POST["immagine"], $_POST["descrizione"], $_POST["autore"], $_GET["nome"]);
         header("Location: admin.php");

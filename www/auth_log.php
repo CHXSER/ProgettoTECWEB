@@ -1,6 +1,5 @@
 <?php
     require_once("php/auth.php");
-    session_start();
     if(!empty($_POST)) {
         $result = login();
         if($result === true) {

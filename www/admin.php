@@ -7,13 +7,13 @@
     $page = "admin";
     $description = "Pagina per eliminare/modificare o aggiungere disegni";
     $keywords = "";
-
-    session_start();
+    
+    include "php/template/header.php";
+    print_r($_SESSION);
     if(!is_admin($_SESSION["username"])) {
         header("Location: account.php");
     }
 
-    include "php/template/header.php";
     $DOM = file_get_contents("html/admin.html");
     $riga_tabella = file_get_contents("html/template/admin_table.html");
     $template = "";

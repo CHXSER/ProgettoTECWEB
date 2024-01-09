@@ -5,7 +5,6 @@
     $keywords = "account, profilo, login, registrati";
 
     require_once "php/user.php";
-    session_start();
 
     include "php/template/header.php";
     $DOM = file_get_contents("html/account.html");
