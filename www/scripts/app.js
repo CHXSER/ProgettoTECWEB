@@ -140,4 +140,18 @@ function calculateTotal() {
 
   document.querySelector('.receipt-price-subtotal').textContent = subTotal.toFixed(2) + '€';
   document.querySelector('.receipt-price-total').textContent = total.toFixed(2) + '€';
+  updateCarrello("", "");
+}
+
+function updateCarrello(nome, quantita) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'update_session.php', true);
+  XPathExpression.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.onreadystatechange = function () {
+    if(xhr.readyState === 4 && xhr.status === 200) {
+      console.log(xhr.responseText); // Log the server response
+    }
+  };
+  // TODO: Far funzionare questa
+  xhr.send('value' + encodeURIComponent(value));
 }
