@@ -5,6 +5,8 @@
 
     header_remove('x-powered-by');
     ob_start();
+
+    require_once "php/auth.php";
     
     if(session_status() === PHP_SESSION_NONE)
         session_start();
@@ -17,11 +19,15 @@
     }
 
     if(isset($_SESSION["cart"])) {
-        $numCarrello = count($_SESSION["cart"]);
-        if($numCarrello == 0) {
-            $DOM = str_replace('data-badge=""', "", $DOM);
+        if(isset($_SESSION["username"]) && is_admin($_SESSION["username"])) {
+            $DOM = preg_replace('/<!-- Elimina carello -->.*?<!-- Elimina carello -->/s', '', $DOM);
         } else {
-            $DOM = str_replace('data-badge=""', 'data-badge="' . $numCarrello . '"', $DOM);
+            $numCarrello = count($_SESSION["cart"]);
+            if($numCarrello == 0) {
+                $DOM = str_replace('data-badge=""', "", $DOM);
+            } else {
+                $DOM = str_replace('data-badge=""', 'data-badge="' . $numCarrello . '"', $DOM);
+            }
         }
     } else {
         $_SESSION["cart"] = array();

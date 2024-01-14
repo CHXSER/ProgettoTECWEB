@@ -15,6 +15,10 @@
     $summaryProduct = file_get_contents("html/template/product_summary_item.html");
     $totalSummary = file_get_contents("html/summary.html");
 
+    if(isset($_SESSION["username"]) && is_admin($_SESSION["username"])) {
+        header("Location: admin.php");
+    }
+
     $template = "";
     $prezzo_totale = 0;
 
