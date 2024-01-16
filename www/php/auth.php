@@ -36,18 +36,18 @@
             return check_email($email);
         }
         if($conferma_ps != $password) {
-            return "Le <span lang\"en\">password</span> non sono uguali";
+            return "Le password non sono uguali";
         }
 
         $email = filter_var($email, FILTER_SANITIZE_EMAIL);
         $result = get_by_email($email);
-        if ($result && count($result) > 0) {
-            return "Esista già un utente con questa <span lang=\"en\">email</span> associata ad esso";
+        if (count($result[0]) > 0) {
+            return "Esista già un utente con questa email associata ad esso";
         }
 
         $user_check = get_by_username($username);
         if ($user_check && count($user_check)) {
-            return "Questo <span lang=\"en\">username</span> è già in uso";
+            return "Questo username è già in uso";
         }
 
         add_user($username, $password, $email);
