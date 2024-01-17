@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg
+PUBLIC "-//W3C//DTD SVG 1.1//EN"
+       "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="206 169 779 501" width="573px" height="332px" xmlns="http://www.w3.org/2000/svg" version="1.1">
+   <line x1="450" y1="327" x2="440" y2="327" style="stroke:#333;stroke-width:1;"/>
+   <line x1="312" y1="214" x2="302" y2="214" style="stroke:#333;stroke-width:1;"/>
+   <line x1="440" y1="327" x2="312" y2="214" style="stroke:#333;stroke-width:1;"/>
+   <line x1="442.5" y1="327" x2="446.03553390593" y2="330.53553390593" style="stroke:#333;stroke-width:2;"/>
+   <line x1="442.5" y1="327" x2="446.03553390593" y2="323.46446609407" style="stroke:#333;stroke-width:2;"/>
+   <line x1="307" y1="214" x2="310.53553390593" y2="217.53553390593" style="stroke:#333;stroke-width:2;"/>
+   <line x1="307" y1="214" x2="310.53553390593" y2="210.46446609407" style="stroke:#333;stroke-width:2;"/>
+   <line x1="553" y1="347" x2="563" y2="347" style="stroke:#333;stroke-width:1;"/>
+   <line x1="663" y1="217" x2="673" y2="217" style="stroke:#333;stroke-width:1;"/>
+   <line x1="563" y1="347" x2="663" y2="217" style="stroke:#333;stroke-width:1;"/>
+   <line x1="560.5" y1="347" x2="556.96446609407" y2="350.53553390593" style="stroke:#333;stroke-width:2;"/>
+   <line x1="560.5" y1="347" x2="556.96446609407" y2="343.46446609407" style="stroke:#333;stroke-width:2;"/>
+   <line x1="668" y1="217" x2="664.46446609407" y2="220.53553390593" style="stroke:#333;stroke-width:2;"/>
+   <line x1="668" y1="217" x2="664.46446609407" y2="213.46446609407" style="stroke:#333;stroke-width:2;"/>
+   <rect width="103" height="20" x="450" y="277" style="fill:#007;stroke:black;"/>
+   <text width="103" height="20" x="455" y="291" style="fill:#fff;" font-family="Arial" font-size="16px"> acquisti</text>
+   <rect width="103" height="20" x="450" y="297" style="fill:none;stroke:black;"/>
+   <text width="103" height="20" x="455" y="311" style="fill:black;" font-family="Arial" font-size="16px">IDAcquisto</text>
+   <rect width="103" height="20" x="450" y="317" style="fill:none;stroke:black;"/>
+   <text width="103" height="20" x="455" y="331" style="fill:black;" font-family="Arial" font-size="16px">username</text>
+   <rect width="103" height="20" x="450" y="337" style="fill:none;stroke:black;"/>
+   <text width="103" height="20" x="455" y="351" style="fill:black;" font-family="Arial" font-size="16px">disegno</text>
+   <rect width="103" height="20" x="450" y="357" style="fill:none;stroke:black;"/>
+   <text width="103" height="20" x="455" y="371" style="fill:black;" font-family="Arial" font-size="16px">dataAcquisto</text>
+   <rect width="103" height="20" x="450" y="377" style="fill:none;stroke:black;"/>
+   <text width="103" height="20" x="455" y="391" style="fill:black;" font-family="Arial" font-size="16px">quantita</text>
+   <rect width="81" height="20" x="678" y="426" style="fill:#007;stroke:black;"/>
+   <text width="81" height="20" x="683" y="440" style="fill:#fff;" font-family="Arial" font-size="16px"> admin</text>
+   <rect width="81" height="20" x="678" y="446" style="fill:none;stroke:black;"/>
+   <text width="81" height="20" x="683" y="460" style="fill:black;" font-family="Arial" font-size="16px">username</text>
+   <rect width="81" height="20" x="678" y="466" style="fill:none;stroke:black;"/>
+   <text width="81" height="20" x="683" y="480" style="fill:black;" font-family="Arial" font-size="16px">password</text>
+   <rect width="91" height="20" x="673" y="187" style="fill:#007;stroke:black;"/>
+   <text width="91" height="20" x="678" y="201" style="fill:#fff;" font-family="Arial" font-size="16px"> disegni</text>
+   <rect width="91" height="20" x="673" y="207" style="fill:none;stroke:black;"/>
+   <text width="91" height="20" x="678" y="221" style="fill:black;" font-family="Arial" font-size="16px">nome</text>
+   <rect width="91" height="20" x="673" y="227" style="fill:none;stroke:black;"/>
+   <text width="91" height="20" x="678" y="241" style="fill:black;" font-family="Arial" font-size="16px">disegno</text>
+   <rect width="91" height="20" x="673" y="247" style="fill:none;stroke:black;"/>
+   <text width="91" height="20" x="678" y="261" style="fill:black;" font-family="Arial" font-size="16px">descrizione</text>
+   <rect width="91" height="20" x="673" y="267" style="fill:none;stroke:black;"/>
+   <text width="91" height="20" x="678" y="281" style="fill:black;" font-family="Arial" font-size="16px">autore</text>
+   <rect width="91" height="20" x="673" y="287" style="fill:none;stroke:black;"/>
+   <text width="91" height="20" x="678" y="301" style="fill:black;" font-family="Arial" font-size="16px">prezzo</text>
+   <rect width="91" height="20" x="673" y="307" style="fill:none;stroke:black;"/>
+   <text width="91" height="20" x="678" y="321" style="fill:black;" font-family="Arial" font-size="16px">quantita</text>
+   <rect width="81" height="20" x="221" y="184" style="fill:#007;stroke:black;"/>
+   <text width="81" height="20" x="226" y="198" style="fill:#fff;" font-family="Arial" font-size="16px"> utente</text>
+   <rect width="81" height="20" x="221" y="204" style="fill:none;stroke:black;"/>
+   <text width="81" height="20" x="226" y="218" style="fill:black;" font-family="Arial" font-size="16px">username</text>
+   <rect width="81" height="20" x="221" y="224" style="fill:none;stroke:black;"/>
+   <text width="81" height="20" x="226" y="238" style="fill:black;" font-family="Arial" font-size="16px">password</text>
+   <rect width="81" height="20" x="221" y="244" style="fill:none;stroke:black;"/>
+   <text width="81" height="20" x="226" y="258" style="fill:black;" font-family="Arial" font-size="16px">email</text>
+</svg>
