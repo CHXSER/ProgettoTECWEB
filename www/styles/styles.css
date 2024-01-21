@@ -146,6 +146,15 @@ header {
   font-family: var(--serif);
 }
 
+.navbar .nav-link:hover {
+  color: var(--thunderbird);
+  border-bottom: 2px solid var(--thunderbird);
+}
+
+.navbar .nav-link.active {
+  border-bottom: 2px solid var(--black);
+}
+
 .nav-icons {
   display: flex;
   flex-direction: row;
@@ -510,7 +519,6 @@ h3.heading {
 
 .error {
   text-align: center;
-  margin-top: 1rem;
 }
 
 .error img {
@@ -828,6 +836,9 @@ label {
 .responsive-table tbody tr td {
   padding: 10px;
   color: var(--black);
+  word-break: break-word;
+  overflow-wrap: break-word; 
+  overflow-x: auto;
 }
 
 .responsive-table td[data-label="Azione"] {
@@ -1027,18 +1038,19 @@ hr {
   outline: none;
   cursor: pointer;
   transition: .5s;
-  color: var(--black);
+  color: var(--thunderbird);
   font-family: var(--display);
   font-weight: bold;
 }
 
 .tab button:hover {
   color: var(--thunderbird);
+  border-bottom: 2px solid var(--thunderbird);
 }
 
 .tab button.active {
   color: var(--thunderbird);
-  border-bottom: 2px solid var(--thunderbird);
+  border-bottom: 2px solid var(--black);
 }
 
 .tab-content {
@@ -1092,9 +1104,8 @@ hr {
   align-items: center;
   text-align: center;
   vertical-align: middle;
-  background-color: var(--old-lace);
   padding-top: 2.5rem !important;
-  padding-bottom: 2.5rem !important;
+  padding-bottom: 2rem !important;
   margin-top: 7rem !important;
   border-radius: 10px;
 }
@@ -1161,6 +1172,9 @@ input:user-invalid {
   text-align: center;
 }
 
+.faq ul li {
+  list-style:circle;
+}
 
 .faq h2, .faq p {
   display: flex;
@@ -1416,13 +1430,8 @@ input:user-invalid {
 }
 
 
-@media (max-width: 380px) {
+@media (max-width: 375px) {
   .button {
     flex-direction: column;
   }
-}
-
-@media (max-width: 400px) {
-  /* */
-  
 }

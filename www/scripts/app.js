@@ -16,6 +16,16 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
+
+let currentPage = window.location.pathname.split('/').pop();
+let navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach((navLink) => {
+  let href = navLink.getAttribute('href');
+  if (href === currentPage) {
+    navLink.classList.add('active');
+  }
+});
+
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
@@ -124,7 +134,7 @@ selectElements.forEach((select, index) => {
     let totalPrice = singlePrice * quantity;
 
     summaryItem.querySelector('.product-summary-price').textContent = totalPrice.toFixed(2) + '€';
-    summaryItem.querySelector('.quantity').textContent = 'x'+ quantity;
+    summaryItem.querySelector('.quantity').textContent = 'x' + quantity;
     calculateTotal();
   });
 });
@@ -133,14 +143,14 @@ function calculateTotal() {
   let summaryPrices = Array.from(document.querySelectorAll('.product-summary-price'));
   let deliveryPrice = parseInt(document.querySelector('.receipt-price-delivery').textContent);
   let tax = parseInt(document.querySelector('.receipt-price-tax').textContent);
-  
+
   let subTotal = summaryPrices.reduce((total, price) => total + parseFloat(price.textContent), 0);
   let taxAmount = (subTotal + deliveryPrice) * tax / 100;
   let total = subTotal + deliveryPrice + taxAmount;
 
   document.querySelector('.receipt-price-subtotal').textContent = subTotal.toFixed(2) + '€';
   document.querySelector('.receipt-price-total').textContent = total.toFixed(2) + '€';
-  
+
   let nome_prodotto = document.querySelector('.product-name').textContent;
   let quantita = document.querySelector('select[title="quantity"][name="quantity"].quantity-available.form-input').value;
 
