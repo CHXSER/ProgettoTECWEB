@@ -41,7 +41,7 @@
 
         $email = filter_var($email, FILTER_SANITIZE_EMAIL);
         $result = get_by_email($email);
-        if (count($result[0]) > 0) {
+        if (!is_bool($result)) {
             return "Esista già un utente con questa email associata ad esso";
         }
 

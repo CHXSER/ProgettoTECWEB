@@ -9,7 +9,8 @@
             header("Location: login.php");
         } else {
             $_SESSION["error-reg"] = $result;
+            header("Location: register.php");
         }
     }
-    header("Location: register.php");
+    
 ?>
