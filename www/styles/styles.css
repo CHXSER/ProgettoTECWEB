@@ -77,6 +77,26 @@ body {
   margin: 0;
 }
 
+a:hover,
+input:hover,
+button:hover,
+select:hover,
+a:focus,
+input:focus,
+button:focus,
+select:focus {
+  font-weight: bold !important;
+}
+
+a:link {
+  color: var(--thunderbird);
+}
+
+a:visited {
+  color: purple;
+}
+
+
 img {
   width: 100%;
 }
@@ -327,7 +347,7 @@ header {
   border-radius: 15px;
 }
 
-.small-collection-card:hover {
+.small-collection-card:hover, .small-collection-card:focus {
   color: var(--thunderbird);
   cursor: pointer;
 }

@@ -6,6 +6,12 @@ window.addEventListener('scroll', function () {
   document.querySelector('.navbar').classList.remove('open-menu');
 });
 
+document.onkeydown = (e) => {
+  if (e.key === 'Enter') {
+    document.activeElement.onclick(e);
+  }
+};
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
