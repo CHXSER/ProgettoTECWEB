@@ -6,11 +6,7 @@ window.addEventListener('scroll', function () {
   document.querySelector('.navbar').classList.remove('open-menu');
 });
 
-document.onkeydown = (e) => {
-  if (e.key === 'Enter') {
-    document.activeElement.onclick(e);
-  }
-};
+const buttons = document.querySelectorAll('small-collection-card');
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -21,7 +17,6 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 });
-
 
 let currentPage = window.location.pathname.split('/').pop();
 let navLinks = document.querySelectorAll('.nav-link');

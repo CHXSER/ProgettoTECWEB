@@ -64,6 +64,7 @@ body {
   --thunderbird: #D32D1F;
   --black: black;
   --old-lace: #FDF5DF;
+  --visited-link-color: purple;
   --display: "Stardom-Regular";
   --serif: "Gambarino-Regular";
   --sans: "Author-Variable";
@@ -88,14 +89,9 @@ select:focus {
   font-weight: bold !important;
 }
 
-a:link {
-  color: var(--thunderbird);
+a:not(.button):visited {
+  color: var(--visited-link-color) !important;
 }
-
-a:visited {
-  color: purple;
-}
-
 
 img {
   width: 100%;
@@ -173,6 +169,10 @@ header {
 
 .navbar .nav-link.active {
   border-bottom: 2px solid var(--black);
+}
+
+.nav-link:visited {
+  color: var(--visited-link-color)
 }
 
 .nav-icons {
@@ -301,21 +301,19 @@ header {
 }
 
 .home-button.home-button {
-  font-family: var(--display);
   color: var(--black);
-  border-bottom: 2px solid var(--black);
-  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-bottom: 1px solid var(--black);
 }
 
 .home-button:hover {
   color: var(--thunderbird);
   border-bottom: 2px solid var(--thunderbird);
   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  font-weight: bold;
 }
 
 .home-text h1 {
   font-size: 3em;
-  font-family: var(--display);
   color: var(--thunderbird);
   margin-bottom: 1.5rem;
 }
@@ -352,6 +350,14 @@ header {
   cursor: pointer;
 }
 
+.small-collection-card:visited {
+  color: var(--visited-link-color) !important;
+}
+
+.small-collection-card:focus {
+  box-shadow: var(--orchid-white);
+}
+
 .small-collection-card img {
   width: 100%;
   margin-bottom: 1rem;
@@ -382,6 +388,10 @@ header {
 .small-collection-card a:hover {
   color: var(--thunderbird);
   transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.small-collection-card a:visited {
+  color: var(--visited-link-color);
 }
 
 .small-collection-text {
@@ -868,7 +878,7 @@ label {
   align-items: center;
 }
 
-.responsive-table #table-actions {
+.responsive-table .table-actions {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -1307,6 +1317,15 @@ input:user-invalid {
    
   .nav-icons i {
     font-size: 24px;
+  }
+
+  .navbar .nav-link:hover {
+    color: var(--orchid-white);
+    border-bottom: 2px solid var(--thunderbird);
+  }
+
+  .nav-link:active {
+    color: var(--black);
   }
 
   .open-menu {
