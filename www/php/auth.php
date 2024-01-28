@@ -94,4 +94,5 @@
         http_response_code(500);
         header("Location: 500.php");
     }
+
 ?>
