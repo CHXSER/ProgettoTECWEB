@@ -1236,22 +1236,18 @@ input:user-invalid {
 }
 
 
-/* width */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: var(--orchid-white); 
 }
  
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--orchid-white); 
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--thunderbird); 
 }
@@ -1467,7 +1463,6 @@ input:user-invalid {
     width: 100%;
   }
 }
-
 
 @media (max-width: 375px) {
   .button {

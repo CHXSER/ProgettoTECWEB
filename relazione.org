@@ -31,7 +31,7 @@ Il referente che ha effettuato il caricamento nel Server: *Bilal El Moutaren*
 
 * Link Sito
 
-Il link per la correzione è: http://localhost:8080/... <-- da aggiungere
+Il link per la correzione è: http://localhost:8080/belmouta/
 
 * Abstract
 BOHEMY è un sito e-commerce nato in Antartide per la vendita di disegni in stile bohémien. Lo stile bohémien è un'espressione vibrante ed elettrica della creatività che abbraccia l'inconsueto. Non è vincolato da regole, spesso fonde diverse forme d'arte, culture e influenze storiche. È caratterizzato da ricchi motivi e colori vibranti, mescolando il naturale e il surreale. Per alcuni, esprime una celebrazione dell'individualità, della libertà e della gioia di creare senza confini. Per altri, è un'espressione di sperimentazione, esplorazione e di un'estetica personale del mondo.
@@ -72,6 +72,7 @@ Il sito è stato progettato per essere sviluppato da tre persone, organizzando i
   - Progettazione e sviluppo codice /PHP/;
   - Validazione dell'usabilità del sito;
   - Stesura e validazione del sito.
+  - Stesura e verifica della relazione
 - Rupi Anton Ricardo
   - Progettazione e implementazione del database;
   - Redazione del contenuto web;
@@ -83,14 +84,14 @@ Per definire la struttura e il contenuto del sito web è stato utilizzato /HTML5
 - Ci siamo assicurati di usare tag adeguati in ogni contesto per migliorare la comprensione per gli screen reader;
 - Abbiamo mantenuto la separazione tra struttura, contenuto e comportamento, evitando di implementare codice js o fogli di stile all'interno dei file html;
 - Per migliorare l'accessibilità del sito nei browser abbiamo implementato metatag e ciò di conseguenza aiuta ad ottenere un ranking migliore nei motori di ricerca.
-Si è cercato di creare un file per i componenti principali del sito web, definendoli all'interno di tag ~<main>~, evitando di azzerare la struttura partendo dal tag ~<html>~, per migliorare l'organizzazione interna, ridurre il peso del sito invocando i componenti necessari in un contesto definito e minimizzare in generale i tempi di attesa.
+Si è cercato di creare un file per i componenti principali del sito web, definendoli all'interno di tag ~<main>~, evitando di azzerare la struttura per ogni pagina del ripartendo dal tag ~<html>~, per migliorare l'organizzazione interna, ridurre il peso del sito invocando i componenti necessari in un contesto definito e minimizzare in generale i tempi di attesa.
 *** CSS
 La presentazione del sito è stata realizzata tramite la versione 3 di /CSS/. è stato realizzato un file ~style.css~ e una versione compressa per rendere più piccola la dimensione del file iniziale. è stato fatto uso ragionevole di di layout flex e grid, variabili e selettori in modo ragionevole per facilitare la progettazione. Abbiamo utilizzato la strategia Responsive Web Design che si basa sull'utilizzo di media-query per adattare il layout del sito web nei dispositivi mobili in base a dimensioni di viewport
 *** JavaScript
 Per gestire il comportamento del sito web, è stato fatto uso di alcuni file javascript: ~app.js~ e ~validate.js~. ~app.js~ è stato realizzato per gestire principalmente gli elementi del sito, tramite l'uso di listener, come ad esempio l'apertura del menu della navbar al click nel menù ad hamburger per i dispositivi mobili, la gestione del carosello per le recensioni o per aggiornare i costi all'interno del carrello. l'intenzione del gruppo era quella di aggiungere anche una barra di navigazione e gestire da javascript, ma a causa  della dimensione del gruppo e del tempo a disposizione non siamo stati in grado di farlo. Il secondo file (~validate.js~) è stato realizzato per gestire gli input all'interno dei vari form presenti all'interno del sito, per evitare di inserire dati scorretti, non adatti per il database e per migliorare l'esperienza dell'utente.
 ** Back-End
 *** Database
-La gestione dei dati del sito web si basa su un database SQL relazionale. Il database è composto dalle seguenti tabelle:
+La gestione dei dati del sito web si basa su un database SQL relazionale in forma normale. Il database è composto dalle seguenti tabelle:
 - Utente: contiene le informazioni relative al cliente, come ~username~, ~password~ ed ~email~;
 - Disegni: permette di salvare le informazioni relative ai disegni che si intende vendere. Consente di salvare il ~titolo~ dell'opera, ~descrizione~, ~prezzo~, ~quantità~ di stampe disponibili, ~autore~ e un'anteprima della stampa in questione, in particolare vengono salvate le path delle posizioni delle immagini nei server. Le opere non devono avere lo stesso nome;
 - Acquisti: è la relazione tra Utente e Disegni. Contiene ~IDacquisto~ e ~dataAcquisto~;
@@ -121,7 +122,7 @@ I form presenti nel sito dispongono dei controlli fatti da parte del server. Per
 Per comunicare errori nell'input si è fatto uso di una variabile di sessione con /PHP_SESSION/ che verrà rimpiazzata appositamente nella pagina.
 **** Sicurezza
 Per quanto riguarda la sicurezza del sito web sono state implementate le seguenti:
-- vengono effettuate solo query parametriche tramite la funzione /prepare()/ di mysqli, questo previene gli attacchi come SQL injection
+- vengono effettuate solo query parametriche tramite la funzione ~prepare()~ di mysqli, questo previene gli attacchi come SQL injection
 - l'utente base non può accedere alle sezioni del sito web dedicate all'amministratore grazie ai diversi controlli
 ** User Interface (UI)
 Abbiamo cercato di seguire un layout di navigazione statico per consentire al visitatore, utente o amministratore del sito di mantenere il contesto e la prospettiva del loro percorso di navigazione, anche mentre esplorano contenuti diversi. Questa struttura è particolarmente adatta per tale tipologia di sito perché rende consistente e coerente l'interfaccia utente su diverse dimensioni di schermo.
