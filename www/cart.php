@@ -56,6 +56,7 @@
         $totalSummary = str_replace("<!-- Subtotale -->", $prezzo_totale, $totalSummary);
         $tasse = ($prezzo_totale * 22) / 100;
         $prezzo_totale = $prezzo_totale + $tasse + 4;
+        $prezzo_totale = round($prezzo_totale, 2);
         $totalSummary = str_replace("<!-- Totale -->", $prezzo_totale, $totalSummary);
         $DOM = str_replace("<!-- Lista prodotti -->", $productList, $DOM);
         $DOM = str_replace("<!-- Vuoto -->", $totalSummary, $DOM);
